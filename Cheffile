@@ -30,13 +30,15 @@ cookbook 'nginx', '1.7'
 cookbook 'php', '1.3.0'             # Note: Versions from 1.3.1 - 1.3.10 seem to fail (tested on CentOS 6.4/6.5)
 cookbook 'phpunit', '>= 0.0.9'
 cookbook 'php-fpm', '0.6.3'
+
 cookbook "wordpress-nginx",
   :git => "https://github.com/roots/wordpress-nginx.git",
   :ref => "master"
 
-# Custom
-cookbook 'base',
-    :path => "site-cookbooks/base"
+cookbook "grunt_cookbook",
+  :git => "https://github.com/MattSurabian/grunt_cookbook.git",
+  :ref => "master"
 
-cookbook 'rootsapp',
-    :path => "site-cookbooks/rootsapp"
+cookbook "wp-cookbook",
+  :git => "https://github.com/roots/wp-cookbook.git",
+  :ref => "master"

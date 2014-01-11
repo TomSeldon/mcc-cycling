@@ -4,7 +4,7 @@
 Vagrant.configure("2") do |config|
 
     # Change this host name to something more relevant
-    config.vm.hostname          = "myapp.dev"
+    config.vm.hostname          = "mcc-cycling.dev"
 
     config.omnibus.chef_version = :latest
     config.vm.box               = "precise64"
@@ -35,19 +35,10 @@ Vagrant.configure("2") do |config|
         chef.roles_path                         = ["chef/roles"]
         #chef.encrypted_data_bag_secret_key_path = ''
 
-        chef.add_recipe "base"
-        chef.add_recipe "base::web-server"
-        #chef.add_recipe "rootsapp::db"
-        chef.add_recipe "rootsapp"
+        chef.add_recipe "wp-cookbook"
+        chef.add_recipe "wp-cookbook::setup"
 
         chef.json = {
-            "rootsapp" => {
-                "host"              =>  config.vm.hostname,
-                "root"              =>  "/srv/web",
-                "database_user"     => "wordpress",
-                "database_password" => "wordpress",
-                "database_name"     => "my-wordpress-site"
-            },
             "mysql" => {
                 "server_debian_password"    => "password",
                 "server_root_password"      => "password",
