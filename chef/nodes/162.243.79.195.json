@@ -1,4 +1,7 @@
 {
+    "build_essential": {
+        "compiletime": true
+    },
     "mysql": {
         "server_debian_password": "password",
         "server_root_password": "password",
@@ -6,7 +9,7 @@
     },
     "wp_cookbook": {
         "user":     "root",
-        "hostname": "146.185.178.161",
+        "hostname": "162.243.228.92",
         "wp_import": true,
         "dir":      "/var/www/mcc_cycling"
     },
