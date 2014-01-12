@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "24073eba2556eaa377eb2ca6ec195304",
+    "hash": "39d0ad6b65f87f45d793ac78bc672db7",
     "packages": [
         {
             "name": "composer/installers",
@@ -122,16 +122,16 @@
         },
         {
             "name": "mustache/mustache",
-            "version": "v2.5.0",
+            "version": "v2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/mustache.php.git",
-                "reference": "dd528e765afcaaae20ce3bebdda3162456d93b47"
+                "reference": "996c944fa2ddedddfaf0d276b913809d6a32fd85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/dd528e765afcaaae20ce3bebdda3162456d93b47",
-                "reference": "dd528e765afcaaae20ce3bebdda3162456d93b47",
+                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/996c944fa2ddedddfaf0d276b913809d6a32fd85",
+                "reference": "996c944fa2ddedddfaf0d276b913809d6a32fd85",
                 "shasum": ""
             },
             "require": {
@@ -163,7 +163,7 @@
                 "mustache",
                 "templating"
             ],
-            "time": "2013-12-14 20:57:43"
+            "time": "2014-01-09 00:36:09"
         },
         {
             "name": "rhumsaa/array_column",
@@ -255,17 +255,17 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v2.4.0",
+            "version": "v2.4.1",
             "target-dir": "Symfony/Component/Finder",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "72356bf0646b11af1bae666c28a639bd8ede459f"
+                "reference": "6904345cf2b3bbab1f6d6e4ce1724cb99df9f00a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/72356bf0646b11af1bae666c28a639bd8ede459f",
-                "reference": "72356bf0646b11af1bae666c28a639bd8ede459f",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/6904345cf2b3bbab1f6d6e4ce1724cb99df9f00a",
+                "reference": "6904345cf2b3bbab1f6d6e4ce1724cb99df9f00a",
                 "shasum": ""
             },
             "require": {
@@ -298,7 +298,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2013-11-26 16:40:27"
+            "time": "2014-01-01 08:14:50"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -451,6 +451,36 @@
                 "wordpress"
             ],
             "time": "2013-11-30 13:14:44"
+        },
+        {
+            "name": "wpackagist/advanced-custom-fields",
+            "version": "4.3.3",
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/advanced-custom-fields.4.3.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/extend/plugins/advanced-custom-fields"
+        },
+        {
+            "name": "wpackagist/redux-framework",
+            "version": "3.1.4",
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/redux-framework.3.1.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/extend/plugins/redux-framework"
         }
     ],
     "packages-dev": [

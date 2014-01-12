@@ -3,12 +3,45 @@
  */
 
 @import "bootstrap/bootstrap.less";
+@import "partials/variables.less";
+@import "partials/headings.less";
+@import "partials/header.less";
 
 /* ==========================================================================
    Base
    ========================================================================== */
 
-body { }
+body {
+  border-top: 5px solid @lightGreen;
+}
+
+.redButton {
+  &:extend(.btn);
+  &:extend(.btn-default);
+
+  background: @ctaRed;
+  background: @ctaRedRGBA;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+  padding: 15px 50px;
+  opacity: 0.95;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
 
 
 

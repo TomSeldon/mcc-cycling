@@ -12,7 +12,6 @@ sql-dump-*.sql
 !.env.example
 
 # Application
-app/uploads
 app/upgrade
 app/plugins/*
 !app/plugins/.gitkeep
