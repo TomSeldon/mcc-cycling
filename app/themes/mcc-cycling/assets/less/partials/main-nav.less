@@ -3,6 +3,19 @@
   position: relative;
   padding: 0;
 
+  & ~ #top-header,
+  & ~ main,
+  & ~ footer {
+    & > .container,
+    & > .row {
+      -webkit-transition: left @sideNavTime ease-in-out;
+      -moz-transition: left @sideNavTime ease-in-out;
+      -o-transition: left @sideNavTime ease-in-out;
+      transition: left @sideNavTime ease-in-out;
+      position: relative;
+    }
+  }
+
   &.in ~ #top-header {
     .nav-toggle {
       button {
@@ -69,10 +82,6 @@
       & ~ footer {
         position: relative;
         overflow: hidden;
-        -webkit-animation: left @sideNavTime ease-in-out;
-        -moz-animation: left @sideNavTime ease-in-out;
-        -o-animation: left @sideNavTime ease-in-out;
-        animation: left @sideNavTime ease-in-out;
 
         & > .container,
         & > .row {
