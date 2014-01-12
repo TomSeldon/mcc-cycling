@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "39d0ad6b65f87f45d793ac78bc672db7",
+    "hash": "6028fd85af92e7d7cb0d53b09cd85203",
     "packages": [
         {
             "name": "composer/installers",
@@ -466,6 +466,21 @@
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/extend/plugins/advanced-custom-fields"
+        },
+        {
+            "name": "wpackagist/jetpack",
+            "version": "2.7",
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/jetpack.2.7.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/extend/plugins/jetpack"
         },
         {
             "name": "wpackagist/redux-framework",

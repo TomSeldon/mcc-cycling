@@ -62,7 +62,8 @@
     "wp-cli/wp-cli": "v0.13.0",
     "vlucas/phpdotenv": "1.0.2",
     "wpackagist/advanced-custom-fields": ">= 4.3.3",
-    "wpackagist/redux-framework": "3.1.4"
+    "wpackagist/redux-framework": "3.1.4",
+    "wpackagist/jetpack": ">= 2.7"
   },
   "extra": {
     "installer-paths": {
