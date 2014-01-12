@@ -19,7 +19,9 @@
 
 
       <main class="main" role="main">
-        <?php include roots_template_path(); ?>
+          <div class="container">
+              <?php include roots_template_path(); ?>
+          </div>
       </main><!-- /.main -->
 
 

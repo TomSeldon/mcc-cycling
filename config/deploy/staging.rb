@@ -1,4 +1,4 @@
-set :stage, :staging
+set :stage, 'staging'
 
 # Simple Role Syntax
 # ==================
@@ -8,7 +8,7 @@ set :stage, :staging
 
 # Extended Server Syntax
 # ======================
-server '146.185.178.161', user: 'deploy', roles: %w{web app db}
+server '162.243.79.195', user: 'root'
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options

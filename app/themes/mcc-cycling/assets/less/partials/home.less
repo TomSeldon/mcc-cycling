@@ -1,4 +1,50 @@
 body.home {
+
+  main {
+    .container {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  #top-header {
+    .top-menu {
+      @media (min-width: @screen-lg-min) {
+        .item {
+          top: 100px;
+        }
+      }
+    }
+
+    .headings {
+      h1 {
+        font-size: 22px;
+      }
+
+      @media (min-width: @screen-sm-min) {
+        margin-bottom: inherit;
+
+        h1 {
+          font-size: @h1-size;
+        }
+      }
+    }
+
+
+    .logos {
+      margin-top: 100px;
+
+      @media (min-width: @screen-sm-min) {
+        margin-bottom: 150px;
+
+        & > * {
+          margin-top: auto;
+        }
+      }
+    }
+  }
+
   #the-event {
     padding: 75px 60px;
     background-color: #e7eaea;

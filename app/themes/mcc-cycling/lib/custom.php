@@ -53,3 +53,41 @@ function mcc_show_latest_post()
         break;
     }
 }
+
+/**
+ * Change the post menu to article
+ */
+function mcc_change_post_menu_text() {
+    global $menu;
+    global $submenu;
+
+    // Change menu item
+    $menu[5][0] = 'News';
+
+    // Change post submenu
+    $submenu['edit.php'][5][0] = 'News';
+    $submenu['edit.php'][10][0] = 'Add News Article';
+    $submenu['edit.php'][16][0] = 'News Tags';
+}
+add_action('admin_menu', 'mcc_change_post_menu_text');
+
+/**
+ * Change the post type labels
+ */
+function change_post_type_labels() {
+    global $wp_post_types;
+
+    // Get the post labels
+    $postLabels = $wp_post_types['post']->labels;
+    $postLabels->name = 'Articles';
+    $postLabels->singular_name = 'News';
+    $postLabels->add_new = 'Add News Article';
+    $postLabels->add_new_item = 'Add News Article';
+    $postLabels->edit_item = 'Edit Article';
+    $postLabels->new_item = 'News';
+    $postLabels->view_item = 'View Articles';
+    $postLabels->search_items = 'Search Articles';
+    $postLabels->not_found = 'No Articles found';
+    $postLabels->not_found_in_trash = 'No Articles found in Trash';
+}
+add_action( 'init', 'change_post_type_labels' );

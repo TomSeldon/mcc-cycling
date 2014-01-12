@@ -20,6 +20,8 @@
         }
     }
 
+    $subtitle = get_field('sub_title');
+
     // Set the background image
     $header_bg_img = get_redux_field('bg_header');
 
@@ -29,45 +31,26 @@
         $header_bg_img = '';
     }
 
-    // Header CTA
-    if (true === $show_cta) {
-
-    }
-
 ?>
-
-<!--
-<header class="banner navbar navbar-default navbar-static-top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
-    </div>
-
-    <nav class="collapse navbar-collapse" role="navigation">
-      <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
-        endif;
-      ?>
-    </nav>
-  </div>
-</header>
--->
 
 <!-- header -->
 <div class="collapse navbar-side-collapse" role="navigation">
     <?php dynamic_sidebar('primary'); ?>
-    <?php
-        if (has_nav_menu('primary_navigation')) :
-           // wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
-        endif;
-    ?>
+
+    <div class="row social">
+        <div class="col-xs-1">
+            <span class="sr-only">Facebook</span>
+            <span class="icon-facebook"></span>
+        </div>
+        <div class="col-xs-1">
+            <span class="sr-only">Twitter</span>
+            <span class=""></span>
+        </div>
+        <div class="col-xs-1">
+            <span class="sr-only">Google Plus</span>
+            <span class=""></span>
+        </div>
+    </div>
 </div>
 
 <header id="top-header" style="background-image: url('<?php echo $header_bg_img; ?>');">
@@ -91,7 +74,10 @@
 
         <div class="row headings animated fadeInDown">
             <h1><?php the_title(); ?></h1>
-            <h2><?php the_field('sub_title'); ?></h2>
+
+            <?php if ($subtitle !== false): ?>
+            <h2><?php echo $subtitle; ?></h2>
+            <?php endif; ?>
         </div>
 
         <?php if ($show_cta): ?>
