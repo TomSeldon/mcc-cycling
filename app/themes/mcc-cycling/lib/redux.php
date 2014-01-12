@@ -53,6 +53,18 @@ function mcc_redux_init()
                 'type'      => 'media',
                 'title'     => __('"Meet the county" background image', 'mcc'),
                 'preview'   => true
+            ),
+            array(
+                'id'        =>'bg_map',
+                'type'      => 'media',
+                'title'     => __('Map background image', 'mcc'),
+                'preview'   => true
+            ),
+            array(
+                'id'        =>'bg_news',
+                'type'      => 'media',
+                'title'     => __('Latest news background image', 'mcc'),
+                'preview'   => true
             )
         )
     );
