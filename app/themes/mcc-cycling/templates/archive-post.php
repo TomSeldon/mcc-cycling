@@ -9,7 +9,7 @@
 
 <div class="row">
     <article class="news col-lg-12">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="big-date">
                 <div class="date">
                     <span><?php echo get_the_time('d'); ?></span>
@@ -20,14 +20,14 @@
             </div>
         </div>
 
-        <header class="col-md-8 col-md-offset-1">
+        <header class="col-md-8">
             <h1><?php the_title(); ?></h1>
             <div class="entry-meta">
                 <?php get_template_part('templates/entry-meta'); ?>
             </div>
         </header>
 
-        <div class="content excerpt col-md-8 col-md-offset-1">
+        <div class="content excerpt col-md-8">
             <?php the_excerpt(); ?>
         </div>
     </article>
