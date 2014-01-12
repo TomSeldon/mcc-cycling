@@ -28,3 +28,28 @@ function the_redux_field($field)
 {
     echo get_redux_field($field);
 }
+
+/**
+ * Displays the single latest post.
+ */
+function mcc_show_latest_post()
+{
+    global $post;
+
+    $args = array(
+        'posts_per_page'    => 1,
+        'post_type'         => 'post',
+        'post_status'       => 'publish'
+    );
+
+    $posts = get_posts($args);
+
+    foreach ($posts as $post) {
+        setup_postdata($post);
+
+        get_template_part('templates/archive-post');
+
+        wp_reset_postdata();
+        break;
+    }
+}

@@ -12,15 +12,13 @@
 <div class="container" id="latest-news" style="background-image: url('<?php echo $news_bg_img; ?>');">
     <div class="row">
         <div class="col-sm-4">
-            <h1>Latest News</h1>
+            <h1 class="page-title">Latest News</h1>
         </div>
-    </div>
-    <div class="row news">
-
-    </div>
-    <div class="row">
-        <div class="col-lg-12 content">
-            <?php the_field('news_content'); ?>
+        <div class="col-sm-8 content">
+            <?php
+                // Setup new post
+                mcc_show_latest_post();
+            ?>
         </div>
     </div>
 </div>
