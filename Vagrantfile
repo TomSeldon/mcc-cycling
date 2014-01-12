@@ -7,8 +7,7 @@ Vagrant.configure("2") do |config|
     config.vm.hostname          = "mcc-cycling.dev"
 
     config.omnibus.chef_version = :latest
-    config.vm.box               = "precise64"
-    config.vm.box_url           = "http://files.vagrantup.com/precise64.box"
+    config.vm.box               = "precise32"
     config.vm.network "private_network", ip: "192.168.50.4"
 
     config.vm.provider :virtualbox do |v|
@@ -35,6 +34,10 @@ Vagrant.configure("2") do |config|
         chef.roles_path                         = ["chef/roles"]
         #chef.encrypted_data_bag_secret_key_path = ''
 
+        chef.log_level = :debug
+
+        chef.add_recipe "mysql::server"
+        chef.add_recipe "database::mysql"
         chef.add_recipe "wp-cookbook"
         chef.add_recipe "wp-cookbook::setup"
 
