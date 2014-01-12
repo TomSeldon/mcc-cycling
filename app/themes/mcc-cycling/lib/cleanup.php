@@ -190,7 +190,7 @@ function roots_excerpt_length($length) {
 }
 
 function roots_excerpt_more($more) {
-  return ' &hellip; <a class="read-more" href="' . get_permalink() . '">' . __('Continued', 'roots') . '</a>';
+  return ' &hellip; <div class="read-more"><a class="read-more" href="' . get_permalink() . '"><i class="glyphicon glyphicon-chevron-right"></i></a></div>';
 }
 add_filter('excerpt_length', 'roots_excerpt_length');
 add_filter('excerpt_more', 'roots_excerpt_more');
