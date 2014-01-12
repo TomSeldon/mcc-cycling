@@ -33,6 +33,20 @@ function mcc_redux_init()
 
     $sections[] = array(
         'icon'      => 'el-icon-screen',
+        'title'     => __('Miscellaneous', 'mcc'),
+        'desc'      => __('<p class="description">Miscellaneous settings.</p>', 'mcc'),
+        'fields'    => array(
+            array(
+                'id'        => 'login_url',
+                'type'      => 'text',
+                'title'     => 'Login URL',
+                'subtitle'  => __('The URL users will be directed to when clicking on the login link in the header.', 'mcc')
+            )
+        )
+    );
+
+    $sections[] = array(
+        'icon'      => 'el-icon-cog',
         'title'     => __('Background images', 'mcc'),
         'desc'      => __('<p class="description">Upload and select background images for the various sections.</p>', 'mcc'),
         'fields'    => array(

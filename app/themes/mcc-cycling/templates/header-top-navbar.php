@@ -67,11 +67,13 @@
         <nav class="row top-menu">
             <div class="col-xs-3 nav-toggle item">
                 <a class="btn btn-default" href="#">
-                    <i class="glyphicon glyphicon-lock"></i>
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="glyphicon glyphicon-align-justify"></i>
                 </a>
             </div>
             <div class="col-xs-3 login item">
-                <a class="btn btn-default" href="#">
+                <a class="btn btn-default" href="<?php the_redux_field('login_url'); ?>">
+                    <span class="sr-only">Login</span>
                     <i class="glyphicon glyphicon-lock"></i>
                 </a>
             </div>
