@@ -1,9 +1,9 @@
 h1, h2 {
-  font-weight: 100;
+  font-weight: 200;
 }
 
 h1 {
-  font-size: 22px;
+  font-size: @h1-size;
   letter-spacing: 3px;
   line-height: 0.9em;
   text-transform: uppercase;
@@ -15,7 +15,7 @@ h2 {
 
 @media (min-width: @screen-sm-min) {
   h1 {
-    font-size: 74px;
+    font-size: @h1-size-lg;
   }
 
   h2 {
