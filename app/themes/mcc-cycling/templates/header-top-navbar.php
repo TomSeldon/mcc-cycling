@@ -64,6 +64,19 @@
 
 <header id="top-header" style="background-image: url('<?php echo $header_bg_img; ?>');">
     <div class="container">
+        <nav class="row top-menu">
+            <div class="col-xs-3 nav-toggle item">
+                <a class="btn btn-default" href="#">
+                    <i class="glyphicon glyphicon-lock"></i>
+                </a>
+            </div>
+            <div class="col-xs-3 login item">
+                <a class="btn btn-default" href="#">
+                    <i class="glyphicon glyphicon-lock"></i>
+                </a>
+            </div>
+        </nav>
+
         <?php get_template_part('templates/logos'); ?>
 
         <div class="row headings animated fadeInDown">
