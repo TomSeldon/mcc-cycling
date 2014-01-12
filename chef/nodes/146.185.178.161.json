@@ -1,0 +1,21 @@
+{
+    "mysql": {
+        "server_debian_password": "password",
+        "server_root_password": "password",
+        "server_repl_password": "password"
+    },
+    "wp_cookbook": {
+        "user":     "root",
+        "hostname": "146.185.178.161",
+        "wp_import": true,
+        "dir":      "/var/www/mcc_cycling"
+    },
+    "run_list": [
+        "recipe[build-essential]",
+        "recipe[apt]",
+        "recipe[mysql::server]",
+        "recipe[database::mysql]",
+        "recipe[wp-cookbook]",
+        "recipe[wp-cookbook::setup]"
+    ]
+}
