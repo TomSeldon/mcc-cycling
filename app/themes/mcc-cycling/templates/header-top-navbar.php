@@ -61,15 +61,13 @@
 -->
 
 <!-- header -->
-<div class="container" id="main-nav-container">
-    <div class="collapse navbar-side-collapse" role="navigation">
-        <?php dynamic_sidebar('primary'); ?>
-        <?php
-            if (has_nav_menu('primary_navigation')) :
-               // wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
-            endif;
-        ?>
-    </div>
+<div class="collapse navbar-side-collapse" role="navigation">
+    <?php dynamic_sidebar('primary'); ?>
+    <?php
+        if (has_nav_menu('primary_navigation')) :
+           // wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
+        endif;
+    ?>
 </div>
 
 <header id="top-header" style="background-image: url('<?php echo $header_bg_img; ?>');">

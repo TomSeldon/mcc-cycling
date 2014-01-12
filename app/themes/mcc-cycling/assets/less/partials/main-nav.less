@@ -1,15 +1,97 @@
-#main-nav-container {
-  width: 100%;
+.navbar-side-collapse {
   background: @lightGreen;
   position: relative;
   padding: 0;
-  box-shadow: 0 30px 80px #aaa;
-  -webkit-box-shadow: 0 30px 80px #aaa;
-  -moz-box-shadow: 0 30px 80px #aaa;
-  -o-box-shadow: 0 30px 80px #aaa;
+
+  &.in ~ #top-header {
+    .nav-toggle {
+      button {
+        background: @lightGreen;
+        border-color: @lightGreen;
+
+        &:hover {
+          background: @lightGreen;
+        }
+      }
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    width: 0%;
+    height: 100% !important;
+    top: 0;
+    position: fixed;
+    -webkit-transition: width @sideNavTime ease-in-out;
+    -moz-transition: width @sideNavTime ease-in-out;
+    -o-transition: width @sideNavTime ease-in-out;
+    transition: width @sideNavTime ease-in-out;
+
+    & > section {
+      -webkit-transition: opacity @sideNavTime ease-in-out;
+      -moz-transition: opacity @sideNavTime ease-in-out;
+      -o-transition: opacity @sideNavTime ease-in-out;
+      transition: opacity @sideNavTime ease-in-out;
+      display: none;
+      opacity: 0;
+    }
+
+    &.collapsing {
+      & > section {
+        opacity: 0;
+        display: none;
+      }
+    }
+
+    &.in {
+      z-index: 99;
+      width: @sideNavWidth;
+      height: 100% !important;
+      box-shadow: 0 30px 80px #444;
+      -webkit-box-shadow: 0 30px 80px #444;
+      -moz-box-shadow: 0 30px 80px #444;
+      -o-box-shadow: 0 30px 80px #444;
+
+      & > section {
+        display: block;
+        opacity: 1;
+      }
+
+      & ~ #top-header {
+        .nav-toggle {
+          position: fixed;
+          left: @sideNavWidth + 5%;
+          z-index: 99;
+        }
+      }
+
+      & ~ #top-header,
+      & ~ main,
+      & ~ footer {
+        position: relative;
+        overflow: hidden;
+        -webkit-animation: left @sideNavTime ease-in-out;
+        -moz-animation: left @sideNavTime ease-in-out;
+        -o-animation: left @sideNavTime ease-in-out;
+        animation: left @sideNavTime ease-in-out;
+
+        & > .container,
+        & > .row {
+          position: relative;
+          left: @sideNavWidth;
+        }
+
+
+      }
+    }
+  }
 
   .widget_search {
     margin-bottom: 30px;
+
+    @media (min-width: @screen-sm-min) {
+      margin-top: 40px;
+      margin-bottom: 150px;
+    }
 
     h3 {
       &:extend(.sr-only);
@@ -64,10 +146,14 @@
   }
 
   .widget_nav_menu {
+    @media (min-width: @screen-sm-min) {
+      margin-bottom: 50px;
+    }
+
     ul {
       list-style: none;
       padding: 0;
-      margin: 0 0 15px 0;
+      margin: 0;
 
       li {
         border-top: 1px solid @greenOverlay;
