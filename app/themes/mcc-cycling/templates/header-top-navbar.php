@@ -66,13 +66,13 @@
     <div class="container">
         <?php get_template_part('templates/logos'); ?>
 
-        <div class="row headings">
+        <div class="row headings animated fadeInDown">
             <h1><?php the_title(); ?></h1>
             <h2><?php the_field('sub_title'); ?></h2>
         </div>
 
         <?php if ($show_cta): ?>
-        <div class="row cta">
+        <div class="row cta animated fadeInDown">
             <a href="<?php echo $cta_href; ?>" class="redButton">
                 <?php echo $cta_button_text; ?>
             </a>
