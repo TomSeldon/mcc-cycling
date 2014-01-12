@@ -61,17 +61,27 @@
 -->
 
 <!-- header -->
+<div class="container" id="main-nav-container">
+    <div class="collapse navbar-side-collapse" role="navigation">
+        <?php dynamic_sidebar('primary'); ?>
+        <?php
+            if (has_nav_menu('primary_navigation')) :
+               // wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
+            endif;
+        ?>
+    </div>
+</div>
 
 <header id="top-header" style="background-image: url('<?php echo $header_bg_img; ?>');">
     <div class="container">
         <nav class="row top-menu">
-            <div class="col-xs-3 nav-toggle item">
-                <a class="btn btn-default" href="#">
+            <div class="col-xs-3 pull-left nav-toggle item">
+                <button type="button" class="btn btn-default" data-toggle="collapse" data-target=".navbar-side-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <i class="glyphicon glyphicon-align-justify"></i>
-                </a>
+                </button>
             </div>
-            <div class="col-xs-3 login item">
+            <div class="col-xs-3 pull-right login item">
                 <a class="btn btn-default" href="<?php the_redux_field('login_url'); ?>">
                     <span class="sr-only">Login</span>
                     <i class="glyphicon glyphicon-lock"></i>

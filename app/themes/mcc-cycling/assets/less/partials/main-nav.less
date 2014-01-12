@@ -1,0 +1,98 @@
+#main-nav-container {
+  width: 100%;
+  background: @lightGreen;
+  position: relative;
+  padding: 0;
+  box-shadow: 0 30px 80px #aaa;
+  -webkit-box-shadow: 0 30px 80px #aaa;
+  -moz-box-shadow: 0 30px 80px #aaa;
+  -o-box-shadow: 0 30px 80px #aaa;
+
+  .widget_search {
+    margin-bottom: 30px;
+
+    h3 {
+      &:extend(.sr-only);
+    }
+
+    .search-form {
+      padding-bottom: 10px;
+      border-bottom: 1px solid @greenOverlay;
+
+      input {
+        background: none;
+        border: none;
+        outline: none;
+        color: #eee;
+        -webkit-appearance: none;
+        border-radius: 0;
+        border-width: 0px;
+        box-shadow: none;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 100;
+
+        &::-webkit-input-placeholder {
+          color: #dedede;
+        }
+
+        &:-moz-placeholder {
+          color: #eee;
+        }
+
+        &::-moz-placeholder {
+          color: #eee;
+        }
+
+        &:-ms-input-placeholder {
+          color: #eee;
+        }
+      }
+
+      .search-submit {
+        background: none;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 18px;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .widget_nav_menu {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px 0;
+
+      li {
+        border-top: 1px solid @greenOverlay;
+
+        &:last-child {
+          border-bottom: 1px solid @greenOverlay;
+        }
+
+        a:link,
+        a:active,
+        a:visited,
+        a:hover {
+          display: block;
+          padding: 10px;
+          color: #eee;
+          font-size: 18px;
+          font-weight: 100;
+          letter-spacing: 1px;
+        }
+
+        a:hover {
+          background: @greenOverlay;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
