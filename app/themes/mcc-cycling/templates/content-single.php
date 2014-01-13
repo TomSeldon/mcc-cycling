@@ -13,7 +13,7 @@
             </div>
 
             <header class="col-md-9">
-                <h1><?php the_title(); ?></h1>
+                <h1 class="entry-title"><?php the_title(); ?></h1>
                 <div class="entry-meta">
                     <?php get_template_part('templates/entry-meta'); ?>
                 </div>

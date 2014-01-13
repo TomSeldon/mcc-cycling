@@ -1,4 +1,5 @@
-body.blog {
+body.blog,
+body.single-post {
   background: @blueGrey;
   background-image: url('/app/themes/mcc-cycling/assets/img/blog-bg.jpg');
   background-position: center bottom;
@@ -8,6 +9,15 @@ body.blog {
   .main {
     padding-top: 50px;
     padding-bottom: 50px;
+
+    article {
+      text-align: left;
+      margin-bottom: 80px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   @media (min-width: @screen-sm-min) {
@@ -16,6 +26,15 @@ body.blog {
 
       .headings {
         margin-bottom: 120px;
+      }
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    article {
+      .entry-title,
+      .entry-meta {
+        text-align: left;
       }
     }
   }
