@@ -47,7 +47,7 @@ function mcc_show_latest_post()
     foreach ($posts as $post) {
         setup_postdata($post);
 
-        get_template_part('templates/archive-post');
+        get_template_part('templates/content');
 
         wp_reset_postdata();
         break;

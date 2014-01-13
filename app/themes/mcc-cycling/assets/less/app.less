@@ -8,6 +8,7 @@
 @import "partials/header.less";
 @import "partials/footer.less";
 @import "partials/main-nav.less";
+@import "partials/comments.less";
 @import "partials/home.less";
 @import "partials/blog.less";
 
@@ -17,6 +18,20 @@
 
 body {
   border-top: 5px solid @lightGreen;
+}
+
+.btn-primary {
+  background-color: none;
+  background-color: rgba(255,255,255,0.1);
+  border-color: #333;
+  border-width: 2px;
+  color: #333;
+  -webkit-transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: @lightGreen;
+    border-color: @lightGreen;
+  }
 }
 
 .redButton {
@@ -89,7 +104,6 @@ article {
 
   .entry-meta {
     font-weight: 200;
-    letter-spacing: 1px;
     color: #888;
   }
 
@@ -122,7 +136,10 @@ article {
    Primary Content
    ========================================================================== */
 
-.main { }
+.main {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
