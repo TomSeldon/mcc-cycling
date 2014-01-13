@@ -1,0 +1,22 @@
+body.blog {
+  background: @blueGrey;
+  background-image: url('/app/themes/mcc-cycling/assets/img/blog-bg.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 500px;
+
+  @media (min-width: @screen-sm-min) {
+    #top-header {
+      background-position-y: 25%;
+
+      .headings {
+        margin-bottom: 120px;
+      }
+    }
+  }
+
+  @media (min-width: @screen-lg-min) {
+    background-size: 100% auto;
+    padding-bottom: 700px;
+  }
+}
