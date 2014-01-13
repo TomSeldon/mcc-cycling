@@ -20,8 +20,6 @@
         }
     }
 
-    $subtitle = get_field('sub_title');
-
     // Set the background image
     $header_bg_img = get_redux_field('bg_header');
 
@@ -71,14 +69,7 @@
         </nav>
 
         <?php get_template_part('templates/logos'); ?>
-
-        <div class="row headings animated fadeInDown">
-            <h1><?php the_title(); ?></h1>
-
-            <?php if ($subtitle !== false): ?>
-            <h2><?php echo $subtitle; ?></h2>
-            <?php endif; ?>
-        </div>
+        <?php get_template_part('templates/page', 'header') ?>
 
         <?php if ($show_cta): ?>
         <div class="row cta animated fadeInDown">

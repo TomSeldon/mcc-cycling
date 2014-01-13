@@ -91,3 +91,19 @@ function change_post_type_labels() {
     $postLabels->not_found_in_trash = 'No Articles found in Trash';
 }
 add_action( 'init', 'change_post_type_labels' );
+
+/**
+ * Allows us to conditionally set the page sub-title.
+ *
+ * @param $subtitle
+ * @return string|void
+ */
+function mcc_set_subtitles($subtitle)
+{
+    if (is_404() || !have_posts()) {
+      $subtitle = __('Sorry, but the page you were trying to view does not exist.', 'mcc');
+    }
+
+    return $subtitle;
+}
+add_filter('page_subtitle', 'mcc_set_subtitles');
