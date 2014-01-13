@@ -24,5 +24,15 @@
           </div>
       </main><!-- /.main -->
 
+
+  <?php
+      if (is_front_page()) {
+          get_template_part('templates/footer', 'home');
+      } else {
+          get_template_part('templates/footer');
+      }
+  ?>
+
+
 </body>
 </html>

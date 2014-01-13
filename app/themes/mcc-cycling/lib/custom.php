@@ -91,19 +91,3 @@ function change_post_type_labels() {
     $postLabels->not_found_in_trash = 'No Articles found in Trash';
 }
 add_action( 'init', 'change_post_type_labels' );
-
-/**
- * Swap out the base template when loading the home page.
- *
- * @param $templates
- * @return mixed
- */
-function mcc_set_home_base($templates)
-{
-    if (is_front_page()) {
-        array_unshift($templates, 'base-home.php');
-    }
-
-    return $templates;
-}
-add_filter('roots_wrap_base', 'mcc_set_home_base');
