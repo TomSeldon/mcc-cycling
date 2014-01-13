@@ -22,16 +22,29 @@ body {
 }
 
 .btn-primary {
-  background-color: none;
   background-color: rgba(255,255,255,0.1);
   border-color: #333;
   border-width: 2px;
   color: #333;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     background-color: @lightGreen;
     border-color: @lightGreen;
+  }
+}
+
+.pager {
+  margin: 0;
+
+  li {
+    a {
+      &:extend(.btn);
+      &:extend(.btn-primary);
+    }
   }
 }
 
