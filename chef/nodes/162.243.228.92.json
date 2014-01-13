@@ -9,7 +9,7 @@
     },
     "wp_cookbook": {
         "user":     "root",
-        "hostname": "162.243.79.195",
+        "hostname": "162.243.228.92",
         "wp_import": true,
         "dir":      "/var/www/mcc_cycling"
     },
