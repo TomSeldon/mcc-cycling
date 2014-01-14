@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
         v.customize ["modifyvm", :id, "--memory", 1024]
     end
 
-    config.vm.synced_folder "./", "/srv/web",
+    config.vm.synced_folder "./", "/var/web",
         owner: "vagrant",
         group: "www-data",
         mount_options: ["dmode=775,fmode=664"]
@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
         chef.add_recipe "mcc-cycling"
 
         chef.json = {
-            "wp-cookbook" => {
+            "wp_cookbook" => {
                 "user"                      => "vagrant"
             },
             "mysql" => {
