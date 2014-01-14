@@ -35,10 +35,12 @@ Vagrant.configure("2") do |config|
         #chef.encrypted_data_bag_secret_key_path = ''
 
         chef.add_recipe "mcc-cycling"
+        chef.add_recipe "wp_cookbook::setup"
 
         chef.json = {
             "wp_cookbook" => {
-                "user"                      => "vagrant"
+                "user"                      => "vagrant",
+                "wp_import"                 => true
             },
             "mysql" => {
                 "server_debian_password"    => "password",
