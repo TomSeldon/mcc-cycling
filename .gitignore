@@ -32,6 +32,8 @@ bin
 # Chef
 tmp
 cookbooks
+chef/nodes/*.json
+
 
 # Project
 .idea
