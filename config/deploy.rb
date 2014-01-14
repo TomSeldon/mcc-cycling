@@ -12,7 +12,7 @@ set :repo_url, 'git@github.com:TomSeldon/mcc-cycling.git'
 # This could be overridden in a stage config file
 set :branch, :master
 
-set :deploy_to, "/srv/www/#{fetch(:application)}"
+set :deploy_to, "/var/www/#{fetch(:application)}"
 
 set :log_level, :info
 

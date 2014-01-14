@@ -1,6 +1,6 @@
 default[:wp_cookbook][:user]      = 'vagrant'
 default[:wp_cookbook][:hostname]  = 'mcc-cycling.dev'
-default[:wp_cookbook][:dir]       = '/srv/web'
+default[:wp_cookbook][:dir]       = '/var/www'
 default[:wp_cookbook][:wp_cli]    = 'vendor/bin/wp'
 default[:wp_cookbook][:theme_dir] = 'app/themes/mcc-cycling'
 default[:wp_cookbook][:db_name]   = 'mcc-cycling'
