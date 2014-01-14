@@ -6,6 +6,11 @@ version          '0.0.1'
 
 recipe 'mcc-cycling::default', 'Base server setup'
 
+supports 'ubuntu'
+
 depends 'build-essential'
-depends 'apt', '1.7.0'
-depends 'package'
+depends 'apt'
+depends 'git'
+depends 'mysql'
+depends 'php'
+depends 'wp-cookbook'

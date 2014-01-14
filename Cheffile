@@ -5,6 +5,9 @@ site 'http://community.opscode.com/api/v1'
 
 cookbook 'chef-client'
 
+cookbook 'php',
+    :git => 'git@github.com:franklinkim/chef-opscode-php.git'
+
 cookbook "wordpress-nginx",
   :git => "https://github.com/roots/wordpress-nginx.git",
   :ref => "master"

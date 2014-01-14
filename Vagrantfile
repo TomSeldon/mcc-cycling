@@ -34,12 +34,7 @@ Vagrant.configure("2") do |config|
         chef.roles_path                         = ["chef/roles"]
         #chef.encrypted_data_bag_secret_key_path = ''
 
-        chef.log_level = :debug
-
-        chef.add_recipe "mysql::server"
-        chef.add_recipe "database::mysql"
-        chef.add_recipe "wp-cookbook"
-        chef.add_recipe "wp-cookbook::setup"
+        chef.add_recipe "mcc-cycling"
 
         chef.json = {
             "mysql" => {
