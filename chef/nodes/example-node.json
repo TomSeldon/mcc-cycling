@@ -3,12 +3,12 @@
         "compiletime": true
     },
     "mysql": {
-        "server_debian_password": "password",
-        "server_root_password": "password",
-        "server_repl_password": "password"
+        "server_debian_password": "CHANGE-ME",
+        "server_root_password": "CHANGE-ME",
+        "server_repl_password": "CHANGE-ME"
     },
     "wp_cookbook": {
-        "hostname": "146.185.178.161",
+        "hostname": "HOST",
         "wp_import": true,
         "dir":      "/var/www/mcc_cycling"
     },
