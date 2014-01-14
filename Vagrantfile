@@ -37,6 +37,9 @@ Vagrant.configure("2") do |config|
         chef.add_recipe "mcc-cycling"
 
         chef.json = {
+            "wp-cookbook" => {
+                "user"                      => "vagrant"
+            },
             "mysql" => {
                 "server_debian_password"    => "password",
                 "server_root_password"      => "password",
