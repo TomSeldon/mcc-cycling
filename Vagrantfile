@@ -52,6 +52,9 @@ Vagrant.configure("2") do |config|
                 "server_debian_password"    => "password",
                 "server_root_password"      => "password",
                 "server_repl_password"      => "password"
+            },
+            "composer" => {
+                "owner"                     => "vagrant"
             }
         }
     end
