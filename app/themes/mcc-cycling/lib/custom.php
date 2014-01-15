@@ -109,13 +109,58 @@ function mcc_set_subtitles($subtitle)
 add_filter('page_subtitle', 'mcc_set_subtitles');
 
 /**
- *
+ * Use custom class for submit button.
  *
  * @param $button
  * @param $form
  * @return string
  */
-function form_submit_button($button, $form) {
+function form_submit_button($button, $form)
+{
     return "<button type='submit' class='redButton' id='gform_submit_button_{$form["id"]}'><span>Submit</span></button>";
 }
 add_filter("gform_submit_button", "form_submit_button", 10, 2);
+
+function gform_label_replace_glyphicon($content, $icon_class)
+{
+    // Lets alter the label to use a Glyphicon
+    // Add icon
+    $regex      = '/gfield_label/';
+    $replace    = "gfield_label input-group-addon glyphicon $icon_class";
+    $content    = preg_replace($regex, $replace, $content);
+
+    // Hide label text
+    $regex      = '/<label(.+)>(.+)<\/label>/';
+    $replace    = '<label$1><span class="sr-only">$2</span></label>';
+    $content    = preg_replace($regex, $replace, $content);
+
+    return $content;
+}
+
+/**
+ * @param $content
+ * @param $field
+ * @param $value
+ * @param $lead_id
+ * @param $form_id
+ * @return mixed
+ */
+function form_glyphicons_name($content, $field, $value, $lead_id, $form_id)
+{
+    $icon = false;
+    $classes = array(
+        'name-icon'     => 'glyphicon-user',
+        'email-icon'    => 'glyphicon-envelope',
+        'phone-icon'    => 'glyphicon-phone',
+        'message-icon'  => 'glyphicon-pencil'
+    );
+
+    foreach ($classes as $class => $icon) {
+        if (false !== strpos($field['cssClass'], $class)) {
+            $content = gform_label_replace_glyphicon($content, $icon);
+        }
+    }
+
+    return $content;
+}
+add_filter("gform_field_content", "form_glyphicons_name", 10, 5);

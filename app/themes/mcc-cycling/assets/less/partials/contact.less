@@ -6,6 +6,23 @@
   background-position: center bottom;
   text-align: center;
 
+  .main {
+    padding-top: 40px;
+  }
+
+  .gfield {
+    &.name-icon,
+    &.phone-icon,
+    &.email-icon,
+    &.message-icon, {
+      .input-group();
+
+      .gfield_label {
+        .input-group-addon();
+      }
+    }
+  }
+
   @media (min-width: @screen-sm-min) {
     .main {
       .container {
