@@ -138,6 +138,11 @@ function gform_label_replace_glyphicon($content, $icon_class)
 }
 
 /**
+ * Checks for known field CSS classes and replaces the field's
+ * label with a Glyphicon. The original label text is retained,
+ * but a CSS class is added making it viewable only to screen
+ * readers.
+ *
  * @param $content
  * @param $field
  * @param $value
@@ -147,7 +152,6 @@ function gform_label_replace_glyphicon($content, $icon_class)
  */
 function form_glyphicons_name($content, $field, $value, $lead_id, $form_id)
 {
-    $icon = false;
     $classes = array(
         'name-icon'     => 'glyphicon-user',
         'email-icon'    => 'glyphicon-envelope',
