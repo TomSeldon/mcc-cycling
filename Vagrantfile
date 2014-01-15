@@ -34,13 +34,19 @@ Vagrant.configure("2") do |config|
         chef.roles_path                         = ["chef/roles"]
         #chef.encrypted_data_bag_secret_key_path = ''
 
+        chef.log_level = :debug
+
         chef.add_recipe "mcc-cycling"
-        chef.add_recipe "wp_cookbook::setup"
+        chef.add_recipe "wp-cookbook::setup"
 
         chef.json = {
             "wp_cookbook" => {
                 "user"                      => "vagrant",
                 "wp_import"                 => true
+            },
+            "nginx" => {
+                "user"                      => "vagrant",
+                "group"                     => "vagrant"
             },
             "mysql" => {
                 "server_debian_password"    => "password",
