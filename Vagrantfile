@@ -19,9 +19,6 @@ Vagrant.configure("2") do |config|
         group: "www-data",
         mount_options: ["dmode=775,fmode=664"]
 
-    config.vm.provision "shell",
-        inline: "sudo touch /usr/local/bin/composer; sudo chmod 777 /usr/local/bin/composer"
-
     config.vm.provision :chef_solo do |chef|
         #
         # Presently, only the `cookbooks_path` setting is required.

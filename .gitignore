@@ -40,6 +40,5 @@ chef/nodes/*.json
 .bundle
 
 # W3 Total Cache
-app/advanced-cache.php
 w3tc-config
 app/cache
