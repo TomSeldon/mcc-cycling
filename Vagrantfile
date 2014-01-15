@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
     config.vm.synced_folder "./", "/var/www/mcc-cycling",
         owner: "vagrant",
         group: "www-data",
-        mount_options: ["dmode=775,fmode=666"]
+        mount_options: ["dmode=775,fmode=664"]
 
     config.vm.provision :chef_solo do |chef|
         #
@@ -52,10 +52,10 @@ Vagrant.configure("2") do |config|
                 "server_debian_password"    => "password",
                 "server_root_password"      => "password",
                 "server_repl_password"      => "password"
-            },
-            "composer" => {
-                "owner"                     => "vagrant"
             }
         }
     end
+
+    config.vm.provision "shell",
+        inline: "sudo touch /usr/local/bin/composer; sudo chmod 777 /usr/local/bin/composer"
 end
