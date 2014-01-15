@@ -9,7 +9,6 @@
 //
 .form-control {
   background: #fcfcfc;
-  border: none;
 }
 
 textarea {
@@ -19,17 +18,15 @@ textarea {
 .input-group-addon {
   background: #fefefe;
 
-  .glyphicon {
-    color: #ccc;
+  & + .form-control {
+    border-left-color: #eee;
+  }
+
+  &.glyphicon {
+    font-size: 1.2em;
+    color: #bbb;
   }
 }
-
-.contact {
-  .glyphicon {
-    color: #ccc;
-  }
-}
-
 
 //
 // Gravity forms base styles
