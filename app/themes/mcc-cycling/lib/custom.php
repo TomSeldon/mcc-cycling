@@ -107,3 +107,15 @@ function mcc_set_subtitles($subtitle)
     return $subtitle;
 }
 add_filter('page_subtitle', 'mcc_set_subtitles');
+
+/**
+ *
+ *
+ * @param $button
+ * @param $form
+ * @return string
+ */
+function form_submit_button($button, $form) {
+    return "<button type='submit' class='redButton' id='gform_submit_button_{$form["id"]}'><span>Submit</span></button>";
+}
+add_filter("gform_submit_button", "form_submit_button", 10, 2);

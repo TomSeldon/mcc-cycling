@@ -19,7 +19,7 @@ function mcc_redux_init()
         'dev_mode'              => false,
         'opt_name'              => 'mcc_redux',
         'system_info'           => false,
-        'display_name'          => 'testing 123',
+        'display_name'          => 'Site Options',
         'show_import_export'    => true,
         'menu_title'            => __('Site Options', 'mcc'),
         'page_title'            => __('Site Options', 'mcc'),
@@ -32,7 +32,7 @@ function mcc_redux_init()
     $sections = array();
 
     $sections[] = array(
-        'icon'      => 'el-icon-screen',
+        'icon'      => 'el-icon-cog',
         'title'     => __('Miscellaneous', 'mcc'),
         'desc'      => __('<p class="description">Miscellaneous settings.</p>', 'mcc'),
         'fields'    => array(
@@ -46,7 +46,7 @@ function mcc_redux_init()
     );
 
     $sections[] = array(
-        'icon'      => 'el-icon-cog',
+        'icon'      => 'el-icon-screen',
         'title'     => __('Background images', 'mcc'),
         'desc'      => __('<p class="description">Upload and select background images for the various sections.</p>', 'mcc'),
         'fields'    => array(
