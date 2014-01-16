@@ -18,10 +18,6 @@ textarea {
 .input-group-addon {
   background: #fefefe;
 
-  & + .form-control {
-    border-left-color: #eee;
-  }
-
   &.glyphicon {
     font-size: 1.2em;
     color: #bbb;
@@ -67,11 +63,12 @@ textarea {
   .gfield_label {
     color: @state-danger-text;
   }
+
   input,
   select,
   textarea {
     border-color: @alert-danger-border;
-    background-color: @alert-danger-bg;
+    //background-color: @alert-danger-bg;
     color: @alert-danger-text;
     .form-control-focus(@alert-danger-text);
   }

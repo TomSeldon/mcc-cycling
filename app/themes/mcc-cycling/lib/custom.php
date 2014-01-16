@@ -167,7 +167,7 @@ function form_glyphicons_name($content, $field, $value, $lead_id, $form_id)
     // Add form-control class
     $search  = '/<(input|textarea)(.+) class=([\'"])(.+)([\'"])(.+)/';
     $replace = '<$1$2 class=$3form-control $4$5$6';
-    $content    = preg_replace($search, $replace, $content);
+    //$content    = preg_replace($search, $replace, $content);
 
     return $content;
 }
