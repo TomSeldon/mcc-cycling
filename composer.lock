@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "d0af1ffe695c7aed01f2735d90eefd83",
+    "hash": "9412d7dd8784cfc585f95320f26194b6",
     "packages": [
         {
             "name": "composer/installers",
@@ -511,6 +511,21 @@
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/extend/plugins/w3-total-cache"
+        },
+        {
+            "name": "wpackagist/wordpress-importer",
+            "version": "0.6.1",
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/extend/plugins/wordpress-importer"
         }
     ],
     "packages-dev": [
