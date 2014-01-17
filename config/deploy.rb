@@ -1,4 +1,4 @@
-set :application, 'mcc_cycling'
+set :application, 'mcc-cycling'
 set :repo_url, 'git@github.com:TomSeldon/mcc-cycling.git'
 
 # Branch options
@@ -14,7 +14,7 @@ set :branch, :master
 
 set :deploy_to, "/var/www/#{fetch(:application)}"
 
-set :log_level, :info
+#set :log_level, :info
 
 set :linked_files, %w{.env}
 set :linked_dirs, %w{app/uploads}
