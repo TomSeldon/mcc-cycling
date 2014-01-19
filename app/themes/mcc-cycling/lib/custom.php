@@ -186,3 +186,17 @@ function shortcode_red_button($atts, $content)
     return $content;
 }
 add_shortcode('red-button', 'shortcode_red_button', 10, 2);
+
+/**
+ * Registers the Google Maps script using API details from the settings.
+ */
+function register_gmaps_script()
+{
+    $api_key   = get_redux_field('gmaps_api_key');
+    $gmaps_url = "https://maps.googleapis.com/maps/api/js?key=$api_key&sensor=false&libraries=geometry";
+
+    wp_register_script('gmaps', $gmaps_url, array(), false, true);
+
+    wp_enqueue_script('gmaps');
+}
+add_action('wp_enqueue_scripts', 'register_gmaps_script');

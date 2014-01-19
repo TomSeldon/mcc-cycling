@@ -31,6 +31,7 @@
 ?>
 
 <div class="container" id="map-routes" style="background-image: url('<?php echo $maproutes_bg_img; ?>');">
+    <div id="map-routes-bg"></div>
     <div class="hidden-xs">
         <div class="row">
             <div class="col-sm-3">

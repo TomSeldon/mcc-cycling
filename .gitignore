@@ -17,6 +17,7 @@ app/plugins/*
 !app/plugins/.gitkeep
 app/mu-plugins/*
 !app/mu-plugins/register-theme-directory.php
+!app/plugins/strava-routes
 
 # Vendor (e.g. Composer)
 vendor/*

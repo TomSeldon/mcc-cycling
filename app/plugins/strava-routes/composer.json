@@ -1,0 +1,32 @@
+{
+    "name":         "ts/strava-routes",
+    "type":         "wordpress-plugin",
+    "description":  "Parses Strava routes into usable segments which can be displayed on a map.",
+    "keywords":     ["strava","routes","segments","wordpress","plugin"],
+    "homepage":     "http://github.com/TomSeldon/StravaRoutes",
+    "authors": [
+        {
+            "name":     "Tom Seldon",
+            "email":    "tom@tomseldon.co.uk",
+            "homepage": "http://tomseldon.co.uk"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url":  "http://wpackagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "guzzle/guzzle": "~3.7",
+        "shark/simple_html_dom": "dev-master",
+        "wpackagist/redux-framework": "3.1.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "classmap": ["lib/"]
+    }
+}

@@ -39,7 +39,7 @@ function mcc_redux_init()
             array(
                 'id'        => 'login_url',
                 'type'      => 'text',
-                'title'     => 'Login URL',
+                'title'     => __('Login URL', 'mcc'),
                 'subtitle'  => __('The URL users will be directed to when clicking on the login link in the header.', 'mcc')
             )
         )
