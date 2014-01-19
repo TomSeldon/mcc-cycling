@@ -164,11 +164,25 @@ function form_glyphicons_name($content, $field, $value, $lead_id, $form_id)
         }
     }
 
-    // Add form-control class
-    $search  = '/<(input|textarea)(.+) class=([\'"])(.+)([\'"])(.+)/';
-    $replace = '<$1$2 class=$3form-control $4$5$6';
-    //$content    = preg_replace($search, $replace, $content);
-
     return $content;
 }
 add_filter("gform_field_content", "form_glyphicons_name", 10, 5);
+
+/**
+ * Adds a short code for generating red buttons.
+ *
+ * @param $atts
+ * @param $content
+ * @return string
+ */
+function shortcode_red_button($atts, $content)
+{
+    extract(shortcode_atts(array(
+        'href'  => '#'
+    ), $atts));
+
+    $content = "<a href='$href' class='redButton'>$content</a>";
+
+    return $content;
+}
+add_shortcode('red-button', 'shortcode_red_button', 10, 2);
