@@ -28,10 +28,13 @@
                 break;
         }
     }
+
+    $route   = get_field('route');
+    $routeID = (isset($route->ID) ? $route->ID : false);
 ?>
 
 <div class="container" id="map-routes" style="background-image: url('<?php echo $maproutes_bg_img; ?>');">
-    <div id="map-routes-bg"></div>
+    <div id="map-routes-bg" data-route="<?php echo $routeID; ?>"></div>
     <div class="hidden-xs">
         <div class="row">
             <div class="col-sm-3">

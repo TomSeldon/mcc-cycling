@@ -94,4 +94,26 @@ class Segment {
 
         return $post;
     }
-} 
+
+    /**
+     * When dealing with many segment IDs, this function will return an
+     * array of the corresponding segment posts.
+     *
+     * @param $segmentIDs
+     * @return array
+     */
+    public static function getSegmentsBySegmentIds($segmentIDs)
+    {
+        $segments = array();
+
+        foreach ($segmentIDs as $id) {
+            $segment = self::getSegmentById($id);
+
+            if (false !== $segment) {
+                $segments[] = $segment;
+            }
+        }
+
+        return $segments;
+    }
+}

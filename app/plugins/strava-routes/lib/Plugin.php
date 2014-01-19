@@ -17,8 +17,7 @@ class Plugin {
         $this->registerPostTypes();
 
         add_action('init', array(&$this, 'addReduxSettings'));
-
-        //$segments = RouteParser::getRouteSegments('http://www.strava.com/routes/120415');
+        add_action('wp_enqueue_scripts', array(&$this, 'localizeScripts'));
     }
 
     /**
@@ -36,5 +35,34 @@ class Plugin {
     public static function addReduxSettings()
     {
         $GLOBALS[Redux\Config::$ReduxName . '_ReduxFramework'] = Redux\Config::buildFramework();
+    }
+
+    /**
+     * Adds route + segment data into a script.
+     * By default, the script handle and route are false.
+     *
+     * They can be set dynamically using filters, and the resultant object will only
+     * be created and attached if these are set to valid values.
+     */
+    public static function localizeScripts()
+    {
+        $route  = apply_filters('StravaRoutes/Scripts/Localize/Route', false);
+        $handle = apply_filters('StravaRoutes/Scripts/Localize/Handle', false);
+
+
+        if (false !== $route && false !== $handle) {
+            $objectName = apply_filters('StravaRoutes/Scripts/Localize/ObjectName', 'StravaRoutes');
+
+            $data = array(
+                'routes'    => array(
+                    array(
+                        'name'      => get_the_title($route),
+                        'segments'  => Parser\Segment::parseSegmentPostsForAPI(get_field('segments', $route))
+                    )
+                )
+            );
+
+            wp_localize_script($handle, $objectName, $data);
+        }
     }
 }

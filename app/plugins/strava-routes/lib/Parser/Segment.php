@@ -38,4 +38,47 @@ class Segment {
         return json_decode($body);
     }
 
+    /**
+     * Returns an array of segments.
+     *
+     * @param $id - The ID of the segment post.
+     * @return array - An array of post metadata for the requested segment.
+     */
+    public static function parseSegmentPostForAPI($id)
+    {
+        $segment    = get_post($id);
+        $response   = false;
+
+        if (false !== $segment) {
+            $response = array(
+                'id'        => get_post_meta($id, 'id', true),
+                'name'      => $segment->post_title,
+                'polyline'  => get_post_meta($id, 'polyline', true)
+            );
+        }
+
+        return $response;
+    }
+
+    /**
+     * When dealing with many segment post IDs, this will return an array
+     * of data for each one.
+     *
+     * @param $ids
+     * @return array
+     */
+    public static function parseSegmentPostsForAPI($ids)
+    {
+        $results = array();
+
+        foreach ($ids as $id) {
+            $result = self::parseSegmentPostForAPI($id);
+
+            if (false !== $result) {
+                $results[] = $result;
+            }
+        }
+
+        return $results;
+    }
 } 

@@ -200,3 +200,30 @@ function register_gmaps_script()
     wp_enqueue_script('gmaps');
 }
 add_action('wp_enqueue_scripts', 'register_gmaps_script');
+
+function set_strava_handle_route($route)
+{
+    if (is_front_page()) {
+        $route = get_field('route');
+    }
+
+    return $route;
+}
+
+/**
+ * If this is the home page, localize the Strava plugin scripts
+ * on the main Roots script.
+ *
+ * @param $handle
+ * @return string
+ */
+function set_strava_handle_home($handle)
+{
+    if (is_front_page()) {
+        $handle = 'roots_scripts';
+    }
+
+    return $handle;
+}
+add_filter('StravaRoutes/Scripts/Localize/Route', 'set_strava_handle_route');
+add_filter('StravaRoutes/Scripts/Localize/Handle', 'set_strava_handle_home');
