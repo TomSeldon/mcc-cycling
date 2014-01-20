@@ -12,7 +12,13 @@
 
 namespace TS\StravaRoutes;
 
-require_once "./vendor/autoload.php";
+require_once dirname(__FILE__) . "/lib/Parser/Routes.php";
+require_once dirname(__FILE__) . "/lib/Parser/Segment.php";
+require_once dirname(__FILE__) . "/lib/PostType/Route.php";
+require_once dirname(__FILE__) . "/lib/PostType/Segment.php";
+require_once dirname(__FILE__) . "/lib/Redux/Config.php";
+require_once dirname(__FILE__) . "/lib/Plugin.php";
+require_once dirname(__FILE__) . "/lib/Sync.php";
 
 // Instantiate the plugin
 $StravaPlugin = new Plugin();
