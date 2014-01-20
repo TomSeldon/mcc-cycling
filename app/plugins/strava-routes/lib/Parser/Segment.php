@@ -53,7 +53,11 @@ class Segment {
             $response = array(
                 'id'        => get_post_meta($id, 'id', true),
                 'name'      => $segment->post_title,
-                'polyline'  => get_post_meta($id, 'polyline', true)
+                'polyline'  => get_post_meta($id, 'polyline', true),
+                'start_latitude'    => get_post_meta($id, 'start_latitude', true),
+                'start_longitude'   => get_post_meta($id, 'start_longitude', true),
+                'end_latitude'      => get_post_meta($id, 'end_latitude', true),
+                'end_longitude'     => get_post_meta($id, 'end_longitude', true)
             );
         }
 

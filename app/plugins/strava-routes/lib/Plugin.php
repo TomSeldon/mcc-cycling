@@ -17,7 +17,7 @@ class Plugin {
         $this->registerPostTypes();
 
         add_action('init', array(&$this, 'addReduxSettings'));
-        add_action('wp_enqueue_scripts', array(&$this, 'localizeScripts'));
+        add_action('wp_enqueue_scripts', array(&$this, 'localizeScripts'), 99);
     }
 
     /**
@@ -48,7 +48,6 @@ class Plugin {
     {
         $route  = apply_filters('StravaRoutes/Scripts/Localize/Route', false);
         $handle = apply_filters('StravaRoutes/Scripts/Localize/Handle', false);
-
 
         if (false !== $route && false !== $handle) {
             $objectName = apply_filters('StravaRoutes/Scripts/Localize/ObjectName', 'StravaRoutes');

@@ -105,7 +105,7 @@ class Sync {
                 'start_longitude'   => $segment->start_longitude,
                 'end_latitude'      => $segment->end_latitude,
                 'end_longitude'     => $segment->end_longitude,
-                'polyline'          => $segment->map->polyline
+                'polyline'          => str_replace('\\', '\\\\', $segment->map->polyline)
             );
 
             foreach ($metaFields as $key => $value) {
