@@ -17,7 +17,7 @@ server '162.243.228.92', user: 'deploy', roles: %w{web app db}
   set :ssh_options, {
     #keys: %w(/Users/Tom/.ssh/github_rsa),
     #forward_agent: true,
-    verbose: :debug
+    #verbose: :debug
     #auth_methods: %w(password)
   }
 
