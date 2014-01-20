@@ -642,10 +642,10 @@
         },
         {
             "name": "wpackagist/advanced-custom-fields",
-            "version": "trunk",
+            "version": "4.3.3",
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/advanced-custom-fields.zip",
+                "url": "http://downloads.wordpress.org/plugin/advanced-custom-fields.4.3.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -657,10 +657,10 @@
         },
         {
             "name": "wpackagist/jetpack",
-            "version": "trunk",
+            "version": "2.7",
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/jetpack.zip",
+                "url": "http://downloads.wordpress.org/plugin/jetpack.2.7.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -687,10 +687,10 @@
         },
         {
             "name": "wpackagist/w3-total-cache",
-            "version": "trunk",
+            "version": "0.9.3",
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/w3-total-cache.zip",
+                "url": "http://downloads.wordpress.org/plugin/w3-total-cache.0.9.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -702,10 +702,10 @@
         },
         {
             "name": "wpackagist/wordpress-importer",
-            "version": "trunk",
+            "version": "0.6.1",
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wordpress-importer.zip",
+                "url": "http://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
                 "reference": null,
                 "shasum": null
             },
