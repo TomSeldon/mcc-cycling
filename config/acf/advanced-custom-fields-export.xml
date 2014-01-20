@@ -18,446 +18,500 @@
 
 
 <rss version="2.0"
-	xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:wp="http://wordpress.org/export/1.1/"
->
+     xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:wp="http://wordpress.org/export/1.1/"
+        >
 
-<channel>
-	<title>MCC Cycling</title>
-	<link>http://mcc-cycling.dev</link>
-	<description></description>
-	<pubDate>Fri, 17 Jan 2014 00:04:57 +0000</pubDate>
-	<language></language>
-	<wp:wxr_version>1.1</wp:wxr_version>
-	<wp:base_site_url>http://mcc-cycling.dev/wp</wp:base_site_url>
-	<wp:base_blog_url>http://mcc-cycling.dev</wp:base_blog_url>
-	<wp:author><wp:author_id>1</wp:author_id><wp:author_login>tom.seldon</wp:author_login><wp:author_email>tom@tomseldon.co.uk</wp:author_email><wp:author_display_name><![CDATA[Tom Seldon]]></wp:author_display_name><wp:author_first_name><![CDATA[Tom]]></wp:author_first_name><wp:author_last_name><![CDATA[Seldon]]></wp:author_last_name></wp:author>
-	<wp:author><wp:author_id>2</wp:author_id><wp:author_login>admin</wp:author_login><wp:author_email>stuartjohnarthur@gmail.com</wp:author_email><wp:author_display_name><![CDATA[Stu Arthur]]></wp:author_display_name><wp:author_first_name><![CDATA[Stu]]></wp:author_first_name><wp:author_last_name><![CDATA[Arthur]]></wp:author_last_name></wp:author>
-	<wp:author><wp:author_id>3</wp:author_id><wp:author_login>mcceditor</wp:author_login><wp:author_email>DanDavies@monmouthshire.gov.uk</wp:author_email><wp:author_display_name><![CDATA[MCC Editor]]></wp:author_display_name><wp:author_first_name><![CDATA[MCC]]></wp:author_first_name><wp:author_last_name><![CDATA[Editor]]></wp:author_last_name></wp:author>
-	<item>
-		<title>Header section</title>
-		<link>http://mcc-cycling.dev/?acf=acf_header-section</link>
-		<pubDate>Sun, 12 Jan 2014 02:13:50 +0000</pubDate>
-		<dc:creator>tom.seldon</dc:creator>
-		<guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=11</guid>
-		<wp:post_id>11</wp:post_id>
-		<wp:post_date>2014-01-12 02:13:50</wp:post_date>
-		<wp:post_date_gmt>2014-01-12 02:13:50</wp:post_date_gmt>
-		<wp:comment_status>closed</wp:comment_status>
-		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_header-section</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>acf</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d1f941ce7e3</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d1f941ce7e3";s:5:"label";s:9:"Sub title";s:4:"name";s:9:"sub_title";s:4:"type";s:4:"text";s:12:"instructions";s:26:"Shown below the page title";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d1f967ce7e4</wp:meta_key>
-			<wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52d1f967ce7e4";s:5:"label";s:19:"Show call to action";s:4:"name";s:19:"show_call_to_action";s:4:"type";s:10:"true_false";s:12:"instructions";s:82:"Should a call to action be displayed beneath the sub title in the heading section?";s:8:"required";s:1:"0";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d1fa1ece7e8</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d1fa1ece7e8";s:5:"label";s:11:"Button text";s:4:"name";s:15:"cta_button_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:13:"Find out more";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d1f967ce7e4";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d1f9a4ce7e5</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52d1f9a4ce7e5";s:5:"label";s:9:"Link type";s:4:"name";s:13:"cta_link_type";s:4:"type";s:6:"select";s:12:"instructions";s:84:"Select whether the CTA should link to an existing page on the site, or a custom URL.";s:8:"required";s:1:"1";s:7:"choices";a:2:{s:4:"page";s:13:"Internal Page";s:3:"url";s:10:"Custom URL";}s:13:"default_value";s:0:"";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d1f967ce7e4";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d1f9f5ce7e6</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d1f9f5ce7e6";s:5:"label";s:4:"Page";s:4:"name";s:8:"cta_page";s:4:"type";s:9:"page_link";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:9:"post_type";a:1:{i:0;s:4:"page";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d1f967ce7e4";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d1f9a4ce7e5";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d1fa3dce7e9</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d1fa3dce7e9";s:5:"label";s:3:"URL";s:4:"name";s:7:"cta_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d1f967ce7e4";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d1f9a4ce7e5";s:8:"operator";s:2:"==";s:5:"value";s:3:"url";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>position</wp:meta_key>
-			<wp:meta_value><![CDATA[acf_after_title]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>hide_on_screen</wp:meta_key>
-			<wp:meta_value><![CDATA[a:6:{i:0;s:11:"the_content";i:1;s:7:"excerpt";i:2;s:6:"author";i:3;s:14:"featured_image";i:4;s:10:"categories";i:5;s:4:"tags";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"page_type";s:8:"operator";s:2:"==";s:5:"value";s:10:"front_page";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>The Event</title>
-		<link>http://mcc-cycling.dev/?acf=acf_the-event</link>
-		<pubDate>Sun, 12 Jan 2014 03:26:09 +0000</pubDate>
-		<dc:creator>tom.seldon</dc:creator>
-		<guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=18</guid>
-		<wp:post_id>18</wp:post_id>
-		<wp:post_date>2014-01-12 03:26:09</wp:post_date>
-		<wp:post_date_gmt>2014-01-12 03:26:09</wp:post_date_gmt>
-		<wp:comment_status>closed</wp:comment_status>
-		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_the-event</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>acf</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d20b28434aa</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d20b28434aa";s:5:"label";s:7:"Heading";s:4:"name";s:13:"event_heading";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:9:"The Event";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>position</wp:meta_key>
-			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>hide_on_screen</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d20b77b162b</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d20b77b162b";s:5:"label";s:7:"Content";s:4:"name";s:13:"event_content";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:7:"toolbar";s:5:"basic";s:12:"media_upload";s:2:"no";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d21774a2883</wp:meta_key>
-			<wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52d21774a2883";s:5:"label";s:19:"Show call to action";s:4:"name";s:25:"event_show_call_to_action";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d21795a2884</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d21795a2884";s:5:"label";s:11:"Button text";s:4:"name";s:21:"event_cta_button_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:17:"Online entry form";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d21774a2883";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d217aea2885</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52d217aea2885";s:5:"label";s:9:"Link type";s:4:"name";s:19:"event_cta_link_type";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:7:"choices";a:2:{s:4:"page";s:13:"Internal page";s:3:"url";s:10:"Custom URL";}s:13:"default_value";s:4:"page";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d21774a2883";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d217e5a2886</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d217e5a2886";s:5:"label";s:4:"Page";s:4:"name";s:14:"event_cta_page";s:4:"type";s:9:"page_link";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:9:"post_type";a:1:{i:0;s:4:"page";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d21774a2883";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}s:13:"52d217fda2887";a:3:{s:5:"field";s:19:"field_52d217aea2885";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d21803a2888</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d21803a2888";s:5:"label";s:3:"URL";s:4:"name";s:13:"event_cta_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d21774a2883";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}s:13:"52d2181ba2889";a:3:{s:5:"field";s:19:"field_52d217aea2885";s:8:"operator";s:2:"==";s:5:"value";s:3:"url";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"page_type";s:8:"operator";s:2:"==";s:5:"value";s:10:"front_page";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Meet the county</title>
-		<link>http://mcc-cycling.dev/?acf=acf_meet-the-county</link>
-		<pubDate>Sun, 12 Jan 2014 04:53:34 +0000</pubDate>
-		<dc:creator>tom.seldon</dc:creator>
-		<guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=24</guid>
-		<wp:post_id>24</wp:post_id>
-		<wp:post_date>2014-01-12 04:53:34</wp:post_date>
-		<wp:post_date_gmt>2014-01-12 04:53:34</wp:post_date_gmt>
-		<wp:comment_status>closed</wp:comment_status>
-		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_meet-the-county</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>acf</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d21e70d6f12</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d21e70d6f12";s:5:"label";s:7:"Heading";s:4:"name";s:11:"mtc_heading";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:15:"Meet the county";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d21ef6d6f13</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d21ef6d6f13";s:5:"label";s:7:"Content";s:4:"name";s:11:"mtc_content";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:7:"toolbar";s:5:"basic";s:12:"media_upload";s:2:"no";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d21f19d6f14</wp:meta_key>
-			<wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52d21f19d6f14";s:5:"label";s:19:"Show call to action";s:4:"name";s:23:"mtc_show_call_to_action";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d21f33d6f15</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d21f33d6f15";s:5:"label";s:11:"Button text";s:4:"name";s:19:"mtc_cta_button_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d21f19d6f14";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d21f66d6f16</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52d21f66d6f16";s:5:"label";s:9:"Link type";s:4:"name";s:17:"mtc_cta_link_type";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:7:"choices";a:2:{s:4:"page";s:13:"Internal page";s:3:"url";s:10:"Custom URL";}s:13:"default_value";s:4:"page";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d21f19d6f14";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d21f90d6f17</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d21f90d6f17";s:5:"label";s:4:"Page";s:4:"name";s:12:"mtc_cta_page";s:4:"type";s:9:"page_link";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:9:"post_type";a:1:{i:0;s:4:"page";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d21f19d6f14";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d21f66d6f16";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d21faad6f19</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d21faad6f19";s:5:"label";s:3:"URL";s:4:"name";s:11:"mtc_cta_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d21f19d6f14";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d21f66d6f16";s:8:"operator";s:2:"==";s:5:"value";s:3:"url";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>position</wp:meta_key>
-			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>hide_on_screen</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"page_type";s:8:"operator";s:2:"==";s:5:"value";s:10:"front_page";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Map</title>
-		<link>http://mcc-cycling.dev/?acf=acf_map</link>
-		<pubDate>Sun, 12 Jan 2014 05:20:40 +0000</pubDate>
-		<dc:creator>tom.seldon</dc:creator>
-		<guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=29</guid>
-		<wp:post_id>29</wp:post_id>
-		<wp:post_date>2014-01-12 05:20:40</wp:post_date>
-		<wp:post_date_gmt>2014-01-12 05:20:40</wp:post_date_gmt>
-		<wp:comment_status>closed</wp:comment_status>
-		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_map</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>acf</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d22575dfb97</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d22575dfb97";s:5:"label";s:7:"Heading";s:4:"name";s:17:"maproutes_heading";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:19:"Discover the beauty";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d2258fdfb98</wp:meta_key>
-			<wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52d2258fdfb98";s:5:"label";s:19:"Show call to action";s:4:"name";s:29:"maproutes_show_call_to_action";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d225c6dfb99</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d225c6dfb99";s:5:"label";s:11:"Button text";s:4:"name";s:25:"maproutes_cta_button_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:13:"Get more info";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d2258fdfb98";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d225dddfb9a</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52d225dddfb9a";s:5:"label";s:9:"Link type";s:4:"name";s:23:"maproutes_cta_link_type";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:7:"choices";a:2:{s:4:"page";s:13:"Internal page";s:3:"url";s:10:"Custom URL";}s:13:"default_value";s:4:"page";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d2258fdfb98";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d225fddfb9b</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d225fddfb9b";s:5:"label";s:4:"Page";s:4:"name";s:18:"maproutes_cta_page";s:4:"type";s:9:"page_link";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:9:"post_type";a:1:{i:0;s:4:"page";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d2258fdfb98";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d225dddfb9a";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d22619dfb9d</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d22619dfb9d";s:5:"label";s:3:"URL";s:4:"name";s:17:"maproutes_cta_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d2258fdfb98";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d225dddfb9a";s:8:"operator";s:2:"==";s:5:"value";s:3:"url";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>position</wp:meta_key>
-			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>hide_on_screen</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"page_type";s:8:"operator";s:2:"==";s:5:"value";s:10:"front_page";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Partners</title>
-		<link>http://mcc-cycling.dev/?acf=acf_partners</link>
-		<pubDate>Sun, 12 Jan 2014 05:39:11 +0000</pubDate>
-		<dc:creator>tom.seldon</dc:creator>
-		<guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=31</guid>
-		<wp:post_id>31</wp:post_id>
-		<wp:post_date>2014-01-12 05:39:11</wp:post_date>
-		<wp:post_date_gmt>2014-01-12 05:39:11</wp:post_date_gmt>
-		<wp:comment_status>closed</wp:comment_status>
-		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_partners</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>acf</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d229bec5df9</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d229bec5df9";s:5:"label";s:7:"Heading";s:4:"name";s:16:"partners_heading";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:15:"Enjoy your stay";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d229d9c5dfa</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d229d9c5dfa";s:5:"label";s:7:"Content";s:4:"name";s:16:"partners_content";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:7:"toolbar";s:5:"basic";s:12:"media_upload";s:2:"no";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d229f6c5dfb</wp:meta_key>
-			<wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52d229f6c5dfb";s:5:"label";s:19:"Show call to action";s:4:"name";s:28:"partners_show_call_to_action";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d22a11c5dfc</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d22a11c5dfc";s:5:"label";s:11:"Button text";s:4:"name";s:24:"partners_cta_button_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:16:"Become a partner";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d22a2ec5dfd</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52d22a2ec5dfd";s:5:"label";s:9:"Link type";s:4:"name";s:22:"partners_cta_link_type";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:7:"choices";a:2:{s:4:"page";s:13:"Internal page";s:3:"url";s:10:"Custom URL";}s:13:"default_value";s:4:"page";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d22a4dc5dfe</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d22a4dc5dfe";s:5:"label";s:4:"Page";s:4:"name";s:17:"partners_cta_page";s:4:"type";s:9:"page_link";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:9:"post_type";a:1:{i:0;s:4:"page";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d22a2ec5dfd";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d22a5fc5e00</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d22a5fc5e00";s:5:"label";s:3:"URL";s:4:"name";s:16:"partners_cta_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d22a2ec5dfd";s:8:"operator";s:2:"==";s:5:"value";s:3:"url";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>position</wp:meta_key>
-			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>hide_on_screen</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d22a853884f</wp:meta_key>
-			<wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_52d22a853884f";s:5:"label";s:7:"Content";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d22a9c38850</wp:meta_key>
-			<wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_52d22a9c38850";s:5:"label";s:8:"Partners";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d22aa838851</wp:meta_key>
-			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_52d22aa838851";s:5:"label";s:8:"Partners";s:4:"name";s:8:"partners";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:10:"sub_fields";a:4:{i:0;a:15:{s:3:"key";s:19:"field_52d22ad838852";s:5:"label";s:4:"Name";s:4:"name";s:4:"name";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:12:{s:3:"key";s:19:"field_52d22ae838853";s:5:"label";s:4:"Logo";s:4:"name";s:4:"logo";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:11:"save_format";s:6:"object";s:12:"preview_size";s:6:"medium";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:11:{s:3:"key";s:19:"field_52d22b2a38855";s:5:"label";s:8:"Add link";s:4:"name";s:8:"add_link";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}i:3;a:15:{s:3:"key";s:19:"field_52d22afc38854";s:5:"label";s:3:"URL";s:4:"name";s:3:"url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d22b2a38855";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}}s:7:"row_min";s:1:"1";s:9:"row_limit";s:0:"";s:6:"layout";s:5:"table";s:12:"button_label";s:11:"Add Partner";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"page_type";s:8:"operator";s:2:"==";s:5:"value";s:10:"front_page";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Near this track</title>
-		<link>http://mcc-cycling.dev/?acf=acf_near-this-track</link>
-		<pubDate>Thu, 16 Jan 2014 21:57:59 +0000</pubDate>
-		<dc:creator>tom.seldon</dc:creator>
-		<guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=56</guid>
-		<wp:post_id>56</wp:post_id>
-		<wp:post_date>2014-01-16 21:57:59</wp:post_date>
-		<wp:post_date_gmt>2014-01-16 21:57:59</wp:post_date_gmt>
-		<wp:comment_status>closed</wp:comment_status>
-		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_near-this-track</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>acf</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d85522cc180</wp:meta_key>
-			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_52d85522cc180";s:5:"label";s:9:"Locations";s:4:"name";s:9:"locations";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"sub_fields";a:3:{i:0;a:15:{s:3:"key";s:19:"field_52d86e78785c9";s:5:"label";s:4:"Name";s:4:"name";s:4:"name";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:15:{s:3:"key";s:19:"field_52d8556bcc182";s:5:"label";s:3:"URL";s:4:"name";s:3:"url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:12:{s:3:"key";s:19:"field_52d8557ecc183";s:5:"label";s:9:"Thumbnail";s:4:"name";s:9:"thumbnail";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:11:"save_format";s:6:"object";s:12:"preview_size";s:6:"medium";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}}s:7:"row_min";s:0:"";s:9:"row_limit";s:0:"";s:6:"layout";s:5:"table";s:12:"button_label";s:12:"Add Location";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>position</wp:meta_key>
-			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>hide_on_screen</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d8562857522</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d8562857522";s:5:"label";s:7:"Heading";s:4:"name";s:23:"near_this_track_heading";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:15:"Near this track";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:13:"page_template";s:8:"operator";s:2:"==";s:5:"value";s:18:"template-event.php";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Event information</title>
-		<link>http://mcc-cycling.dev/?acf=acf_event-information</link>
-		<pubDate>Thu, 16 Jan 2014 22:26:07 +0000</pubDate>
-		<dc:creator>tom.seldon</dc:creator>
-		<guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=61</guid>
-		<wp:post_id>61</wp:post_id>
-		<wp:post_date>2014-01-16 22:26:07</wp:post_date>
-		<wp:post_date_gmt>2014-01-16 22:26:07</wp:post_date_gmt>
-		<wp:comment_status>closed</wp:comment_status>
-		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_event-information</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>acf</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_52d85c302eaca</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d85c302eaca";s:5:"label";s:10:"Event date";s:4:"name";s:10:"event_date";s:4:"type";s:11:"date_picker";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:11:"date_format";s:6:"yymmdd";s:14:"display_format";s:8:"dd/mm/yy";s:9:"first_day";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:13:"page_template";s:8:"operator";s:2:"==";s:5:"value";s:18:"template-event.php";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>position</wp:meta_key>
-			<wp:meta_value><![CDATA[acf_after_title]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>layout</wp:meta_key>
-			<wp:meta_value><![CDATA[no_box]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>hide_on_screen</wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-</channel>
+    <channel>
+        <title>MCC Cycling</title>
+        <link>http://mcc-cycling.dev</link>
+        <description></description>
+        <pubDate>Mon, 20 Jan 2014 00:48:45 +0000</pubDate>
+        <language></language>
+        <wp:wxr_version>1.1</wp:wxr_version>
+        <wp:base_site_url>http://mcc-cycling.dev/wp</wp:base_site_url>
+        <wp:base_blog_url>http://mcc-cycling.dev</wp:base_blog_url>
+        <wp:author><wp:author_id>1</wp:author_id><wp:author_login>tom.seldon</wp:author_login><wp:author_email>tom@tomseldon.co.uk</wp:author_email><wp:author_display_name><![CDATA[Tom Seldon]]></wp:author_display_name><wp:author_first_name><![CDATA[Tom]]></wp:author_first_name><wp:author_last_name><![CDATA[Seldon]]></wp:author_last_name></wp:author>
+        <wp:author><wp:author_id>2</wp:author_id><wp:author_login>admin</wp:author_login><wp:author_email>stuartjohnarthur@gmail.com</wp:author_email><wp:author_display_name><![CDATA[Stu Arthur]]></wp:author_display_name><wp:author_first_name><![CDATA[Stu]]></wp:author_first_name><wp:author_last_name><![CDATA[Arthur]]></wp:author_last_name></wp:author>
+        <wp:author><wp:author_id>3</wp:author_id><wp:author_login>mcceditor</wp:author_login><wp:author_email>DanDavies@monmouthshire.gov.uk</wp:author_email><wp:author_display_name><![CDATA[MCC Editor]]></wp:author_display_name><wp:author_first_name><![CDATA[MCC]]></wp:author_first_name><wp:author_last_name><![CDATA[Editor]]></wp:author_last_name></wp:author>
+        <item>
+            <title>Header section</title>
+            <link>http://mcc-cycling.dev/?acf=acf_header-section</link>
+            <pubDate>Sun, 12 Jan 2014 02:13:50 +0000</pubDate>
+            <dc:creator>tom.seldon</dc:creator>
+            <guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=11</guid>
+            <wp:post_id>11</wp:post_id>
+            <wp:post_date>2014-01-12 02:13:50</wp:post_date>
+            <wp:post_date_gmt>2014-01-12 02:13:50</wp:post_date_gmt>
+            <wp:comment_status>closed</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>acf_header-section</wp:post_name>
+            <wp:status>publish</wp:status>
+            <wp:post_parent>0</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>acf</wp:post_type>
+            <wp:post_password></wp:post_password>
+            <wp:postmeta>
+                <wp:meta_key>_edit_last</wp:meta_key>
+                <wp:meta_value><![CDATA[1]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d1f941ce7e3</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d1f941ce7e3";s:5:"label";s:9:"Sub title";s:4:"name";s:9:"sub_title";s:4:"type";s:4:"text";s:12:"instructions";s:26:"Shown below the page title";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d1f967ce7e4</wp:meta_key>
+                <wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52d1f967ce7e4";s:5:"label";s:19:"Show call to action";s:4:"name";s:19:"show_call_to_action";s:4:"type";s:10:"true_false";s:12:"instructions";s:82:"Should a call to action be displayed beneath the sub title in the heading section?";s:8:"required";s:1:"0";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d1fa1ece7e8</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d1fa1ece7e8";s:5:"label";s:11:"Button text";s:4:"name";s:15:"cta_button_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:13:"Find out more";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d1f967ce7e4";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d1f9a4ce7e5</wp:meta_key>
+                <wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52d1f9a4ce7e5";s:5:"label";s:9:"Link type";s:4:"name";s:13:"cta_link_type";s:4:"type";s:6:"select";s:12:"instructions";s:84:"Select whether the CTA should link to an existing page on the site, or a custom URL.";s:8:"required";s:1:"1";s:7:"choices";a:2:{s:4:"page";s:13:"Internal Page";s:3:"url";s:10:"Custom URL";}s:13:"default_value";s:0:"";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d1f967ce7e4";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d1f9f5ce7e6</wp:meta_key>
+                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d1f9f5ce7e6";s:5:"label";s:4:"Page";s:4:"name";s:8:"cta_page";s:4:"type";s:9:"page_link";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:9:"post_type";a:1:{i:0;s:4:"page";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d1f967ce7e4";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d1f9a4ce7e5";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d1fa3dce7e9</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d1fa3dce7e9";s:5:"label";s:3:"URL";s:4:"name";s:7:"cta_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d1f967ce7e4";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d1f9a4ce7e5";s:8:"operator";s:2:"==";s:5:"value";s:3:"url";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>position</wp:meta_key>
+                <wp:meta_value><![CDATA[acf_after_title]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>layout</wp:meta_key>
+                <wp:meta_value><![CDATA[default]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>hide_on_screen</wp:meta_key>
+                <wp:meta_value><![CDATA[a:6:{i:0;s:11:"the_content";i:1;s:7:"excerpt";i:2;s:6:"author";i:3;s:14:"featured_image";i:4;s:10:"categories";i:5;s:4:"tags";}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>rule</wp:meta_key>
+                <wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"page_type";s:8:"operator";s:2:"==";s:5:"value";s:10:"front_page";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>The Event</title>
+            <link>http://mcc-cycling.dev/?acf=acf_the-event</link>
+            <pubDate>Sun, 12 Jan 2014 03:26:09 +0000</pubDate>
+            <dc:creator>tom.seldon</dc:creator>
+            <guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=18</guid>
+            <wp:post_id>18</wp:post_id>
+            <wp:post_date>2014-01-12 03:26:09</wp:post_date>
+            <wp:post_date_gmt>2014-01-12 03:26:09</wp:post_date_gmt>
+            <wp:comment_status>closed</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>acf_the-event</wp:post_name>
+            <wp:status>publish</wp:status>
+            <wp:post_parent>0</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>acf</wp:post_type>
+            <wp:post_password></wp:post_password>
+            <wp:postmeta>
+                <wp:meta_key>_edit_last</wp:meta_key>
+                <wp:meta_value><![CDATA[1]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d20b28434aa</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d20b28434aa";s:5:"label";s:7:"Heading";s:4:"name";s:13:"event_heading";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:9:"The Event";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>position</wp:meta_key>
+                <wp:meta_value><![CDATA[normal]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>layout</wp:meta_key>
+                <wp:meta_value><![CDATA[default]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>hide_on_screen</wp:meta_key>
+                <wp:meta_value><![CDATA[]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d20b77b162b</wp:meta_key>
+                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d20b77b162b";s:5:"label";s:7:"Content";s:4:"name";s:13:"event_content";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:7:"toolbar";s:5:"basic";s:12:"media_upload";s:2:"no";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d21774a2883</wp:meta_key>
+                <wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52d21774a2883";s:5:"label";s:19:"Show call to action";s:4:"name";s:25:"event_show_call_to_action";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d21795a2884</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d21795a2884";s:5:"label";s:11:"Button text";s:4:"name";s:21:"event_cta_button_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:17:"Online entry form";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d21774a2883";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d217aea2885</wp:meta_key>
+                <wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52d217aea2885";s:5:"label";s:9:"Link type";s:4:"name";s:19:"event_cta_link_type";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:7:"choices";a:2:{s:4:"page";s:13:"Internal page";s:3:"url";s:10:"Custom URL";}s:13:"default_value";s:4:"page";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d21774a2883";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d217e5a2886</wp:meta_key>
+                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d217e5a2886";s:5:"label";s:4:"Page";s:4:"name";s:14:"event_cta_page";s:4:"type";s:9:"page_link";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:9:"post_type";a:1:{i:0;s:4:"page";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d21774a2883";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d217aea2885";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d21803a2888</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d21803a2888";s:5:"label";s:3:"URL";s:4:"name";s:13:"event_cta_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d21774a2883";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d217aea2885";s:8:"operator";s:2:"==";s:5:"value";s:3:"url";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52dc431b76b62</wp:meta_key>
+                <wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52dc431b76b62";s:5:"label";s:5:"Route";s:4:"name";s:5:"route";s:4:"type";s:11:"post_object";s:12:"instructions";s:38:"Select which route to show on the map.";s:8:"required";s:1:"1";s:9:"post_type";a:1:{i:0;s:5:"route";}s:8:"taxonomy";a:1:{i:0;s:3:"all";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d21774a2883";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>rule</wp:meta_key>
+                <wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"page_type";s:8:"operator";s:2:"==";s:5:"value";s:10:"front_page";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>Meet the county</title>
+            <link>http://mcc-cycling.dev/?acf=acf_meet-the-county</link>
+            <pubDate>Sun, 12 Jan 2014 04:53:34 +0000</pubDate>
+            <dc:creator>tom.seldon</dc:creator>
+            <guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=24</guid>
+            <wp:post_id>24</wp:post_id>
+            <wp:post_date>2014-01-12 04:53:34</wp:post_date>
+            <wp:post_date_gmt>2014-01-12 04:53:34</wp:post_date_gmt>
+            <wp:comment_status>closed</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>acf_meet-the-county</wp:post_name>
+            <wp:status>publish</wp:status>
+            <wp:post_parent>0</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>acf</wp:post_type>
+            <wp:post_password></wp:post_password>
+            <wp:postmeta>
+                <wp:meta_key>_edit_last</wp:meta_key>
+                <wp:meta_value><![CDATA[1]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d21e70d6f12</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d21e70d6f12";s:5:"label";s:7:"Heading";s:4:"name";s:11:"mtc_heading";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:15:"Meet the county";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d21ef6d6f13</wp:meta_key>
+                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d21ef6d6f13";s:5:"label";s:7:"Content";s:4:"name";s:11:"mtc_content";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:7:"toolbar";s:5:"basic";s:12:"media_upload";s:2:"no";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d21f19d6f14</wp:meta_key>
+                <wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52d21f19d6f14";s:5:"label";s:19:"Show call to action";s:4:"name";s:23:"mtc_show_call_to_action";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d21f33d6f15</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d21f33d6f15";s:5:"label";s:11:"Button text";s:4:"name";s:19:"mtc_cta_button_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d21f19d6f14";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d21f66d6f16</wp:meta_key>
+                <wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52d21f66d6f16";s:5:"label";s:9:"Link type";s:4:"name";s:17:"mtc_cta_link_type";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:7:"choices";a:2:{s:4:"page";s:13:"Internal page";s:3:"url";s:10:"Custom URL";}s:13:"default_value";s:4:"page";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d21f19d6f14";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d21f90d6f17</wp:meta_key>
+                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d21f90d6f17";s:5:"label";s:4:"Page";s:4:"name";s:12:"mtc_cta_page";s:4:"type";s:9:"page_link";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:9:"post_type";a:1:{i:0;s:4:"page";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d21f19d6f14";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d21f66d6f16";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d21faad6f19</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d21faad6f19";s:5:"label";s:3:"URL";s:4:"name";s:11:"mtc_cta_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d21f19d6f14";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d21f66d6f16";s:8:"operator";s:2:"==";s:5:"value";s:3:"url";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>position</wp:meta_key>
+                <wp:meta_value><![CDATA[normal]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>layout</wp:meta_key>
+                <wp:meta_value><![CDATA[default]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>hide_on_screen</wp:meta_key>
+                <wp:meta_value><![CDATA[]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>rule</wp:meta_key>
+                <wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"page_type";s:8:"operator";s:2:"==";s:5:"value";s:10:"front_page";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>Map</title>
+            <link>http://mcc-cycling.dev/?acf=acf_map</link>
+            <pubDate>Sun, 12 Jan 2014 05:20:40 +0000</pubDate>
+            <dc:creator>tom.seldon</dc:creator>
+            <guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=29</guid>
+            <wp:post_id>29</wp:post_id>
+            <wp:post_date>2014-01-12 05:20:40</wp:post_date>
+            <wp:post_date_gmt>2014-01-12 05:20:40</wp:post_date_gmt>
+            <wp:comment_status>closed</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>acf_map</wp:post_name>
+            <wp:status>publish</wp:status>
+            <wp:post_parent>0</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>acf</wp:post_type>
+            <wp:post_password></wp:post_password>
+            <wp:postmeta>
+                <wp:meta_key>_edit_last</wp:meta_key>
+                <wp:meta_value><![CDATA[1]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d22575dfb97</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d22575dfb97";s:5:"label";s:7:"Heading";s:4:"name";s:17:"maproutes_heading";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:19:"Discover the beauty";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d2258fdfb98</wp:meta_key>
+                <wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52d2258fdfb98";s:5:"label";s:19:"Show call to action";s:4:"name";s:29:"maproutes_show_call_to_action";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d225c6dfb99</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d225c6dfb99";s:5:"label";s:11:"Button text";s:4:"name";s:25:"maproutes_cta_button_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:13:"Get more info";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d2258fdfb98";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d225dddfb9a</wp:meta_key>
+                <wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52d225dddfb9a";s:5:"label";s:9:"Link type";s:4:"name";s:23:"maproutes_cta_link_type";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:7:"choices";a:2:{s:4:"page";s:13:"Internal page";s:3:"url";s:10:"Custom URL";}s:13:"default_value";s:4:"page";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d2258fdfb98";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d225fddfb9b</wp:meta_key>
+                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d225fddfb9b";s:5:"label";s:4:"Page";s:4:"name";s:18:"maproutes_cta_page";s:4:"type";s:9:"page_link";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:9:"post_type";a:1:{i:0;s:4:"page";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d2258fdfb98";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d225dddfb9a";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d22619dfb9d</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d22619dfb9d";s:5:"label";s:3:"URL";s:4:"name";s:17:"maproutes_cta_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d2258fdfb98";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d225dddfb9a";s:8:"operator";s:2:"==";s:5:"value";s:3:"url";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>position</wp:meta_key>
+                <wp:meta_value><![CDATA[normal]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>layout</wp:meta_key>
+                <wp:meta_value><![CDATA[default]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>hide_on_screen</wp:meta_key>
+                <wp:meta_value><![CDATA[]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>rule</wp:meta_key>
+                <wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"page_type";s:8:"operator";s:2:"==";s:5:"value";s:10:"front_page";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>Partners</title>
+            <link>http://mcc-cycling.dev/?acf=acf_partners</link>
+            <pubDate>Sun, 12 Jan 2014 05:39:11 +0000</pubDate>
+            <dc:creator>tom.seldon</dc:creator>
+            <guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=31</guid>
+            <wp:post_id>31</wp:post_id>
+            <wp:post_date>2014-01-12 05:39:11</wp:post_date>
+            <wp:post_date_gmt>2014-01-12 05:39:11</wp:post_date_gmt>
+            <wp:comment_status>closed</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>acf_partners</wp:post_name>
+            <wp:status>publish</wp:status>
+            <wp:post_parent>0</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>acf</wp:post_type>
+            <wp:post_password></wp:post_password>
+            <wp:postmeta>
+                <wp:meta_key>_edit_last</wp:meta_key>
+                <wp:meta_value><![CDATA[1]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d229bec5df9</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d229bec5df9";s:5:"label";s:7:"Heading";s:4:"name";s:16:"partners_heading";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:15:"Enjoy your stay";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d229d9c5dfa</wp:meta_key>
+                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d229d9c5dfa";s:5:"label";s:7:"Content";s:4:"name";s:16:"partners_content";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:7:"toolbar";s:5:"basic";s:12:"media_upload";s:2:"no";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d229f6c5dfb</wp:meta_key>
+                <wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52d229f6c5dfb";s:5:"label";s:19:"Show call to action";s:4:"name";s:28:"partners_show_call_to_action";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d22a11c5dfc</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d22a11c5dfc";s:5:"label";s:11:"Button text";s:4:"name";s:24:"partners_cta_button_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:16:"Become a partner";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d22a2ec5dfd</wp:meta_key>
+                <wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52d22a2ec5dfd";s:5:"label";s:9:"Link type";s:4:"name";s:22:"partners_cta_link_type";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:7:"choices";a:2:{s:4:"page";s:13:"Internal page";s:3:"url";s:10:"Custom URL";}s:13:"default_value";s:4:"page";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d22a4dc5dfe</wp:meta_key>
+                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d22a4dc5dfe";s:5:"label";s:4:"Page";s:4:"name";s:17:"partners_cta_page";s:4:"type";s:9:"page_link";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:9:"post_type";a:1:{i:0;s:4:"page";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d22a2ec5dfd";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d22a5fc5e00</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d22a5fc5e00";s:5:"label";s:3:"URL";s:4:"name";s:16:"partners_cta_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}i:1;a:3:{s:5:"field";s:19:"field_52d22a2ec5dfd";s:8:"operator";s:2:"==";s:5:"value";s:3:"url";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>position</wp:meta_key>
+                <wp:meta_value><![CDATA[normal]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>layout</wp:meta_key>
+                <wp:meta_value><![CDATA[default]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>hide_on_screen</wp:meta_key>
+                <wp:meta_value><![CDATA[]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d22a853884f</wp:meta_key>
+                <wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_52d22a853884f";s:5:"label";s:7:"Content";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d22a9c38850</wp:meta_key>
+                <wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_52d22a9c38850";s:5:"label";s:8:"Partners";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d22aa838851</wp:meta_key>
+                <wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_52d22aa838851";s:5:"label";s:8:"Partners";s:4:"name";s:8:"partners";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:10:"sub_fields";a:4:{i:0;a:15:{s:3:"key";s:19:"field_52d22ad838852";s:5:"label";s:4:"Name";s:4:"name";s:4:"name";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:12:{s:3:"key";s:19:"field_52d22ae838853";s:5:"label";s:4:"Logo";s:4:"name";s:4:"logo";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:11:"save_format";s:6:"object";s:12:"preview_size";s:6:"medium";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:11:{s:3:"key";s:19:"field_52d22b2a38855";s:5:"label";s:8:"Add link";s:4:"name";s:8:"add_link";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}i:3;a:15:{s:3:"key";s:19:"field_52d22afc38854";s:5:"label";s:3:"URL";s:4:"name";s:3:"url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d22b2a38855";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}}s:7:"row_min";s:1:"1";s:9:"row_limit";s:0:"";s:6:"layout";s:5:"table";s:12:"button_label";s:11:"Add Partner";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52d229f6c5dfb";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>rule</wp:meta_key>
+                <wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"page_type";s:8:"operator";s:2:"==";s:5:"value";s:10:"front_page";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>Near this track</title>
+            <link>http://mcc-cycling.dev/?acf=acf_near-this-track</link>
+            <pubDate>Thu, 16 Jan 2014 21:57:59 +0000</pubDate>
+            <dc:creator>tom.seldon</dc:creator>
+            <guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=56</guid>
+            <wp:post_id>56</wp:post_id>
+            <wp:post_date>2014-01-16 21:57:59</wp:post_date>
+            <wp:post_date_gmt>2014-01-16 21:57:59</wp:post_date_gmt>
+            <wp:comment_status>closed</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>acf_near-this-track</wp:post_name>
+            <wp:status>publish</wp:status>
+            <wp:post_parent>0</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>acf</wp:post_type>
+            <wp:post_password></wp:post_password>
+            <wp:postmeta>
+                <wp:meta_key>_edit_last</wp:meta_key>
+                <wp:meta_value><![CDATA[1]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d85522cc180</wp:meta_key>
+                <wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_52d85522cc180";s:5:"label";s:9:"Locations";s:4:"name";s:9:"locations";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"sub_fields";a:3:{i:0;a:15:{s:3:"key";s:19:"field_52d86e78785c9";s:5:"label";s:4:"Name";s:4:"name";s:4:"name";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:15:{s:3:"key";s:19:"field_52d8556bcc182";s:5:"label";s:3:"URL";s:4:"name";s:3:"url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:12:{s:3:"key";s:19:"field_52d8557ecc183";s:5:"label";s:9:"Thumbnail";s:4:"name";s:9:"thumbnail";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:11:"save_format";s:6:"object";s:12:"preview_size";s:6:"medium";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}}s:7:"row_min";s:0:"";s:9:"row_limit";s:0:"";s:6:"layout";s:5:"table";s:12:"button_label";s:12:"Add Location";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>position</wp:meta_key>
+                <wp:meta_value><![CDATA[normal]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>layout</wp:meta_key>
+                <wp:meta_value><![CDATA[default]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>hide_on_screen</wp:meta_key>
+                <wp:meta_value><![CDATA[]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d8562857522</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52d8562857522";s:5:"label";s:7:"Heading";s:4:"name";s:23:"near_this_track_heading";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:15:"Near this track";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>rule</wp:meta_key>
+                <wp:meta_value><![CDATA[a:5:{s:5:"param";s:13:"page_template";s:8:"operator";s:2:"==";s:5:"value";s:18:"template-event.php";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>Event information</title>
+            <link>http://mcc-cycling.dev/?acf=acf_event-information</link>
+            <pubDate>Thu, 16 Jan 2014 22:26:07 +0000</pubDate>
+            <dc:creator>tom.seldon</dc:creator>
+            <guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=61</guid>
+            <wp:post_id>61</wp:post_id>
+            <wp:post_date>2014-01-16 22:26:07</wp:post_date>
+            <wp:post_date_gmt>2014-01-16 22:26:07</wp:post_date_gmt>
+            <wp:comment_status>closed</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>acf_event-information</wp:post_name>
+            <wp:status>publish</wp:status>
+            <wp:post_parent>0</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>acf</wp:post_type>
+            <wp:post_password></wp:post_password>
+            <wp:postmeta>
+                <wp:meta_key>_edit_last</wp:meta_key>
+                <wp:meta_value><![CDATA[1]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52d85c302eaca</wp:meta_key>
+                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52d85c302eaca";s:5:"label";s:10:"Event date";s:4:"name";s:10:"event_date";s:4:"type";s:11:"date_picker";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:11:"date_format";s:6:"yymmdd";s:14:"display_format";s:8:"dd/mm/yy";s:9:"first_day";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>rule</wp:meta_key>
+                <wp:meta_value><![CDATA[a:5:{s:5:"param";s:13:"page_template";s:8:"operator";s:2:"==";s:5:"value";s:18:"template-event.php";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>position</wp:meta_key>
+                <wp:meta_value><![CDATA[acf_after_title]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>layout</wp:meta_key>
+                <wp:meta_value><![CDATA[no_box]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>hide_on_screen</wp:meta_key>
+                <wp:meta_value><![CDATA[]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>Route details</title>
+            <link>http://mcc-cycling.dev/?acf=acf_route-details</link>
+            <pubDate>Sun, 19 Jan 2014 12:25:19 +0000</pubDate>
+            <dc:creator>tom.seldon</dc:creator>
+            <guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=73</guid>
+            <wp:post_id>73</wp:post_id>
+            <wp:post_date>2014-01-19 12:25:19</wp:post_date>
+            <wp:post_date_gmt>2014-01-19 12:25:19</wp:post_date_gmt>
+            <wp:comment_status>closed</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>acf_route-details</wp:post_name>
+            <wp:status>publish</wp:status>
+            <wp:post_parent>0</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>acf</wp:post_type>
+            <wp:post_password></wp:post_password>
+            <wp:postmeta>
+                <wp:meta_key>_edit_last</wp:meta_key>
+                <wp:meta_value><![CDATA[1]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52dbc337f8437</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52dbc337f8437";s:5:"label";s:9:"Route URL";s:4:"name";s:3:"url";s:4:"type";s:4:"text";s:12:"instructions";s:69:"The URL to the Strava Route, e.g. http://www.strava.com/routes/120415";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:35:"http://www.strava.com/routes/120415";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52dbc373f8438</wp:meta_key>
+                <wp:meta_value><![CDATA[a:10:{s:3:"key";s:19:"field_52dbc373f8438";s:5:"label";s:19:"Auto-fetch segments";s:4:"name";s:19:"auto_fetch_segments";s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"message";s:0:"";s:13:"default_value";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>position</wp:meta_key>
+                <wp:meta_value><![CDATA[acf_after_title]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>layout</wp:meta_key>
+                <wp:meta_value><![CDATA[default]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>hide_on_screen</wp:meta_key>
+                <wp:meta_value><![CDATA[]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52dbe31b6a1d2</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52dbe31b6a1d2";s:5:"label";s:8:"Segments";s:4:"name";s:8:"segments";s:4:"type";s:12:"relationship";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"return_format";s:2:"id";s:9:"post_type";a:1:{i:0;s:7:"segment";}s:8:"taxonomy";a:1:{i:0;s:3:"all";}s:7:"filters";a:1:{i:0;s:6:"search";}s:15:"result_elements";s:0:"";s:3:"max";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_52dbc373f8438";s:8:"operator";s:2:"==";s:5:"value";s:1:"1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>rule</wp:meta_key>
+                <wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:5:"route";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+    </channel>
 </rss>
