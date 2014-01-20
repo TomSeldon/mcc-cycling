@@ -12,7 +12,7 @@
 
 namespace TS\StravaRoutes;
 
-require_once dirname(__FILE__) . "/vendor/autoload.php";
+require_once "./vendor/autoload.php";
 
 // Instantiate the plugin
 $StravaPlugin = new Plugin();
