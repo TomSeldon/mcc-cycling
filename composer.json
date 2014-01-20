@@ -65,7 +65,9 @@
     "wpackagist/redux-framework": "3.1.4",
     "wpackagist/jetpack": ">= 2.7",
     "wpackagist/w3-total-cache": ">= 0.9.3",
-    "wpackagist/wordpress-importer": ">= 0.6.1"
+    "wpackagist/wordpress-importer": ">= 0.6.1",
+    "guzzle/guzzle": "~3.7",
+    "shark/simple_html_dom": "dev-master"
   },
   "extra": {
     "installer-paths": {
