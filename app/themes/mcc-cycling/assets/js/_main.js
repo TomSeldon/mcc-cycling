@@ -84,7 +84,7 @@ var MCCSite = {
                 var path = polylines[k];
 
                 var polyOptions = {
-                    strokeColor: '#000000',
+                    strokeColor: '#444',
                     strokeOpacity: 1.0,
                     strokeWeight: 5,
                     path: path
