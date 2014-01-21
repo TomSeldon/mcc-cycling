@@ -12,5 +12,10 @@
   "noarg": true,
   "node": true,
   "strict": false,
-  "trailing": true
+  "trailing": true,
+  "globals": {
+      "angular": true,
+      "StravaRoutes": true,
+      "google": true
+  }
 }

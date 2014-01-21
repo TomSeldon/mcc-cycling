@@ -56,6 +56,7 @@ class Plugin {
                 'routes'    => array(
                     array(
                         'name'      => get_the_title($route),
+                        'postId'    => $route->ID,
                         'segments'  => Parser\Segment::parseSegmentPostsForAPI(get_field('segments', $route))
                     )
                 )
