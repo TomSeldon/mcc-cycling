@@ -25,8 +25,9 @@
 
   ?>
 
+  <div class="container" id="main-container">
 
-      <main class="main" role="main">
+      <main class="main <?php if (roots_display_sidebar()): echo 'col-sm-8'; endif; ?>" role="main">
           <div class="container">
               <?php
                   if (is_front_page()) {
@@ -38,6 +39,13 @@
           </div>
       </main><!-- /.main -->
 
+  <?php if (roots_display_sidebar()) : ?>
+      <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+          <?php include roots_sidebar_path(); ?>
+      </aside><!-- /.sidebar -->
+  <?php endif; ?>
+
+  </div>
 
   <?php
       if (is_front_page()) {

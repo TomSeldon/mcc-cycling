@@ -11,7 +11,7 @@
   }
 
   & ~ #top-header,
-  & ~ main,
+  & ~ #main-container main,
   & ~ footer {
     & > .container,
     & > .row {
@@ -24,7 +24,7 @@
   }
 
   &.in ~ #top-header,
-  &.in ~ .main #top-header {
+  &.in ~ #main-container .main #top-header {
     .nav-toggle {
       button {
         background: @lightGreen;
@@ -85,7 +85,7 @@
       }
 
       & ~ #top-header,
-      & ~ main,
+      & ~ #main-container main,
       & ~ footer {
         position: relative;
         overflow: hidden;

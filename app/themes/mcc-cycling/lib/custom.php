@@ -227,3 +227,16 @@ function set_strava_handle_home($handle)
 }
 add_filter('StravaRoutes/Scripts/Localize/Route', 'set_strava_handle_route');
 add_filter('StravaRoutes/Scripts/Localize/Handle', 'set_strava_handle_home');
+
+
+function mcc_filter_sidebar($sidebar)
+{
+    if (!is_front_page() && is_page_template('default')) {
+        $sidebar = true;
+    } else {
+        $sidebar = false;
+    }
+
+    return $sidebar;
+}
+add_filter('roots_display_sidebar', 'mcc_filter_sidebar');
