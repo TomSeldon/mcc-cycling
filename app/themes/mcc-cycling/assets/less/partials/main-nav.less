@@ -74,6 +74,8 @@
       }
 
       & ~ #top-header {
+        background-position: center right;
+
         .nav-toggle {
           position: fixed;
           margin-left: @sideNavWidth + 5%;
@@ -86,13 +88,7 @@
       & ~ footer {
         position: relative;
         overflow: hidden;
-
-//        & > .container,
-//        & > .row {
-          margin-left: @sideNavWidth;
-//        }
-
-
+        margin-left: @sideNavWidth;
       }
     }
   }
