@@ -30,7 +30,7 @@
     }
 ?>
 
-<div class="container" id="partners" style="background-image: url('<?php echo $partners_bg_img; ?>');">
+<div class="container section" id="partners" style="background-image: url('<?php echo $partners_bg_img; ?>');">
     <div class="row">
         <div class="col-lg-12">
             <h1><?php the_field('partners_heading'); ?></h1>

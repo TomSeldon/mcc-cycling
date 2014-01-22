@@ -3,3 +3,4 @@
 <?php get_template_part('templates/map-routes'); ?>
 <?php get_template_part('templates/enjoy-your-stay'); ?>
 <?php get_template_part('templates/latest-news'); ?>
+<?php get_template_part('templates/footer-twitter'); ?>

@@ -9,18 +9,32 @@
 
   <?php
     do_action('get_header');
-    // Use Bootstrap's navbar if enabled in config.php
-    if (current_theme_supports('bootstrap-top-navbar')) {
-      get_template_part('templates/header-top-navbar');
+
+    if (is_front_page()) {
+        get_template_part('templates/header-top-navbar');
     } else {
-      get_template_part('templates/header');
+        // Use Bootstrap's navbar if enabled in config.php
+        if (current_theme_supports('bootstrap-top-navbar')) {
+            get_template_part('templates/header-top-navbar');
+            get_template_part('templates/header-title');
+        } else {
+            get_template_part('templates/header');
+            get_template_part('templates/header-title');
+        }
     }
+
   ?>
 
 
       <main class="main" role="main">
           <div class="container">
-              <?php include roots_template_path(); ?>
+              <?php
+                  if (is_front_page()) {
+                      get_template_part('templates/header-title');
+                  }
+
+                  include roots_template_path();
+              ?>
           </div>
       </main><!-- /.main -->
 

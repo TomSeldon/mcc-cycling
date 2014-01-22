@@ -30,7 +30,7 @@
     }
 ?>
 
-<div class="container" id="meet-the-county" style="background-image: url('<?php echo $mtc_bg_img; ?>');">
+<div class="container section" id="meet-the-county" style="background-image: url('<?php echo $mtc_bg_img; ?>');">
     <div class="row">
         <div class="col-sm-5">
             <h1><?php the_field('mtc_heading'); ?></h1>

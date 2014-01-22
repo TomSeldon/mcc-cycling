@@ -33,7 +33,7 @@
     $routeID = (isset($route->ID) ? $route->ID : false);
 ?>
 
-<div class="container" id="map-routes" style="background-image: url('<?php echo $maproutes_bg_img; ?>');">
+<div class="container section" id="map-routes" style="background-image: url('<?php echo $maproutes_bg_img; ?>');">
     <div id="map-routes-bg" data-strava-route="" data-route-id="<?php echo $routeID; ?>"></div>
     <div class="hidden-xs">
         <div class="row">

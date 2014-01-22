@@ -30,7 +30,7 @@
     }
 ?>
 
-<div class="container" id="the-event" style="background-image: url('<?php echo $event_bg_img; ?>');">
+<div class="container section" id="the-event" style="background-image: url('<?php echo $event_bg_img; ?>');">
     <div class="row">
         <div class="col-sm-5">
             <h1><?php the_field('event_heading'); ?></h1>
