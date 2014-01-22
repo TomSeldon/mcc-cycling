@@ -12,11 +12,11 @@ var MCCSite = {
     // Home page
     home: {
         init: function() {
-            jQuery.fn.fullpage({
-                verticalCentered:   false,
-                resize:             false,
-                scrollingSpeed:     500
-            });
+//            jQuery.fn.fullpage({
+//                verticalCentered:   false,
+//                resize:             false,
+//                scrollingSpeed:     500
+//            });
         }
     },
     // About page
