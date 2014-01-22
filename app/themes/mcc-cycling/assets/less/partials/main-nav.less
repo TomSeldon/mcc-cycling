@@ -15,10 +15,10 @@
   & ~ footer {
     & > .container,
     & > .row {
-      -webkit-transition: left @sideNavTime ease-in-out;
-      -moz-transition: left @sideNavTime ease-in-out;
-      -o-transition: left @sideNavTime ease-in-out;
-      transition: left @sideNavTime ease-in-out;
+      -webkit-transition: all @sideNavTime ease-in-out;
+      -moz-transition: all @sideNavTime ease-in-out;
+      -o-transition: all @sideNavTime ease-in-out;
+      transition: all @sideNavTime ease-in-out;
       position: relative;
     }
   }
@@ -39,13 +39,15 @@
   @media (min-width: @screen-sm-min) {
     width: @sideNavWidth;
     height: 100% !important;
-    left: -@sideNavWidth;
+    margin-left: -@sideNavWidth;
     top: 0;
     position: fixed;
-    -webkit-transition: left @sideNavTime ease-in-out;
-    -moz-transition: left @sideNavTime ease-in-out;
-    -o-transition: left @sideNavTime ease-in-out;
-    transition: left @sideNavTime ease-in-out;
+    -webkit-transition: all @sideNavTime ease-in-out;
+    -moz-transition: all @sideNavTime ease-in-out;
+    -o-transition: all @sideNavTime ease-in-out;
+    transition: all @sideNavTime ease-in-out;
+    transition: all @sideNavTime ease-in-out;
+    z-index: 99;
 
     & > section {
       -webkit-transition: opacity @sideNavTime ease-in-out;
@@ -62,7 +64,7 @@
 
     &.in {
       z-index: 99;
-      left: 0;
+      margin-left: 0;
       height: 100% !important;
       box-shadow: 0 30px 80px #444;
       -webkit-box-shadow: 0 30px 80px #444;
@@ -76,7 +78,7 @@
       & ~ #top-header {
         .nav-toggle {
           position: fixed;
-          left: @sideNavWidth + 5%;
+          margin-left: @sideNavWidth + 5%;
           z-index: 99;
         }
       }
@@ -90,7 +92,7 @@
         & > .container,
         & > .row {
           position: relative;
-          left: @sideNavWidth;
+          margin-left: @sideNavWidth;
         }
 
 
