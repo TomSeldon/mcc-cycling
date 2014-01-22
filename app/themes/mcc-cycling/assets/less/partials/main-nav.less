@@ -11,16 +11,13 @@
   }
 
   & ~ #top-header,
-  & ~ #main-container main,
+  & ~ #main-container .main,
   & ~ footer {
-    & > .container,
-    & > .row {
-      -webkit-transition: all @sideNavTime ease-in-out;
-      -moz-transition: all @sideNavTime ease-in-out;
-      -o-transition: all @sideNavTime ease-in-out;
-      transition: all @sideNavTime ease-in-out;
-      position: relative;
-    }
+    -webkit-transition: all @sideNavTime ease-in-out;
+    -moz-transition: all @sideNavTime ease-in-out;
+    -o-transition: all @sideNavTime ease-in-out;
+    transition: all @sideNavTime ease-in-out;
+    position: relative;
   }
 
   &.in ~ #top-header,
@@ -85,16 +82,15 @@
       }
 
       & ~ #top-header,
-      & ~ #main-container main,
+      & ~ #main-container .main,
       & ~ footer {
         position: relative;
         overflow: hidden;
 
-        & > .container,
-        & > .row {
-          position: relative;
+//        & > .container,
+//        & > .row {
           margin-left: @sideNavWidth;
-        }
+//        }
 
 
       }
