@@ -105,6 +105,7 @@ class Sync {
                 'start_longitude'   => $segment->start_longitude,
                 'end_latitude'      => $segment->end_latitude,
                 'end_longitude'     => $segment->end_longitude,
+                'distance'          => $segment->distance,
                 'polyline'          => str_replace('\\', '\\\\', $segment->map->polyline)
             );
 

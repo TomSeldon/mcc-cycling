@@ -35,8 +35,11 @@
 
         this.getContentForSegment = function(segment)
         {
+            console.log(segment);
             var content = '<div class="segment-popup">' +
                 '<header><h6>' + segment.name + '</h6></header>' +
+                '<p class="distance">Distance: ' + segment.distance + '</p>' +
+                '<p class="url"><a target="_blank" href="http://www.strava.com/segments/' + segment.id + '">More details...</a></p>' +
                 '</div>';
 
             return content;

@@ -57,7 +57,8 @@ class Segment {
                 'start_latitude'    => get_post_meta($id, 'start_latitude', true),
                 'start_longitude'   => get_post_meta($id, 'start_longitude', true),
                 'end_latitude'      => get_post_meta($id, 'end_latitude', true),
-                'end_longitude'     => get_post_meta($id, 'end_longitude', true)
+                'end_longitude'     => get_post_meta($id, 'end_longitude', true),
+                'distance'          => get_post_meta($id, 'distance', true)
             );
         }
 

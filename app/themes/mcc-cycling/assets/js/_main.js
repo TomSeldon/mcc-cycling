@@ -12,51 +12,6 @@ var MCCSite = {
     // Home page
     home: {
         init: function() {
-//
-//            var polylines = [];
-//            var bounds    = new google.maps.LatLngBounds();
-//            var routes    = StravaRoutes.routes;
-//            var route;
-//
-//            // Convert segments to polylines
-//            for (var i=0; i<routes.length; i++) {
-//                route = routes[i];
-//
-//                for (var j=0; j<route.segments.length; j++) {
-//                    var segment         = route.segments[j];
-//                    var encodedPolyline = segment.polyline;
-//                    var decodedPolyline = google.maps.geometry.encoding.decodePath(encodedPolyline);
-//
-//                    polylines.push(decodedPolyline);
-//                }
-//            }
-//
-//            var map = new google.maps.Map(document.getElementById("map-routes-bg"), mapOptions);
-//
-//            // Add polylines to map
-//            for (var k=0; k<polylines.length; k++) {
-//                var path = polylines[k];
-//
-//                var polyOptions = {
-//                    strokeColor: '#444',
-//                    strokeOpacity: 1.0,
-//                    strokeWeight: 5,
-//                    path: path
-//                };
-//
-//                // Extend bounds
-//                for (var l=0; l<path.length; l++) {
-//                    bounds.extend(path[l]);
-//                }
-//
-//                var polyline = new google.maps.Polyline(polyOptions);
-//
-//                polyline.setMap(map);
-//            }
-//
-
-//
-//            map.fitBounds(bounds);
         }
     },
     // About page

@@ -165,8 +165,6 @@
                 if (route.postId === routeId) {
                     $scope.route            = route;
                     $scope.route.segments   = SegmentService.segmentsToPolylines(route.segments);
-
-                    window.route=route;
                     break;
                 }
             }
