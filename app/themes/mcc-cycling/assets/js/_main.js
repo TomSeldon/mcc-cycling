@@ -48,5 +48,3 @@ var UTIL = {
 };
 
 $(document).ready(UTIL.loadEvents);
-
-console.log(StravaRoutes);
