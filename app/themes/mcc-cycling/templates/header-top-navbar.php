@@ -1,7 +1,7 @@
 
 <!-- header -->
 <div class="collapse navbar-side-collapse" role="navigation">
-    <?php dynamic_sidebar('primary'); ?>
+    <?php dynamic_sidebar('main-menu'); ?>
 
     <div class="row social">
         <div class="col-xs-1">
