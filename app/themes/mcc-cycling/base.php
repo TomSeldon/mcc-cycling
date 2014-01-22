@@ -28,15 +28,13 @@
   <div class="container" id="main-container">
 
       <main class="main <?php if (roots_display_sidebar()): echo 'col-sm-8'; endif; ?>" role="main">
-          <div class="container">
-              <?php
-                  if (is_front_page()) {
-                      get_template_part('templates/header-title');
-                  }
+          <?php
+              if (is_front_page()) {
+                  get_template_part('templates/header-title');
+              }
 
-                  include roots_template_path();
-              ?>
-          </div>
+              include roots_template_path();
+          ?>
       </main><!-- /.main -->
 
   <?php if (roots_display_sidebar()) : ?>
