@@ -21,7 +21,7 @@ class Route {
 
     public static function savePost($postID)
     {
-        if (self::$postType !== $_POST['post_type']) {
+        if (!isset($_POST['post_type']) || self::$postType !== $_POST['post_type']) {
             return;
         }
 
