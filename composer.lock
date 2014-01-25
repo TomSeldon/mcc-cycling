@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "661ff91d88347708e2e09fe1ffe48ec0",
+    "hash": "fc81a60546b282e3bfb2193d2188c136",
     "packages": [
         {
             "name": "composer/installers",
@@ -533,10 +533,10 @@
         },
         {
             "name": "wordpress",
-            "version": "3.8",
+            "version": "3.8.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/WordPress/WordPress/archive/3.8.zip",
+                "url": "https://github.com/WordPress/WordPress/archive/3.8.1.zip",
                 "reference": null,
                 "shasum": null
             },
