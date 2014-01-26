@@ -17,6 +17,8 @@
         get_template_part('templates/header');
     }
 
+    get_template_part('templates/header','back-to-top');
+
   ?>
 
   <div class="container" id="main-container">

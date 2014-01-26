@@ -5,7 +5,33 @@ var MCCSite = {
     // All pages
     common: {
         init: function() {
-            // JS here
+            var $backToTopBtn = jQuery("#back-to-top");
+            var windowHeight = jQuery(window).height();
+
+            $backToTopBtn.on('click', function(){
+                jQuery("html, body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+
+            function toggleBackToTop()
+            {
+                windowHeight = jQuery(window).height();
+                var offset   = $backToTopBtn.offset().top;
+
+                if (offset > windowHeight) {
+                    if (!$backToTopBtn.is(':visible')) {
+                        $backToTopBtn.fadeIn();
+                    }
+                } else {
+                    if ($backToTopBtn.is(':visible')) {
+                        $backToTopBtn.fadeOut();
+                    }
+                }
+            }
+
+            jQuery(window).scroll(function(){
+               toggleBackToTop();
+            });
         },
         finalize: function() { }
     },
