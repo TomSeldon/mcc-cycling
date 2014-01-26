@@ -1,6 +1,7 @@
 body.home {
   background-image: none;
   background: #fff;
+  padding-bottom: 0;
 
   #main-container {
     width: 100%;
@@ -17,13 +18,20 @@ body.home {
       padding: 0;
       margin: 0;
 
-      .section {
-        background-attachment: fixed;
+      .row {
+        margin-left: 0;
+        margin-right: 0;
       }
+    }
+
+    .section {
+//        background-attachment: fixed;
     }
   }
 
   #top-header {
+    margin-bottom: 0;
+
     .top-menu {
       @media (min-width: @screen-lg-min) {
         .item {
@@ -119,7 +127,6 @@ body.home {
   }
 
   #meet-the-county {
-    padding: 15px;
     padding-top: 60px;
     background-color: #e7eaea;
     background-repeat: no-repeat;

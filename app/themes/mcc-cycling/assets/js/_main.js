@@ -12,11 +12,23 @@ var MCCSite = {
     // Home page
     home: {
         init: function() {
-            jQuery.fn.fullpage({
-                verticalCentered:   false,
-                resize:             false,
-                scrollingSpeed:     500
+            // Force full height sections
+            var $sections = jQuery('.main > .section');
+
+            function fitSections()
+            {
+                var height = jQuery(window).height();
+
+                jQuery.each($sections, function(i, $section){
+                  jQuery($section).css('min-height', height);
+                });
+            }
+
+            jQuery(window).resize(function(){
+                fitSections();
             });
+
+            fitSections();
         }
     },
     // About page
