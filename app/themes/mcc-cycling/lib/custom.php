@@ -240,3 +240,45 @@ function mcc_filter_sidebar($sidebar)
     return $sidebar;
 }
 add_filter('roots_display_sidebar', 'mcc_filter_sidebar');
+
+function add_location_taxonomies()
+{
+    $facilitiesLabels = array(
+        'name'          => __('Facilities', 'mcc'),
+        'singular_name' => __('Facility', 'mcc')
+    );
+
+    $facilitiesArgs = array(
+        'hierarchical'  => false,
+        'show_ui'       => true,
+        'labels'        => $facilitiesLabels
+    );
+
+    register_taxonomy('facility', array('location'), $facilitiesArgs);
+}
+add_filter('init', 'add_location_taxonomies');
+
+/**
+ * Adds a post type for locations.
+ */
+function add_post_type_location()
+{
+    $labels = array(
+        'add_new_item'  => 'Add New Location',
+        'edit_item'     => 'Edit Location',
+        'search_items'  => 'Search Locations'
+    );
+
+    $args = array(
+        'label'     => 'Locations',
+        'labels'    => $labels,
+        'public'    => true,
+        'menu_icon' => 'dashicons-admin-site',
+        'supports'  => array('title','editor','thumbnail')
+    );
+
+    register_post_type('location', $args);
+
+    register_taxonomy_for_object_type('facility', 'location');
+}
+add_action('init', 'add_post_type_location');
