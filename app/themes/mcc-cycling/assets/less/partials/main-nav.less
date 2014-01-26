@@ -1,3 +1,6 @@
+body {
+  position: relative;
+}
 .navbar-side-collapse {
   background: @lightGreen;
   position: relative;
@@ -11,13 +14,12 @@
   }
 
   & ~ #top-header,
-  & ~ #main-container .main,
+  & ~ #main-container,
   & ~ footer {
     -webkit-transition: all @sideNavTime ease-in-out;
     -moz-transition: all @sideNavTime ease-in-out;
     -o-transition: all @sideNavTime ease-in-out;
     transition: all @sideNavTime ease-in-out;
-    position: relative;
   }
 
   &.in ~ #top-header,
@@ -37,7 +39,7 @@
   @media (min-width: @screen-sm-min) {
     width: @sideNavWidth;
     height: 100% !important;
-    margin-left: -@sideNavWidth;
+    left: -@sideNavWidth;
     top: 0;
     position: fixed;
     -webkit-transition: all @sideNavTime ease-in-out;
@@ -62,7 +64,7 @@
 
     &.in {
       z-index: 99;
-      margin-left: 0;
+      left: 0;
       height: 100% !important;
       box-shadow: 0 30px 80px #444;
       -webkit-box-shadow: 0 30px 80px #444;
@@ -78,17 +80,20 @@
 
         .nav-toggle {
           position: fixed;
-          margin-left: @sideNavWidth + 5%;
+          left: @sideNavWidth + 5%;
           z-index: 99;
         }
       }
 
-      & ~ #top-header,
-      & ~ #main-container .main,
+      & ~ #main-container,
       & ~ footer {
-        position: relative;
         overflow: hidden;
-        margin-left: @sideNavWidth;
+        width: 100% - @sideNavWidth;
+        margin-left: 30%;
+
+        .container {
+          width: 100%;
+        }
       }
     }
   }
