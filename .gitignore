@@ -36,6 +36,7 @@ chef/nodes/*.json
 
 
 # Project
+.DS_Store
 .idea
 .bundle
 
