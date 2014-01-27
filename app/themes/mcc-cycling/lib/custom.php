@@ -270,11 +270,14 @@ function add_post_type_location()
     );
 
     $args = array(
-        'label'     => 'Locations',
-        'labels'    => $labels,
-        'public'    => true,
-        'menu_icon' => 'dashicons-admin-site',
-        'supports'  => array('title','editor','thumbnail')
+        'label'         => 'Locations',
+        'labels'        => $labels,
+        'public'        => true,
+        'menu_icon'     => 'dashicons-admin-site',
+        'supports'      => array('title','editor','thumbnail'),
+        'has_archive'   => true,
+        'with_front'    => true,
+        'rewrite'       => array('slug' => 'locations')
     );
 
     register_post_type('location', $args);
