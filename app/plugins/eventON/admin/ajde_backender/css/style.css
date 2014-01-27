@@ -1,0 +1,300 @@
+/*-- AJDE backender styles --*/
+#acus_arrow{
+	background: url(../images/ajde_arrow.png) top left no-repeat;
+	display:block; height:28px; width:16px;margin:0 0 0 -15px;
+	position:absolute
+}
+
+#ajde_customization td, #ajde_customization{margin:0; padding:0; border:none; border-spacing:0}
+#acus_left, #acus_right{min-height:500px; border:1px solid #d9d7d7;}
+#acus_left{
+	min-height:auto;
+	border-bottom:none;
+	border-right:none;
+	width:175px;
+}
+#acus_left ul, #acus_left ul li{margin:0}
+#acus_left ul a{cursor:pointer}
+
+#acus_left ul .level2 a{background-color: #e3e2e2;border-bottom:1px solid #b7b7b7;	}
+#acus_left ul .level2 a:hover{background-color:#d8d7d7;}
+#acus_left ul .level3 a{text-shadow: 0 1px #E8E8E8;color:#3d3d3d;background-color: #d0d0d0; border-bottom:1px solid #b7b7b7;}
+#acus_left ul .level3 a:hover{background-color:#c8c8c8;}
+
+.backender_yn_sec{
+	background-color: #E6E6E6;
+	margin-top: -10px;
+	padding: 10px 10px 0;
+}
+.backender_yn_sec em.hr_line{
+	margin:10px -10px;
+	border-bottom:1px solid #dbdbdb;
+}
+
+#acus_left ul a, #acus_left ul p{
+	display:block; text-decoration:none;
+	padding:10px;
+	border-bottom:1px solid #d9d7d7;margin:0;
+	background-color:#f8f7f7;
+	font-size:12px;line-height:130%
+}
+#acus_left ul a:hover{background-color:#f4f4f4}
+#acus_left ul p{font-style:italic; font-family:georgia; color:#aeaeae}
+#acus_left ul a.ny_subfield{background-color:#fdfdfd}
+#acus_left ul a.ny_afterfield{background-color:transparent; color:#fff; border-bottom:1px solid #a6a6a6}
+#acus_right{	background-color:#eeeeee; position:relative;}
+
+#acus_right .customization_right_in{padding:20px; min-width:410px}
+#acus_right h3{border:none;moz-box-shadow: none;-webkit-box-shadow: none;box-shadow:none; background-color:transparent;
+	background-image:none;
+	font-family:georgia; font-style:italic; font-size:18px;
+	padding:0 0 10px
+}
+.customization_right_in p{margin:0 0 3px}
+.customization_right_in .nfe_f_width input, .customization_right_in .nfe_f_width textarea{
+	width:100%;
+	color:#666666;
+	padding:5px 8px;
+}
+em.hr_line{border-bottom:1px solid #e5e4e4; display:block; margin:10px -20px}
+.nfer textarea{width:100%; height:80px}
+.nfer .notice{
+	margin:15px -20px;
+	padding:5px 20px;
+	background-color:#f2e3c2;
+	border-top:1px solid #e9cfab;
+	border-bottom:1px solid #e9cfab;
+}
+
+.acus_line.acus_checks span{display:block; padding:3px 0; font-style:italic}
+.acus_line.acus_checks input{width: 20px;text-align: left;}
+
+.acus_line input{width:120px}
+.acus_line em{width:200px; position:relative}
+.acus_colorp{position:absolute;margin-left:125px; 
+	display:block;height:19px; width:20px; top:0; margin-top:-2px;background-color:#206177}
+
+h4.acus_subheader{font:16px georgia italic; margin:0;color:#a3a3a3}
+.acus_radio em{display:block; padding-bottom:5px;width:100%}	
+.acus_radio input{width:15px; text-align:left;}
+.legend{
+	position:absolute;
+	right:0;
+	width:200px;
+	background-color:#fff;
+	padding:8px;
+	top:19px;
+	-webkit-box-shadow:  0px 5px 5px 0px #cfcfcf;        
+    box-shadow:  0px 5px 5px 0px #cfcfcf;
+	z-index:400
+}
+.legend_icon{
+	text-align:center;
+	background-color:#e6e6e6;
+	font-style:normal;
+	position:absolute;
+	right:0;cursor:pointer; top:4px;
+	height:15px; width:15px;
+	border:1px solid #c9c9c9;
+	-webkit-box-shadow:  0px 0px 5px 0px #cfcfcf;        
+    box-shadow:  0px 0px 5px 0px #cfcfcf;
+}
+.legend_icon:hover{background-color:#fff}
+
+
+.yesno_row{position:relative;min-height:26px}
+.yesno_row span{	
+	padding-left:77px;
+	padding-top:4px;
+	display:block; 
+}
+.yesno_row .acus_yn_btn{
+	position:absolute;
+}
+
+.acus_yn_btn{
+	background:url(../../../assets/images/yes_no_btn.png) left top no-repeat;
+	height:26px;
+	width:68px;
+	display:inline-block; cursor:pointer;
+}
+.acus_yn_btn.btn_at_no{
+	background-position: 0 -26px;
+}
+
+.backender_left{width:295px}
+
+@media only screen and (max-width: 900px){
+	#acus_left{width:45px}
+	.backender_left{width:70px}
+	#acus_left ul a{
+		text-indent:-9999px;
+		width:25px;
+		background: url(../images/backender.png) 10px no-repeat
+	}
+}
+
+
+/*-- customization styles --*/
+
+.colorpicker {
+	width: 356px;
+	height: 176px;
+	overflow: hidden;
+	position: absolute;
+	background: url(../images/colorpicker_background.png);
+	font-family: Arial, Helvetica, sans-serif;
+	display: none;
+}
+.colorpicker_color {
+	width: 150px;
+	height: 150px;
+	left: 14px;
+	top: 13px;
+	position: absolute;
+	background: #f00;
+	overflow: hidden;
+	cursor: crosshair;
+}
+.colorpicker_color div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 150px;
+	background: url(../images/colorpicker_overlay.png);
+}
+.colorpicker_color div div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 11px;
+	height: 11px;
+	overflow: hidden;
+	background: url(../images/colorpicker_select.gif);
+	margin: -5px 0 0 -5px;
+}
+.colorpicker_hue {
+	position: absolute;
+	top: 13px;
+	left: 171px;
+	width: 35px;
+	height: 150px;
+	cursor: n-resize;
+}
+.colorpicker_hue div {
+	position: absolute;
+	width: 35px;
+	height: 9px;
+	overflow: hidden;
+	background: url(../images/colorpicker_indic.gif) left top;
+	margin: -4px 0 0 0;
+	left: 0px;
+}
+.colorpicker_new_color {
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	left: 213px;
+	top: 13px;
+	background: #f00;
+}
+.colorpicker_current_color {
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	left: 283px;
+	top: 13px;
+	background: #f00;
+}
+.colorpicker input {
+	background-color: transparent!important;
+	border: 1px solid transparent!important;
+	position: absolute;
+	font-size: 10px;line-height:12px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #898989!important;
+	top: 4px;
+	right: 11px;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+	height: 13px;
+}
+.colorpicker_hex {
+	position: absolute;
+	width: 72px;
+	height: 22px;
+	background: url(../images/colorpicker_hex.png) top;
+	left: 212px;
+	top: 142px;
+}
+.colorpicker_hex input {
+	right: 6px;
+}
+.colorpicker_field {
+	height: 22px;
+	width: 62px;
+	background-position: top;
+	position: absolute;
+}
+.colorpicker_field span {
+	position: absolute;
+	width: 12px;
+	height: 22px;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	cursor: n-resize;
+}
+.colorpicker_rgb_r {
+	background-image: url(../images/colorpicker_rgb_r.png);
+	top: 52px;
+	left: 212px;
+}
+.colorpicker_rgb_g {
+	background-image: url(../images/colorpicker_rgb_g.png);
+	top: 82px;
+	left: 212px;
+}
+.colorpicker_rgb_b {
+	background-image: url(../images/colorpicker_rgb_b.png);
+	top: 112px;
+	left: 212px;
+}
+.colorpicker_hsb_h {
+	background-image: url(../images/colorpicker_hsb_h.png);
+	top: 52px;
+	left: 282px;
+}
+.colorpicker_hsb_s {
+	background-image: url(../images/colorpicker_hsb_s.png);
+	top: 82px;
+	left: 282px;
+}
+.colorpicker_hsb_b {
+	background-image: url(../images/colorpicker_hsb_b.png);
+	top: 112px;
+	left: 282px;
+}
+.colorpicker_submit {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	background: url(../images/colorpicker_submit.png) top;
+	left: 322px;
+	top: 142px;
+	overflow: hidden;
+}
+.colorpicker_focus {
+	background-position: center;
+}
+.colorpicker_hex.colorpicker_focus {
+	background-position: bottom;
+}
+.colorpicker_submit.colorpicker_focus {
+	background-position: bottom;
+}
+.colorpicker_slider {
+	background-position: bottom;
+}

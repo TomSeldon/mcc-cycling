@@ -18,6 +18,7 @@ app/plugins/*
 app/mu-plugins/*
 !app/mu-plugins/register-theme-directory.php
 !app/plugins/strava-routes
+!app/plugins/eventON
 
 # Vendor (e.g. Composer)
 vendor/*
