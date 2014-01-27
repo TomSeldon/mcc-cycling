@@ -16,14 +16,20 @@ body.post-type-archive-location {
     padding: 1em 0;
     border-top: 1px solid #ccc;
 
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+
     header {
       h1, h2 {
         margin-top: 0;
       }
     }
 
-    .image {
-      text-align: center;
+    .thumbnail {
+      margin: 1.5em auto;
     }
 
     .read-more {
@@ -32,6 +38,14 @@ body.post-type-archive-location {
       a {
         padding: 5px 10px;
         font-size: 16px;
+      }
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    article.location {
+      .thumbnail {
+        margin: auto;
       }
     }
   }
