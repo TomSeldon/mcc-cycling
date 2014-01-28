@@ -45,7 +45,7 @@
 </div>
 
 <aside class="col-sm-4">
-    <?php if (!empty($location)): ?>
+    <?php if (!empty($location) && !empty($location['address'])): ?>
     <div class="location">
         <h2>Location</h2>
         <div class="map" data-map="">
@@ -59,12 +59,14 @@
     </div>
     <?php endif; ?>
 
+    <?php if (has_post_thumbnail()): ?>
     <div class="featured-image">
         <h2>Featured image</h2>
         <?php echo get_the_post_thumbnail($post->ID, 'medium', array('class' => 'thumbnail pull-left')); ?>
     </div>
+    <?php endif; ?>
 
-    <?php if (count($facilities)): ?>
+    <?php if (false !== $facilities && count($facilities)): ?>
     <h2>Facilities</h2>
     <ul class="list-group">
         <?php foreach ($facilities as $facility): ?>
