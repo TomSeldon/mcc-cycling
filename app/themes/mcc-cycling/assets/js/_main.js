@@ -39,7 +39,7 @@ var MCCSite = {
     home: {
         init: function() {
             // Force full height sections
-            var $sections = jQuery('.main > .section');
+            var $sections = jQuery('.main > .section, #top-header');
 
             function fitSections()
             {
