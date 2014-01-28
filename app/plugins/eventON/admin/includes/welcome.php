@@ -4,8 +4,6 @@
  *
  * Shows a feature overview for the new version (major).
  *
- * Adapted from code in Woocommerce.
- *
  * @author 		AJDE
  * @category 	Admin
  * @package 	EventON/Admin
@@ -14,19 +12,10 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-/**
- * WC_Welcome_Page class.
- *
- * @since 2.0
- */
+
 class EVO_Welcome_Page {
 
-/**
-	 * __construct function.
-	 *
-	 * @access public
-	 * @return void
-	 */
+
 	public function __construct() {
 		
 		add_action( 'admin_menu', array( $this, 'admin_menus') );
@@ -36,9 +25,6 @@ class EVO_Welcome_Page {
 
 	/**
 	 * Add admin menus/screens
-	 *
-	 * @access public
-	 * @return void
 	 */
 	public function admin_menus() {
 
@@ -53,9 +39,6 @@ class EVO_Welcome_Page {
 
 	/**
 	 * admin_css function.
-	 *
-	 * @access public
-	 * @return void
 	 */
 	public function admin_css() {
 		wp_enqueue_style( 'eventon-activation', AJDE_EVCAL_URL.'/assets/css/activation.css' );
@@ -63,15 +46,11 @@ class EVO_Welcome_Page {
 	
 	/**
 	 * Add styles just for this page, and remove dashboard page links.
-	 *
-	 * @access public
-	 * @return void
 	 */
 	public function admin_head() {
 		global $eventon;
 
 		remove_submenu_page( 'index.php', 'evo-about' );
-
 		
 		?>
 		<style type="text/css">
@@ -82,52 +61,84 @@ class EVO_Welcome_Page {
 	
 	/**
 	 * Into text/links shown on all about pages.
-	 *
-	 * @access private
-	 * @return void
 	 */
 	private function intro() {
 		global $eventon;
 		
 
 		// Drop minor version if 0
-		$major_version = substr( $eventon->version, 0, 3 );
-		?>
-		<h1><?php printf( __( 'Welcome to EventON %s', 'eventon' ), $major_version ); ?></h1>
-
-		<div class="about-text eventon-about-text">
+		//$major_version = substr( $eventon->version, 0, 3 );
+		
+	?>
+		
+		<div id='eventon_welcome_header'>
+			
+			<p class='logo'><img src='<?php echo AJDE_EVCAL_URL?>/assets/images/welcome/welcome_screen_logo.jpg'/><span>WordPress Event Calendar</span></p>
+			<p class='h3'>
 			<?php
-				$message = __( 'Thanks for purchasing!', 'eventon' );
-
-				printf( __( '%s EventON %s has a faster platform that\'s capable of expanding to new heights. We hope you enjoy it.', 'eventon' ), $message, $major_version );
-			?>
+				if(!empty($_GET['evo-updated']))
+					$message = __( 'Thank you for updating eventON to ver ', 'eventon' );
+				else
+					$message = __( 'Thank you for purchasing eventON ver ', 'eventon' );
+					
+				printf( __( '%s%s', 'eventon' ), $message,	$eventon->version );
+			?></p>			
+			<p class='h4'><?php 
+				if(!empty($_GET['evo-updated']))
+					printf( __( 'We hope you will enjoy the new features we have added!','eventon'));
+				else
+					printf( __( 'We hope you will enjoy eventON - an event calendar plugin for WordPress!','eventon'));
+			?></p>
+			
 		</div>
-
-		<div class="evo-badge"><img src='<?php echo AJDE_EVCAL_URL?>/assets/images/welcome/badge.jpg'/></div>
+		
 
 		<p class="eventon-actions">
-			<a href="<?php echo admin_url('admin.php?page=eventon'); ?>" class="button button-primary"><?php _e( 'Settings', 'eventon' ); ?></a>
-			<a class="docs button button-primary" href="http://plugins.ashanjay.com/event-calendar/documentation/"><?php _e( 'Documentation', 'eventon' ); ?></a>
-			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://plugins.ashanjay.com/event-calendar" data-text="Event Calendar Plugin for WordPress." data-via="EventON" data-size="large" data-hashtags="ashanjay">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		</p>
+			<a href="<?php echo admin_url('admin.php?page=eventon'); ?>" class="evo_admin_btn btn_prime"><?php _e( 'Settings', 'eventon' ); ?></a>
+			
+			<a class="evo_admin_btn btn_prime" href="http://www.myeventon.com/documentation/" target='_blank'><?php _e( 'Documentation', 'eventon' ); ?></a>
+			
+			<a class="evo_admin_btn btn_prime" href="http://www.myeventon.com/support/" target='_blank'><?php _e( 'Support', 'eventon' ); ?></a>
 
+			<a class="evo_admin_btn btn_prime" href="http://www.myeventon.com/news/" target='_blank'><?php _e( 'News', 'eventon' ); ?></a>
+			<a class="evo_admin_btn btn_prime" href="http://www.myeventon.com/documentation/eventon-changelog/" target='_blank'><?php _e( 'Changelog', 'eventon' ); ?></a>
+			
+		</p>
+		<div class='eventon-welcome-twitter'>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myeventon.com/" data-text="Event Calendar Plugin for WordPress." data-via="EventON" data-size="large" data-hashtags="ashanjay">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		
+		<?php /*
 		<h2 class="nav-tab-wrapper">
 			<a class="nav-tab <?php if ( $_GET['page'] == 'evo-about' ) echo 'nav-tab-active'; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'evo-about' ), 'index.php' ) ) ); ?>">
 				<?php _e( "What's New", 'eventon' ); ?>			
 			</a>
 		</h2>
-		<?php
+		<?php */
 	}
 	
 	/**
 	 * Output the about screen.
-	 *
-	 * @access public
-	 * @return void
 	 */
 	public function about_screen() {
 		global $eventon;
+		?>
+		<div class="wrap about-wrap eventon-welcome-box">
+
+			<?php $this->intro(); ?>
+
+			<!--<div class="changelog point-releases"></div>-->
+
+
+			<div class="return-to-dashboard">
+				<a href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'eventon' ), 'admin.php' ) ) ); ?>"><?php _e( 'Go to myeventon Settings', 'eventon' ); ?></a>
+			</div>
+		</div>
+		<?php
+
+
+			/*
 		?>
 		<div class="wrap about-wrap">
 
@@ -137,47 +148,53 @@ class EVO_Welcome_Page {
 
 			<div class="changelog">
 
-				<h3><?php _e( 'New Name: EventON', 'eventon' ); ?></h3>
+				
+				<h3><?php _e( 'What is new?', 'eventon' ); ?></h3>
 
-				<div class="feature-section images-stagger-right">					
-					<p><?php _e( 'We have big plans to bring EventON to a whole new level. One of them includes a newer brand name that we can carry forward. Not just the name change, we have restructured the plugin core files that will allow you to expand the capabilities of our awesome plugin to new levels.', 'eventon' ); ?></p>
-				</div>
-
-				<h3><?php _e( 'New Branding', 'eventon' ); ?></h3>
-
-				<div class="feature-section col three-col">
+				<div class="feature-section col two-col">
 
 					<div>
 						<img src="<?php echo AJDE_EVCAL_URL . '/assets/images/welcome/001.jpg'; ?>" alt="Product panel screenshot" style="width: 99%; margin: 0 0 1em;" />
-						<h4><?php _e( 'Minor UI updates', 'eventon' ); ?></h4>
-						<p><?php _e( 'We have made few changes as far as UI to match the new brand name.', 'eventon' ); ?></p>
-					</div>
-
-					<div>
-						<img src="<?php echo AJDE_EVCAL_URL . '/assets/images/welcome/002.jpg'; ?>" alt="Order panel screenshot" style="width: 99%; margin: 0 0 1em;" />
-						<h4><?php _e( 'Addons', 'eventon' ); ?></h4>
-						<p><?php _e( 'Addons are a new addition that will allow you to extend the capabilities of this plugin further.', 'eventon' ); ?></p>
+						<h4><?php _e( 'New Shortcode Box', 'eventon' ); ?></h4>
+						<p><?php _e( 'Introducing the new super easy to use and very intuitive shortcode generator box for eventON along with new shortcode button for WYSIWYG editor.', 'eventon' ); ?></p>
 					</div>
 
 					<div class="last-feature">
-						<img src="<?php echo AJDE_EVCAL_URL . '/assets/images/welcome/003.jpg'; ?>" alt="Download panel screenshot" style="width: 99%; margin: 0 0 1em;" />
-						<h4><?php _e( 'Plugin Update Checker', 'eventon' ); ?></h4>
-						<p><?php _e( 'You don\'t have to check on envato anymore to know if there is a newer version of this plugin available.', 'eventon' ); ?></p>
+						<img src="<?php echo AJDE_EVCAL_URL . '/assets/images/welcome/002.jpg'; ?>" alt="Order panel screenshot" style="width: 99%; margin: 0 0 1em;" />
+						<h4><?php _e( 'Collapsable Settings', 'eventon' ); ?></h4>
+						<p><?php _e( 'Event edit page settings meta boxes can now be collapsed for better space saving and have the page remember which ones you closed for next visit.', 'eventon' ); ?></p>
 					</div>
+
+
+				</div>
+				<div class="feature-section col two-col">
+
+					<div>
+						<img src="<?php echo AJDE_EVCAL_URL . '/assets/images/welcome/003.jpg'; ?>" alt="Product panel screenshot" style="width: 99%; margin: 0 0 1em;" />
+						<h4><?php _e( 'Rearrange EventCard', 'eventon' ); ?></h4>
+						<p><?php _e( 'You can now rearrange the order in which to show eventCard data.', 'eventon' ); ?></p>
+					</div>
+
+					<div class="last-feature">
+						<img src="<?php echo AJDE_EVCAL_URL . '/assets/images/welcome/004.jpg'; ?>" alt="Order panel screenshot" style="width: 99%; margin: 0 0 1em;" />
+						<h4><?php _e( 'Dual Lingual Capability', 'eventon' ); ?></h4>
+						<p><?php _e( 'You can now customize eventON text to have two different languages and choose which one to use on calendar.', 'eventon' ); ?></p>
+					</div>
+
 
 				</div>
 				<div class="feature-section col three-col">
 
 					<div>
-						<img src="<?php echo AJDE_EVCAL_URL . '/assets/images/welcome/004.jpg'; ?>" alt="Product panel screenshot" style="width: 99%; margin: 0 0 1em;" />
-						<h4><?php _e( 'New Shortcode button', 'eventon' ); ?></h4>
-						<p><?php _e( 'Now you can add shortcodes on the fly direct from the pages shortcode button.', 'eventon' ); ?></p>
+						<img src="<?php echo AJDE_EVCAL_URL . '/assets/images/welcome/005.jpg'; ?>" alt="Product panel screenshot" style="width: 99%; margin: 0 0 1em;" />
+						<h4><?php _e( 'ICS and get directions', 'eventon' ); ?></h4>
+						<p><?php _e( "We've added ICS file download capability to events along with get directions from the location of the event direct into the eventCard.", 'eventon' ); ?></p>
 					</div>
 
 					<div>
-						<img src="<?php echo AJDE_EVCAL_URL . '/assets/images/welcome/005.jpg'; ?>" alt="Order panel screenshot" style="width: 99%; margin: 0 0 1em;" />
-						<h4><?php _e( 'Widget Update', 'eventon' ); ?></h4>
-						<p><?php _e( 'Widgets now support upcoming events list for specified number of upcoming months.', 'eventon' ); ?></p>
+						<img src="<?php echo AJDE_EVCAL_URL . '/assets/images/welcome/006.jpg'; ?>" alt="Order panel screenshot" style="width: 99%; margin: 0 0 1em;" />
+						<h4><?php _e( 'Feature Events', 'eventon' ); ?></h4>
+						<p><?php _e( 'You can now feature events and have the featured events show above all the other events.', 'eventon' ); ?></p>
 					</div>
 
 					
@@ -188,33 +205,20 @@ class EVO_Welcome_Page {
 
 			</div>
 
-			<div class="changelog">
-				<h3><?php _e( 'Under the Hood', 'eventon' ); ?></h3>
+			<h3><?php _e( "A message from Ashan Jay", 'eventon' ); ?></h3>
 
-				<div class="feature-section col three-col">
-					<div>
-						<h4><?php _e( 'New class based strucutre', 'eventon' ); ?></h4>
-						<p><?php _e( 'We have rebuilt the base core of the plugin using a classes based structure to allow future expansions.', 'eventon' ); ?></p>
-					</div>
-					<div>
-						<h4><?php _e( 'New Hooks into calendar', 'eventon' ); ?></h4>
-						<p><?php _e( 'We have included various hooks and filters into the code structure of this plugin so even you can plug-into these hooks to extend the functionalities.', 'eventon' ); ?></p>
-					</div>
-					
-					<div class='last-feature'>
-						<h4><?php _e( 'Better event data handling', 'eventon' ); ?></h4>
-						<p><?php _e( 'We have improved the event filtering code structure to load events faster for the calendar months.', 'eventon' ); ?></p>
-					</div>
-					
-				</div>
-
+			<div class="feature-section images-stagger-right">					
+				<p>I want to personally thank you for purchasing eventON! Your support has allowed us to move eventON forward with amazing new features and fine tune our beautiful calendar design. We have so much more planned for eventON in the coming months. If you haven't already please take part in our <a href='https://groups.google.com/forum/#!forum/myeventon' target='_blank'>support forum</a> to make eventON a better plugin for tomorrow and voice your suggestions for future updates. -- <a target='_blank' href='http://www.myeventon.com/documentation/eventon-changelog/'><?php _e( 'The complete changelog', 'eventon' ); ?></a></p>
 			</div>
+
 
 			<div class="return-to-dashboard">
 				<a href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'eventon' ), 'admin.php' ) ) ); ?>"><?php _e( 'Go to myEventON Settings', 'eventon' ); ?></a>
 			</div>
 		</div>
 		<?php
+
+		*/
 	}
 	
 	/**
@@ -223,7 +227,7 @@ class EVO_Welcome_Page {
 	public function welcome() {
 
 		// Bail if no activation redirect transient is set
-	    if ( ! get_transient( '_evo_activation_redirect' ) )
+	    if ( ! get_transient( '_evo_activation_redirect' )  )
 			return;
 
 		// Delete the redirect transient
@@ -236,15 +240,21 @@ class EVO_Welcome_Page {
 		// Bail if activating from network, or bulk, or within an iFrame
 		if ( is_network_admin() || isset( $_GET['activate-multi'] ) || defined( 'IFRAME_REQUEST' ) )
 			return;
-
-		if ( ( isset( $_GET['action'] ) && 'upgrade-plugin' == $_GET['action'] ) && ( isset( $_GET['plugin'] ) && strstr( $_GET['plugin'], 'eventon.php' ) ) )
-			return;
-
-		wp_safe_redirect( admin_url( 'index.php?page=evo-about' ) );
 		
+		// plugin is updated
+		if ( ( isset( $_GET['action'] ) && 'upgrade-plugin' == $_GET['action'] ) && ( isset( $_GET['plugin'] ) && strstr( $_GET['plugin'], 'eventon.php' ) ) ){
+			wp_safe_redirect( admin_url( 'index.php?page=evo-about&evo-updated=true' ) );
+		
+		// first time activation
+		}else{
+			wp_safe_redirect( admin_url( 'index.php?page=evo-about' ) );
+		}
+			
 		
 		exit;
-	}
+	}	
+	
+	
 	
 }
 

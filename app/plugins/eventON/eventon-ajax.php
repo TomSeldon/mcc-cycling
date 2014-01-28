@@ -16,14 +16,26 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Verify eventon Licenses AJAX function
 function eventon_license_verification(){
-	global $eventon;
+	global $eventon;	
+	$new_license_content= '';
+	$error_msg='00';
+	
+	$license_errors = array( 
+		'01'=>"No data returned from envato API",
+		"02"=>'Your license is not a valid one!, please check and try again.',
+		"03"=>'envato verification API is busy at moment, please try later.',
+		"00"=>'Could not verify the License key. Please try again.'
+	);
+	
 	
 	$key = $_POST['key'];
 	$slug = $_POST['slug'];
 	
-	$status = $eventon->evo_updater->is_verify_license_key($slug, $key);
 	
-	$new_license_content='';
+	// verify license from eventon server
+	$status = $eventon->evo_updater->_verify_license_key($slug, $key);
+	
+	
 	if($status){
 		$save_license_date = $eventon->evo_updater->save_license_key($slug, $key);
 		
@@ -40,12 +52,16 @@ function eventon_license_verification(){
 		}else{
 			$status='error';
 		}
-	}else{	$status='error'; }
+	}else{	
+		$error_msg = $license_errors[$status];
+		$status='error'; 		
+	}
 	
 	
 	$return_content = array(
 		'status'=>$status,		
-		'new_content'=>$new_license_content
+		'new_content'=>$new_license_content,
+		'error_msg'=>$error_msg
 	);
 	echo json_encode($return_content);		
 	exit;
@@ -60,10 +76,28 @@ add_action('wp_ajax_nopriv_eventon_verify_lic', 'eventon_license_verification');
  */
 function evcal_ajax_callback(){
 	global $eventon;
+	$shortcode_args;
 	
-	$focused_month_num = (int)($_POST['next_m']);
-	$focused_year = $_POST['next_y'];		
-	$focus_month_name = eventon_returnmonth_name_by_num($focused_month_num);
+	// month year values
+	$current_month = (int)($_POST['current_month']);
+	$current_year = (int)($_POST['current_year']);
+	$direction = $_POST['direction'];
+	
+	
+	if($direction=='none'){
+		$focused_month_num = $current_month;
+		$focused_year = $current_year;
+	}else{
+		$focused_month_num = ($direction=='next')?
+			(($current_month==12)? 1:$current_month+1):
+			(($current_month==1)? 12:$current_month-1);
+		
+		$focused_year = ($direction=='next')? 
+			(($current_month==12)? $current_year+1:$current_year):
+			(($current_month==1)? $current_year-1:$current_year);
+	}	
+	
+		
 	
 	// validate $_POST values
 	$soft_by = (isset($_POST['sort_by']))? $_POST['sort_by']: 'sort_date';
@@ -82,26 +116,98 @@ function evcal_ajax_callback(){
 		'filters'=>((isset($_POST['filters']))? $_POST['filters']:null)
 	);
 	
+	// shortcode arguments USED to build calendar
+	$shortcode_args_arr = $_POST['shortcode'];
+	
+	if(!empty($shortcode_args_arr) && count($shortcode_args_arr)>0){
+		foreach($shortcode_args_arr as $f=>$v){
+			$shortcode_args[$f]=$v;
+		}
+		$eve_args = array_merge($eve_args, $shortcode_args);
+		$lang = $shortcode_args_arr['lang'];
+	}else{
+		$lang ='';
+	}
+	
+	
+	// GET calendar header month year values
+	$calendar_month_title = get_eventon_cal_title_month($focused_month_num, $focused_year, $lang);
+	
 	
 	// Addon hook
 	if(has_filter('eventon_ajax_arguments')){
 		$eve_args = apply_filters('eventon_ajax_arguments',$eve_args, $_POST);
 	}
 	
+	//print_r($eve_args);
+	
 	$content_li = $eventon->evo_generator->eventon_generate_events( $eve_args);
 	
+	
+	// RETURN VALUES
 	// Array of content for the calendar's AJAX call returned in JSON format
-	$return_content = array(
+	$return_content = array(		
 		'content'=>$content_li,
-		'new_month_year'=>$focus_month_name
+		'cal_month_title'=>$calendar_month_title,
+		'month'=>$focused_month_num,
+		'year'=>$focused_year
 	);			
 	
 	
-	echo json_encode($return_content);		
+	echo json_encode($return_content);
 	exit;
 }
 add_action('wp_ajax_the_ajax_hook', 'evcal_ajax_callback');
 add_action('wp_ajax_nopriv_the_ajax_hook', 'evcal_ajax_callback');
+
+
+
+/*
+ * dynamic styles
+ */
+function eventon_dymanic_css(){
+	//global $foodpress_menus;
+	require('admin/inline-styles.php');
+	exit;
+}
+add_action('wp_ajax_evo_dynamic_css', 'eventon_dymanic_css');
+add_action('wp_ajax_nopriv_evo_dynamic_css','eventon_dymanic_css');
+
+
+
+
+/** Admin AJAX Event  *****************************************************/
+
+/**
+ * Feature an event from admin
+ */
+function eventon_feature_event() {
+
+	if ( ! is_admin() ) die;
+
+	if ( ! current_user_can('edit_eventon') ) wp_die( __( 'You do not have sufficient permissions to access this page.', 'eventon' ) );
+
+	if ( ! check_admin_referer('eventon-feature-event')) wp_die( __( 'You have taken too long. Please go back and retry.', 'eventon' ) );
+
+	$post_id = isset( $_GET['eventID'] ) && (int) $_GET['eventID'] ? (int) $_GET['eventID'] : '';
+
+	if (!$post_id) die;
+
+	$post = get_post($post_id);
+
+	if ( ! $post || $post->post_type !== 'ajde_events' ) die;
+
+	$featured = get_post_meta( $post->ID, '_featured', true );
+
+	if ( $featured == 'yes' )
+		update_post_meta($post->ID, '_featured', 'no');
+	else
+		update_post_meta($post->ID, '_featured', 'yes');
+
+	wp_safe_redirect( remove_query_arg( array('trashed', 'untrashed', 'deleted', 'ids'), wp_get_referer() ) );
+}
+add_action('wp_ajax_eventon-feature-event', 'eventon_feature_event');
+
 
 
 

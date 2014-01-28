@@ -7,7 +7,7 @@
  * @author 		AJDE
  * @category 	Admin
  * @package 	EventON/Admin
- * @version     1.0.1
+ * @version     1.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -17,11 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
  * Prevent non-admin access to backend
- *
- * @access public
- * @return void
  */
-add_action( 'init', 'eventon_add_shortcode_button' );
 add_filter( 'tiny_mce_version', 'eventon_refresh_mce' ); 
  
 function eventon_prevent_admin_access() {
@@ -31,73 +27,63 @@ function eventon_prevent_admin_access() {
 	}
 }
 
-/**
- * Add a button for shortcodes to the WP editor.
- */
-function eventon_add_shortcode_button() {
-	if ( ! current_user_can('edit_posts') && ! current_user_can('edit_pages') ) return;
-	if ( get_user_option('rich_editing') == 'true') :
-		add_filter('mce_external_plugins', 'eventon_add_shortcode_tinymce_plugin');
-		add_filter('mce_buttons', 'eventon_register_shortcode_button');	
-		
-	endif;
-}
-/**
- * Register the shortcode button.
- */
-function eventon_register_shortcode_button($buttons) {
+
+// ADD custom "add eventon shortcode" button next to add media 
+add_action('media_buttons_context',  'eventon_shortcode_button');
+function eventon_shortcode_button($context) {
+	
+	global $pagenow, $typenow, $post;	
+	
+	if ( $typenow == 'post' && ! empty( $_GET['post'] ) ) {
+		$typenow = $post->post_type;
+	} elseif ( empty( $typenow ) && ! empty( $_GET['post'] ) ) {
+        $post = get_post( $_GET['post'] );
+        $typenow = $post->post_type;
+    }
+	
+	if ( $typenow == '' || $typenow == "ajde_events" ) return;
+
+	//our popup's title
+  	$text = '[ ] ADD EVENTON';
+  	$title = 'eventON Shortcode generator';
+
+  	//append the icon
+  	$context .= "<a id='evo_shortcode_btn' class='eventon_popup_trig evo_admin_btn btn_prime' title='{$title}' href='#'>{$text}</a>";
+	
 	eventon_shortcode_pop_content();
-	array_push($buttons, "|", "EventONShortcodes");
-	return $buttons;
+	
+  	return $context;
 }
+
+
+
 
 /**
  * Short code popup content
  */
 function eventon_shortcode_pop_content(){
-	global $eventon;
-	$shortcode_btns = array(
-		'Basic Calendar'=>'[add_eventon]',
-		'Calendar - unique ID'=>'[add_eventon cal_id="1"]',
-		'Calendar - event type'=>'[add_eventon cal_id="1" event_type=""]',
-		'Calendar - event type 2'=>'[add_eventon cal_id="1" event_type_2=""]',
-		'Calendar - event count limit'=>'[add_eventon cal_id="1" event_count=""]',
-		'Calendar - different start month'=>'[add_eventon cal_id="1" month_incre=""]',
-		'Upcoming Month List'=>'[add_eventon cal_id="1" show_upcoming="1" number_of_months=""]',
-	);
+	global $evo_shortcode_box, $eventon;
+	$content='';
 	
-	// hook for addons
-	if(has_filter('eventon_shortcode_options')){
-		$shortcode_btns = apply_filters('eventon_shortcode_options',$shortcode_btns);
-	}
+	require_once(AJDE_EVCAL_PATH.'/classes/shortcodes/class-shortcode_box_generator.php');
 	
-	$content='<h2>Select EventON Shortcode Options</h2>';
-	foreach($shortcode_btns as $sc_f=>$sc_v){
-		$content.= "<p class='eventon_shortcode_btn' scode='{$sc_v}'>".$sc_f."</p>";
-	}
-	$content.="<div class='clear'></div>";
+	$content = $evo_shortcode_box->get_content();
 	
-	echo $eventon->output_eventon_pop_window($content, 'eventon_shortcode');
+	// eventon popup box
+	echo $eventon->output_eventon_pop_window(array(
+		'content'=>$content, 
+		'class'=>'eventon_shortcode', 
+		'attr'=>'clear="false"', 
+		'title'=>'Shortcode Generator'
+	));
 }
 
 
 
 
-/**
- * Add the shortcode button to TinyMCEy
- */
-function eventon_add_shortcode_tinymce_plugin($plugin_array) {
-	
-	$plugin_array['EventONShortcodes'] = AJDE_EVCAL_URL . '/assets/js/editor_plugin.js';
-	return $plugin_array;
-}
 
 /**
  * Force TinyMCE to refresh.
- *
- * @access public
- * @param mixed $ver
- * @return int
  */
 function eventon_refresh_mce( $ver ) {
 	$ver += 3;
@@ -105,126 +91,35 @@ function eventon_refresh_mce( $ver ) {
 }
 
 
-// ==========================
-//	ADDON
-
-// Check for addons
-function eventon_check_addons() {
-	global $eventon, $wpdb;
+// SAVE: closed meta field boxes
+function eventon_save_collapse_metaboxes( $page, $post_value ) {
 	
-	// Get addon options array - if any
-	$eventon_addons_opt = get_option('eventon_addons');
-	$physical_addons_array='';
-	$eventon_addons= array();
+	if(empty($post_value)) return;
 	
-	$addon_path = AJDE_EVCAL_DIR.'/'.EVENTON_BASE.'/addons';
-		
+	$user_id = get_current_user_id();
+	$option_name = 'closedmetaboxes_' . $page; // use the "pagehook" ID
 	
-	$addon_dirs = scandir($addon_path);
+	$meta_box_ids = array_unique(array_filter(explode(',',$post_value)));
 	
-	// run through each addon directory
-	foreach ($addon_dirs as $addon_dir) {
-		
-		if ($addon_dir === '.' or $addon_dir === '..') continue;
-		if (is_dir($addon_path . '/' . $addon_dir)) {
-			$eventon_addons[]=  $addon_dir;	
-			
-			$pd = get_plugin_data($addon_path.'/'.$addon_dir.'/index.php');
-			
-			
-			$array_1 = array(
-				'name'=> 		$pd['Name'],
-				'details'=> 	$pd['Description'],
-				'version'=> 	$pd['Version'],
-				'path'=>		$addon_path.'/'.$addon_dir.'/index.php',				
-				'slug'=>		$addon_dir,
-				'guide_file'=>		( file_exists($addon_path.'/'.$addon_dir.'/guide.php') )? 
-					AJDE_EVCAL_URL.'/addons/'.$addon_dir.'/guide.php':null
-			);
-			
-			
-			// treatment for addons that DONT exist
-			if( (!empty($eventon_addons_opt) && !array_key_exists($addon_dir, $eventon_addons_opt) ) || 
-				(empty($eventon_addons_opt))	){
-				
-				$array_1 = array_merge($array_1, array('status'=>		'inactive'));
-			
-			// addons that exist with status values
-			}else if( !empty($eventon_addons_opt)) {
-				$status = $eventon_addons_opt[$addon_dir]['status'];
-				$array_1 = array_merge($array_1, array('status'=>		$status));
-			}
-			
-			$physical_addons_array[$addon_dir] = $array_1;
-		}
-		
-	}
+	$meta_box_id_ar =serialize($meta_box_ids);
 	
-	
-	// compare addons in physical directory VS saved in options
-	if(!empty($eventon_addons_opt) && is_array($eventon_addons_opt)){
-		foreach($eventon_addons_opt as $addonf=>$addon){
-			if(empty($addon['type']) || $addon['type']!='extension'){
-				
-				// remove the addons that are in the options that arent physically present
-				if(is_array($physical_addons_array) && !array_key_exists($addonf, $physical_addons_array) ){
-					// remove from options values array
-					unset($eventon_addons_opt[$addonf]);	
-					
-				
-				// no physical addons
-				}else if(!is_array($physical_addons_array)){
-					unset($eventon_addons_opt[$addonf]);
-					
-				}
-			}
-		}	
-	}
-	
-	// update options
-	if(is_array($physical_addons_array) && is_array($eventon_addons_opt) ){
-		$new_eventon_addons = array_merge($eventon_addons_opt, $physical_addons_array);
-		
-	}elseif(is_array($physical_addons_array)  && !is_array($eventon_addons_opt)){
-		// no saved eventon_addons in get_option
-		$new_eventon_addons =$physical_addons_array;
-		
-	}elseif(!is_array($physical_addons_array)  && is_array($eventon_addons_opt)){
-		// No new addons found but addon details exist on get_options so resave that.
-		$new_eventon_addons =$eventon_addons_opt;	
-	}else{
-		$new_eventon_addons='';
-	}
-	update_option('eventon_addons',$new_eventon_addons);
-	
-
+	update_user_option( $user_id, $option_name,  $meta_box_id_ar , true );
 	
 }
 
-/**
- * update a field for addon
- */
-function eventon_update_addon_field($addon_name, $field_name, $new_value){
-	$eventon_addons_opt = get_option('eventon_addons');
+function eventon_get_collapse_metaboxes($page){
 	
-	$newarray = array();
+	$user_id = get_current_user_id();
+    $option_name = 'closedmetaboxes_' . $page; // use the "pagehook" ID
+	$option_arr = get_user_option( $option_name, $user_id );
 	
-	// the array that contain addon details in array
-	$addon_array = $eventon_addons_opt[$addon_name];
+	if(empty($option_arr)) return;
 	
-	foreach($addon_array as $field=>$val){
-		if($field==$field_name){ 
-			$val=$new_value;
-		}
-		$newarray[$field]=$val;
-	}
-	$new_ar[$addon_name] = $newarray;
+	return unserialize($option_arr);
+	//return ($option_arr);
 	
-	$merged=array_merge($eventon_addons_opt,$new_ar);
-	
-	
-	update_option('eventon_addons',$merged);
 }
+
 
 
 

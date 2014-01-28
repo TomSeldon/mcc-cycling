@@ -2,69 +2,55 @@
 /**
  * inline dynamic styles for front end
  *
- * @version		1.1
- * @package		EventON/Styles
+ * @version		0.1
+ * @package		eventon/Styles
  * @author 		AJDE
  */
 
+header('Content-type: text/css');
+//header('Cache-control: must-revalidate');
 
-/*
-* The Front-end Event Calendar Code DISPLAY
-*/
-
-function eventon_dynamic_inline_styles(){
 	// Load variables
 	$evcal_val1= get_option('evcal_options_evcal_1');
 	
-	// get icons for the event card
-	for($x=1; $x<6; $x++){
-		if(!empty($evcal_val1['evcal_icon_00'.$x]) )
-			$icon_array[$x] = wp_get_attachment_image_src($evcal_val1['evcal_icon_00'.$x], 'full');
-	}
+
+	// magnifying glass cursor
+	echo (!empty($evcal_val1['evo_ftim_mag']) && $evcal_val1['evo_ftim_mag']=='yes')? ".evcal_evdata_img{cursor: url(".AJDE_EVCAL_URL."/assets/images/zoom.png), auto;}":null;
 	
-	
-	echo "<style type='text/css'>";
-	
-	// (---) Hook for addons
-	if(has_action('eventon_inline_styles')){
-		do_action('eventon_inline_styles');
-	}
-	
-	echo get_option('evcal_styles');
-	
+
+	// background
+	echo ".eventon_events_list .eventon_list_event .desc_trig{background-color:#".( (!empty($evcal_val1['evcal__bgc4']))? $evcal_val1['evcal__bgc4']:'fafafa' ).";}
+
+	.eventon_events_list .eventon_list_event .desc_trig:hover{background-color:#".( (!empty($evcal_val1['evcal__bgc4h']))? $evcal_val1['evcal__bgc4h']:'f4f4f4' ).";}";
+
+	// STYLES
 	echo "
-		.ajde_evcal_calendar .calendar_header p, .eventon_sort_line p, .eventon_filter_line p, .eventon_events_list .eventon_list_event .evcal_cblock, .eventon_events_list .eventon_list_event .evcal_desc span.evcal_desc2, .evcal_evdata_row .evcal_evdata_cell h2, .evcal_evdata_row .evcal_evdata_cell h3, .evcal_month_line p{
+		
+		".((!empty($evcal_val1['evo_ftimgheight']))?
+			".evcal_evdata_img{height:".$evcal_val1['evo_ftimgheight']."px}":null )."
+		
+		.ajde_evcal_calendar .calendar_header p, .eventon_sort_line p, .eventon_filter_line p, .eventon_events_list .eventon_list_event .evcal_cblock, .evcal_cblock, .eventon_events_list .eventon_list_event .evcal_desc span.evcal_desc2, .evcal_desc span.evcal_desc2, .evcal_evdata_row .evcal_evdata_cell h2, .evcal_evdata_row .evcal_evdata_cell h3.evo_h3, .evcal_month_line p, .evo_clik_row .evo_h3{
 			font-family:".( (!empty($evcal_val1['evcal_font_fam']))? $evcal_val1['evcal_font_fam']:"oswald, 'arial narrow'" )."; 
 		}
 		
-		/*-- arrow --*/		
-		.evcal_evdata_row .evcal_evdata_icons.evcalicon_1{
-			".( (!empty($icon_array[1]))? 'background:url('.$icon_array[1][0].') center center no-repeat':'background-position:0 0px' )."
-		}.evcal_evdata_row .evcal_evdata_icons.evcalicon_2{
-			".( (!empty($icon_array[2]))? 'background:url('.$icon_array[2][0].') center center no-repeat':'background-position:0 -31px' )."
-		}.evcal_evdata_row .evcal_evdata_icons.evcalicon_3{
-			".( (!empty($icon_array[3]))? 'background:url('.$icon_array[3][0].') center center no-repeat':'background-position:0 -125px' )."
-		}.evcal_evdata_row .evcal_evdata_icons.evcalicon_4{
-			".( (!empty($icon_array[4]))? 'background:url('.$icon_array[4][0].') center center no-repeat':'background-position:0 -64px' )."
-		}.evcal_evdata_row .evcal_evdata_icons.evcalicon_5{
-			".( (!empty($icon_array[5]))? 'background:url('.$icon_array[5][0].') center center no-repeat':'background-position:0 -96px' )."
-		}.evcal_evdata_row .evcal_evdata_icons.evcalicon_6{
-			".( (!empty($icon_array[6]))? 'background:url('.$icon_array[5][0].') center center no-repeat':'background-position:0 -190px' )."
-		}.evcal_evdata_row .evcal_evdata_icons.evcalicon_7{
-			".( (!empty($icon_array[7]))? 'background:url('.$icon_array[5][0].') center center no-repeat':'background-position:0 -225px' )."
+	
+		/* sort options text */
+		.ajde_evcal_calendar .evo_sort_btn{
+			color:#".( (!empty($evcal_val1['evcal__sot']))? $evcal_val1['evcal__sot']:'ededed' ).";
+		}.ajde_evcal_calendar .evo_sort_btn:hover{
+			color:#".( (!empty($evcal_val1['evcal__sotH']))? $evcal_val1['evcal__sotH']:'d8d8d8' ).";
+		}
+
+		/* icons */
+		.evcal_evdata_row .evcal_evdata_icons i, .evcal_evdata_row .evcal_evdata_custometa_icons i{
+			color:#".( (!empty($evcal_val1['evcal__ecI']))? $evcal_val1['evcal__ecI']:'6B6B6B' ).";
+			font-size:".( (!empty($evcal_val1['evcal__ecIz']))? $evcal_val1['evcal__ecIz']:'18px' ).";
 		}
 		
 		
-		
 		#evcal_list .eventon_list_event .event_description .evcal_btn{
-			color:#".( (!empty($evcal_val1['evcal_gen_btn_fc']))? $evcal_val1['evcal_gen_btn_fc']:'fff' ).";
-			font:bold 18px Helvetica, arial;
-			display:inline-block;
-			padding:8px 12px!important; margin-top:4px;
-			background-color:#".( (!empty($evcal_val1['evcal_gen_btn_bgc']))? $evcal_val1['evcal_gen_btn_bgc']:'237ebd' ).";
-			-moz-border-radius: 3px; 
-			-webkit-border-radius: 3px;
-			border-radius: 3px;
+			color:#".( (!empty($evcal_val1['evcal_gen_btn_fc']))? $evcal_val1['evcal_gen_btn_fc']:'fff' ).";			
+			background-color:#".( (!empty($evcal_val1['evcal_gen_btn_bgc']))? $evcal_val1['evcal_gen_btn_bgc']:'237ebd' ).";			
 		}
 		#evcal_list .eventon_list_event .event_description .evcal_btn:hover{
 			color:#".( (!empty($evcal_val1['evcal_gen_btn_fcx']))? $evcal_val1['evcal_gen_btn_fcx']:'fff' ).";
@@ -72,7 +58,17 @@ function eventon_dynamic_inline_styles(){
 		}
 		
 		/*-- font color match --*/
-		.ajde_evcal_calendar #evcal_head.calendar_header #evcal_cur{
+		#evcal_list .eventon_list_event .evcal_desc em{
+			color:#".( (!empty($evcal_val1['evcal__fc6']))? $evcal_val1['evcal__fc6']:'8c8c8c' ).";
+		}";
+		
+		if(!empty($evcal_val1['evcal__fc6'])){
+			echo "#evcal_widget .eventon_events_list .eventon_list_event .evcal_desc .evcal_desc_info em{
+				color:#". $evcal_val1['evcal__fc6']."
+			}";
+		}
+		
+		echo ".ajde_evcal_calendar #evcal_head.calendar_header #evcal_cur, .ajde_evcal_calendar .evcal_month_line p{
 			color:#".( (!empty($evcal_val1['evcal_header1_fc']))? $evcal_val1['evcal_header1_fc']:'C6C6C6' ).";
 		}
 		#evcal_list .eventon_list_event .evcal_cblock{
@@ -87,18 +83,35 @@ function eventon_dynamic_inline_styles(){
 		#evcal_list .eventon_list_event .evcal_eventcard p{
 			color:#".( (!empty($evcal_val1['evcal__fc5']))? $evcal_val1['evcal__fc5']:'656565' ).";
 		}
-		.eventon_events_list .eventon_list_event .evcal_eventcard, .evcal_evdata_row{
-			background-color:#".( (!empty($evcal_val1['evcal__bc1']))? $evcal_val1['evcal__bc1']:'EAEAEA' ).";
+
+		/* event card color*/
+		.eventon_events_list .eventon_list_event .evcal_eventcard, .evcal_evdata_row, .evorow .tbrow{
+			background-color:#".eventon_styles('EAEAEA','evcal__bc1', $evcal_val1).";
 		}
 					
 		#eventon_loadbar{
-			background-color:#".( (!empty($evcal_val1['evcal_header1_fc']))? $evcal_val1['evcal_header1_fc']:'6B6B6B' )."; height:2px; width:0%}
+			background-color:#".eventon_styles('6B6B6B','evcal_header1_fc', $evcal_val1)."; height:2px; width:0%}
 		
-		.evcal_event_details .evcal_evdata_cell.shorter_desc{
-			height:150px; overflow:hidden;
-		}	
+		/*-- font sizes --*/
+		.evcal_evdata_row .evcal_evdata_cell h3, .evo_clik_row .evo_h3{font-size:".eventon_styles('18px','evcal_fs_001', $evcal_val1).";}";
 		
-		
-		</style>";
+
+
+		// featured event styles
+		if(!empty($evcal_val1['evo_fte_override']) && $evcal_val1['evo_fte_override']=='yes'){
+			echo "#evcal_list .eventon_list_event .evcal_list_a.featured_event{border-left-color:#".eventon_styles('ca594a','evcal__ftec', $evcal_val1)."!important;}";
+		}
+
+
+
+
+
+
+	// (---) Hook for addons
+	if(has_action('eventon_inline_styles')){
+		do_action('eventon_inline_styles');
+	}
 	
-}
+	echo get_option('evcal_styles');
+
+	

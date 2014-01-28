@@ -10,5 +10,5 @@
 		</table>			
 	</div>
 </div>
-<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+<input type="submit" class="evo_admin_btn btn_prime" value="<?php _e('Save Changes') ?>" />
 </form>

@@ -1,7 +1,13 @@
 <?php
 
+
+
 $eventon_custom_language_array = array(
 	array(
+		'label'=>'Sort Options',
+		'name'=>'evcal_lang_sopt',
+		'legend'=>''
+	),array(
 		'label'=>'Sort By',
 		'name'=>'evcal_lang_sort',
 		'legend'=>''
@@ -14,9 +20,31 @@ $eventon_custom_language_array = array(
 		'name'=>'evcal_lang_stitle',
 		'legend'=>''
 	),array(
+		'label'=>'All',
+		'name'=>'evcal_lang_all',
+		'legend'=>'Sort options all text'
+	),array(
+		'label'=>$evt_name,
+		'name'=>'evcal_lang_et1',
+	),array(
+		'label'=>$evt_name2,
+		'name'=>'evcal_lang_et2',
+	),array(
+		'label'=>'Location Name',
+		'name'=>'evcal_lang_location_name',
+		'legend'=>''
+	),array(
 		'label'=>'Location',
 		'name'=>'evcal_lang_location',
 		'legend'=>''
+	),array(
+		'label'=>'Type your address',
+		'name'=>'evcalL_getdir_placeholder',
+		'legend'=>'Get directions section'
+	),array(
+		'label'=>'Click here to get directions',
+		'name'=>'evcalL_getdir_title',
+		'legend'=>'Get directions section'
 	),array(
 		'label'=>'Time',
 		'name'=>'evcal_lang_time',
@@ -88,6 +116,10 @@ $eventon_custom_language_array = array(
 		'label'=>'Learn More link text',
 		'name'=>'evcal_evcard_learnmore2',
 		'legend'=>'for meetup'
+	),array(
+		'label'=>'Add to your calendar',
+		'name'=>'evcal_evcard_addics',
+		'legend'=>'Text for the button that allow downloading ICS file for events'
 	)
 );
 ?>

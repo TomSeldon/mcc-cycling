@@ -1,35 +1,81 @@
 /*
 	INITIATE google gmaps on web page
 */
+
 	
 var geocoder;
-var map;
-function initialize(map_canvas_id, address,mapformat, zoom_level) {
-	
-	
-	
+var test =3;
+
+function getGeocoder(){
+	return geocoder;
+}
+
+function initialize(map_canvas_id, address,mapformat, zoom_level, location_type, scrollwheel) {
+	var map;
 	geocoder = new google.maps.Geocoder();
-	var latlng = new google.maps.LatLng(-34.397, 150.644);
-	var myOptions = {
-		zoom: zoom_level,
-		center: latlng,
-		mapTypeId:mapformat
+			
+	var latlng = new google.maps.LatLng(-34.397, 150.644);	
+
+	if(scrollwheel==false ){
+		var myOptions = {			
+			center: latlng,	
+			mapTypeId:mapformat,	
+			zoom: zoom_level,	
+			scrollwheel: false,
+		}
+	}else{
+		var myOptions = {	
+			center: latlng,	
+			mapTypeId:mapformat,	
+			zoom: zoom_level }
 	}
+	
+	
 	var map_canvas = document.getElementById(map_canvas_id);
 	map = new google.maps.Map(map_canvas, myOptions);
-			
 	
-	geocoder.geocode( { 'address': address}, function(results, status) {
-	  if (status == google.maps.GeocoderStatus.OK) {
-		map.setCenter(results[0].geometry.location);
-		var marker = new google.maps.Marker({
-			map: map,
-			position: results[0].geometry.location
+	
+	// address from latlng
+	if(location_type=='latlng'){
+		var latlngStr = address.split(",",2);
+		var lat = parseFloat(latlngStr[0]);
+		var lng = parseFloat(latlngStr[1]);
+		var latlng = new google.maps.LatLng(lat, lng);
+		
+		geocoder.geocode({'latLng': latlng}, function(results, status) {
+			if (status == google.maps.GeocoderStatus.OK) {
+			map.setCenter(results[0].geometry.location);
+			var marker = new google.maps.Marker({
+				map: map,
+				position: latlng
+			});
+			} else {
+				document.getElementById(map_canvas_id).style.display='none';
+			}
 		});
-		//$('#'+map_canvas_id).height(200);
-	  } else {
-			document.getElementById('#'+map_canvas_id).style.display='none';
-		//alert("Geocode was not successful for the following reason: " + status);
-	  }
-	});
+		
+	}else if(address==''){
+		console.log('t');
+	}else{
+		geocoder.geocode( { 'address': address}, function(results, status) {
+			if (status == google.maps.GeocoderStatus.OK) {
+				
+				
+				//console.log('map '+results[0].geometry.location);
+				map.setCenter(results[0].geometry.location);
+				var marker = new google.maps.Marker({
+					map: map,
+					position: results[0].geometry.location
+				});
+				
+				
+			} else {
+				document.getElementById(map_canvas_id).style.display='none';				
+			}
+		});
+	}
+	
+	
 }
+
+

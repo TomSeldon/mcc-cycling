@@ -1,8 +1,11 @@
+/*
+	eventON backend scripts
+*/
 jQuery(document).ready(function($){
 	
 	
 	//yes no buttons in event edit page
-	$('#evcal_settings').delegate('.evcal_yn_btn', 'click',function(){
+	$('#evcal_settings').on('click','.evcal_yn_btn',function(){
 		// yes
 		if($(this).hasClass('btn_at_no')){
 			$(this).removeClass('btn_at_no');
@@ -28,6 +31,11 @@ jQuery(document).ready(function($){
 		$(this).parent().removeClass('onfocus');
 	});
 	
-	
+	// change language
+	$('#evo_lang_selection').change(function(){
+		var val = $(this).val();
+		var url = $(this).attr('url');
+		window.location.replace(url+'?page=eventon&tab=evcal_2&lang='+val);
+	});
 	
 });

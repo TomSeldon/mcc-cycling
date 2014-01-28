@@ -2,9 +2,9 @@
 /**
  * EventON Install
  *
- * Plugin install script which adds default pages, taxonomies, and database tables to WordPress. Runs on activation and upgrade.
+ * Plugin install script which adds default pages to WordPress. Runs on activation and upgrade.
  *
- * @author 		WooThemes
+ * @author 		AJDE
  * @category 	Admin
  * @package 	EventON/Admin/Install
  * @version     0.1
@@ -45,9 +45,6 @@ function eventon_create_page( $slug, $option, $page_title = '', $page_content = 
 
 /**
  * Create pages that the plugin relies on, storing page id's in variables.
- *
- * @access public
- * @return void
  */
 function eventon_create_pages() {
 

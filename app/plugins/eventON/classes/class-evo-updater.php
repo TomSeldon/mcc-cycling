@@ -24,7 +24,7 @@ class evo_updater{
     public $slug;
 	
 	public $transient;
-
+		
     /**
      * Initialize a new instance of the WordPress Auto-Update class
      */
@@ -40,7 +40,7 @@ class evo_updater{
         add_filter('pre_set_site_transient_update_plugins', array(&$this, 'check_update'));
 
         // Define the alternative response for information checking
-        add_filter('plugins_api', array(&$this, 'plugins_api_call'), 10, 3);
+        add_filter('plugins_api', array(&$this, 'evo_check_info'), 10, 3);
 		
 		// update to current version
 		$this->save_new_license_field_values('current_version',$this->current_version,$this->slug);
@@ -67,7 +67,7 @@ class evo_updater{
         }
 		
 		// save update status
-		$_new_update = ($this->current_version< $remote_version)?true:false;		
+		$_new_update = (version_compare($this->current_version, $remote_version, '<'))?true:false;	
 		$this->save_new_update_details($remote_version, $_new_update, $this->current_version);
 	
 		return $transient;
@@ -75,15 +75,20 @@ class evo_updater{
     }
 	
 	
+	public function evo_check_info($false, $action, $args){
+		if ($args->slug === $this->slug) {  
+            $information = $this->getRemote_information($args);  
+            return $information;  
+        }  
+        return $false;
+	}
+	
 	
     /**
      * Add our self-hosted description to the filter
      */
-    public function plugins_api_call($false, $action, $args){
+    public function getRemote_information( $args){
 		global $wp_version; 
-		
-		if (!isset($args->slug) || ($args->slug != $this->slug))
-			return false;
 		
 		/*
 		$plugin_info = get_site_transient('update_plugins');
@@ -93,7 +98,7 @@ class evo_updater{
 		
 		$request_string = array(
 				'body' => array(
-					'action' => $action, 
+					'action' => 'plugin_information', 
 					'request' => serialize($args),
 					'api-key' => md5(get_bloginfo('url'))
 				),
@@ -102,21 +107,16 @@ class evo_updater{
 		
 		$request = wp_remote_post($this->api_url, $request_string);
 		
-		/*
-		if (is_wp_error($request) || wp_remote_retrieve_response_code($request) !== 200) {
-			$res = new WP_Error('plugins_api_failed', __('An Unexpected HTTP Error occurred during the API request.</p> <p><a href="?" onclick="document.location.reload(); return false;">Try again</a>'), $request->get_error_message());
-		} else {
-		*/
-		if (!is_wp_error($request) || wp_remote_retrieve_response_code($request) === 200) {
-			$res = unserialize($request['body']);			
-			if ($res === false){
-				$res = new WP_Error('plugins_api_failed', __('An unknown error occurred'), $request['body']);
-			}else{			
-				$res->download_link = $this->get_package_download_url();
-			}
-		}
-		
-		return $res;	
+		 
+        if (!is_wp_error($request) || wp_remote_retrieve_response_code($request) === 200) {  
+            
+			$result = unserialize($request['body']);
+			$result->download_link = $this->get_package_download_url();
+			
+			return  $result;
+        }  
+        return false;  
+			
 		
     }
 	
@@ -153,6 +153,7 @@ class evo_updater{
 		}
 	}
 	
+	// save license fields to wp options
 	function save_new_license_field_values($license_field, $new_value, $license_slug){
 		$licenses =get_option('_evo_licenses');
 		
@@ -235,7 +236,7 @@ class evo_updater{
 	}
 	
 	/** get license key **/
-	public function is_verify_license_key($slug='', $key=''){
+	public function _verify_license_key($slug='', $key=''){
 		
 		$slug = (!empty($slug))? $slug: $this->slug;
 		$saved_key = (!empty($key) )? $key: $this->get_saved_license_key($slug);
@@ -246,7 +247,8 @@ class evo_updater{
 		
 			$args = array(
 				'slug' => $this->slug,
-				'key'=>$saved_key
+				'key'=>$saved_key,
+				'server'=>$_SERVER['SERVER_NAME']
 			);
 			$request_string = array(
 				'body' => array(
@@ -262,12 +264,14 @@ class evo_updater{
 			if (!is_wp_error($request) || wp_remote_retrieve_response_code($request) === 200) {
 				$license_check_status =  $request['body'];
 				
-				return ($license_check_status==1)? true:false;
+				// if validation return 1 or if error code returned
+				return ($license_check_status==1)? true:$license_check_status;
 					
 			}			
 		}	
 	}
 	
+	// get saved license key from wp options
 	public function get_saved_license_key($slug=''){
 		$licenses =get_option('_evo_licenses');
 		
@@ -280,6 +284,7 @@ class evo_updater{
 		}
 	}
 	
+	// save to wp options
 	public function save_license_key($slug, $key){
 		$licenses =get_option('_evo_licenses');
 		
@@ -311,5 +316,22 @@ class evo_updater{
 		}
 		
 	}
-  
+	
+	// compare and return true or false for has newset version;
+	public function has_newest_version($remote_version=''){
+			
+		if(empty($remote_version)){
+			$evoOpt = get_option('_evo_licenses');			
+			if(!empty($evoOpt)){
+				$remote_version = $evoOpt['eventon']['remote_version'];
+			}else{
+				$remote_version = $this->getRemote_version;
+			}			
+		}
+		
+		
+		return ( version_compare($remote_version, $this->current_version ) >=0)? true:false;
+		
+	}
+	
 }
