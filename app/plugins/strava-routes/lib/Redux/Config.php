@@ -17,6 +17,10 @@ class Config {
      */
     public static function buildFramework()
     {
+        if (!class_exists('ReduxFramework')) {
+            return;
+        }
+
         return new \ReduxFramework(self::getSections(), self::getArgs());
     }
 

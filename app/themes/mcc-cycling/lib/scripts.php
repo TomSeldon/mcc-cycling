@@ -41,7 +41,7 @@ add_action('wp_enqueue_scripts', 'roots_scripts', 90);
 
 function mcc_admin_scripts()
 {
-    wp_enqueue_script('gmaps_autocomplete', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true');
+   // wp_enqueue_script('gmaps_autocomplete', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true');
 }
 add_action('admin_enqueue_scripts', 'mcc_admin_scripts');
 
