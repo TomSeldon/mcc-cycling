@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
         v.customize ["modifyvm", :id, "--memory", 1024]
     end
 
-    config.vm.synced_folder "./", "/var/www/mcc-cycling",
+    config.vm.synced_folder "./", "/var/www/mcc-cycling/current",
         owner: "vagrant",
         group: "www-data",
         mount_options: ["dmode=775,fmode=664"]
