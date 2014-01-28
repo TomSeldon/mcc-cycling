@@ -104,6 +104,11 @@ function mcc_set_subtitles($subtitle)
       $subtitle = __('Sorry, but the page you were trying to view does not exist.', 'mcc');
     }
 
+    if (is_post_type_archive('location')) {
+        $count_locations = wp_count_posts('location')->publish;
+        $subtitle = __($count_locations . ' locations found', 'mcc');
+    }
+
     return $subtitle;
 }
 add_filter('page_subtitle', 'mcc_set_subtitles');
@@ -285,3 +290,16 @@ function add_post_type_location()
     register_taxonomy_for_object_type('facility', 'location');
 }
 add_action('init', 'add_post_type_location');
+
+function mcc_locations_posts_per_page($query)
+{
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+
+    if ( is_post_type_archive( 'location' ) ) {
+        // Display 50 posts for a custom post type called 'movie'
+        $query->set( 'posts_per_page', -1 );
+        return;
+    }
+}
+add_action('pre_get_posts', 'mcc_locations_posts_per_page');
