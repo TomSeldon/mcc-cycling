@@ -24,12 +24,11 @@
                 var $markersEl = element.find('.marker');
 
                 $markersEl.each(function(index, $markerEl){
-                    var marker = {};
+                    var lng = angular.element($markerEl).data('lng');
+                    var lat = angular.element($markerEl).data('lat');
+                    var latlng = new google.maps.LatLng(lat, lng);
 
-                    marker.lng = angular.element($markerEl).data('lng');
-                    marker.lat = angular.element($markerEl).data('lat');
-
-                    markers.push(marker);
+                    markers.push(new google.maps.Marker({position: latlng}));
                 });
 
                 scope.markers = markers;
