@@ -4,6 +4,8 @@
  * Author: Tom Seldon
  * Created: 27/01/2014
  */
+
+    $location = get_field('location');
 ?>
 
 <article class="location row">
@@ -16,6 +18,9 @@
         <header><h2><?php the_title(); ?></h2></header>
         <div class="description">
             <?php the_field('description'); ?>
+        </div>
+        <div class="location">
+            <?php echo $location['address']; ?>
         </div>
         <div class="read-more">
             <a href="<?php the_permalink(); ?>">Read more</a>

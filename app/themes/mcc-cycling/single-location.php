@@ -46,6 +46,20 @@
 </div>
 
 <aside class="col-sm-4">
+    <?php if (!empty($location)): ?>
+    <div class="location">
+        <h2>Location</h2>
+        <div class="map" data-map="">
+             <div class="marker"
+                  data-marker=""
+                  data-lng="<?php echo $location['lng']; ?>"
+                  data-lat="<?php echo $location['lat']; ?>"
+                  data-address="<?php echo $location['address']; ?>">
+             </div>
+        </div>
+    </div>
+    <?php endif; ?>
+
     <?php if (count($facilities)): ?>
     <h2>Facilities</h2>
     <ul class="list-group">

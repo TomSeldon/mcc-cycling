@@ -3,6 +3,7 @@
 (function(){
     var stravaRouteDirective = function()
     {
+        console.log('123');
         return {
             restrict:   'A',
             controller: 'StravaMapController',
