@@ -41,7 +41,7 @@ while (have_posts()) : the_post(); ?>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-9 main">
+            <div class="col-md-9 main">
                 <ul class="nav nav-pills">
                     <li class="active"><a href="#event" data-toggle="tab">The Event</a></li>
                     <li><a href="#route" data-toggle="tab">The Route</a></li>
@@ -57,7 +57,7 @@ while (have_posts()) : the_post(); ?>
                 </div>
             </div>
 
-            <div class="col-sm-3 sidebar">
+            <div class="col-md-3 sidebar">
                 <div class="summary row">
                     <h2>Summary</h2>
                     <div class="panel panel-default summary">
