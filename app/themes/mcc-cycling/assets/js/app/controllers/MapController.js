@@ -104,7 +104,7 @@
         }
 
         $scope.$on('map.bounds_changed', function(event, map){
-           console.log(map);
+           centerMap(map);
         });
 
         $scope.$watch('mapEl', function(mapEl){
