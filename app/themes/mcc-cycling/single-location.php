@@ -11,6 +11,7 @@
     $location   = get_field('location');
     $facilities = get_the_terms($post->ID, 'facility');
 
+    while (have_posts()): the_post();
 ?>
 
 <div class="col-sm-8">
@@ -39,10 +40,8 @@
     </div>
 
     <div class="content">
-        <?php echo $post->post_content; ?>
+        <?php the_content(); ?>
     </div>
-
-    <?php the_content(); ?>
 </div>
 
 <aside class="col-sm-4">
@@ -74,3 +73,5 @@
     </ul>
     <?php endif; ?>
 </aside>
+
+<?php endwhile; ?>
