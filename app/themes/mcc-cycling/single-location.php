@@ -36,6 +36,12 @@
                     <td><a href="mailto:<?php echo $email; ?>"><?php echo $email ?></a></td>
                 </tr>
             <?php endif; ?>
+            <?php if (false !== $location && !empty($location['address'])): ?>
+                <tr>
+                    <td><?php _e('Location:'); ?></td>
+                    <td><?php echo $location['address']; ?></td>
+                </tr>
+            <?php endif; ?>
         </table>
     </div>
 
