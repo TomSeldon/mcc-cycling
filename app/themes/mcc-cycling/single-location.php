@@ -60,6 +60,11 @@
     </div>
     <?php endif; ?>
 
+    <div class="featured-image">
+        <h2>Featured image</h2>
+        <?php echo get_the_post_thumbnail($post->ID, 'medium', array('class' => 'thumbnail pull-left')); ?>
+    </div>
+
     <?php if (count($facilities)): ?>
     <h2>Facilities</h2>
     <ul class="list-group">
@@ -68,6 +73,4 @@
         <?php endforeach; ?>
     </ul>
     <?php endif; ?>
-
-    <?php echo get_the_post_thumbnail($post->ID, 'medium', array('class' => 'thumbnail pull-left')); ?>
 </aside>

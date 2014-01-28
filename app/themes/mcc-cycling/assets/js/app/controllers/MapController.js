@@ -57,6 +57,11 @@
          */
         function createMap(element) {
             $scope.map =  new google.maps.Map(element, $scope.options.map);
+
+
+            google.maps.event.addListener($scope.map, 'bounds_changed', function() {
+                $scope.$broadcast('map.bounds_changed', $scope.map);
+            });
         }
 
         /**
@@ -81,22 +86,26 @@
          * Centers the map so all markers can be seen.
          *
          * @param map
-         * @param markers
          */
-        function centerMap(map, markers) {
-            var bounds = new google.maps.LatLngBounds();
+        function centerMap(map) {
+            var bounds  = new google.maps.LatLngBounds();
+            var markers = $scope.markers;
 
             for (var i=0; i<markers.length; i++) {
                 var marker = markers[i];
 
                 var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
 
-                bounds.extend( latlng );
+                bounds.extend(latlng);
             }
 
             map.setZoom(14);
             map.setCenter(bounds.getCenter());
         }
+
+        $scope.$on('map.bounds_changed', function(event, map){
+           console.log(map);
+        });
 
         $scope.$watch('mapEl', function(mapEl){
             createMap(mapEl);
@@ -104,7 +113,7 @@
 
         $scope.$watch('markers', function(){
             updateMarkers($scope.map, $scope.markers);
-            centerMap($scope.map, $scope.markers);
+            centerMap($scope.map);
         });
     };
 
