@@ -52,7 +52,7 @@ while (have_posts()) : the_post(); ?>
                         <?php the_content(); ?>
                     </div>
                     <div class="tab-pane fade in" id="route">
-                        route
+                        <div id="sportive-route-lg" data-strava-route="" data-route-id="<?php echo $route->ID; ?>"></div>
                     </div>
                 </div>
             </div>

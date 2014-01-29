@@ -206,10 +206,49 @@ function register_gmaps_script()
 }
 add_action('wp_enqueue_scripts', 'register_gmaps_script');
 
+/**
+ * Checks if a Strava Route has been assigned to the specified post.
+ * Uses current post if no post ID specified.
+ *
+ * @param null $postID
+ * @return bool
+ */
+function get_strava_route($postID=null)
+{
+    global $post;
+
+    if ($postID === null) {
+        $postID = $post->ID;
+    }
+
+    $routePost = get_field('route', $postID);
+
+    // Check if a route field was set
+    if (false !== $routePost) {
+        // Is it a route post type?
+        if (isset($routePost->ID) && 'route' === get_post_type($routePost->ID)) {
+            return $routePost;
+        }
+    }
+
+    return false;
+}
+
+/**
+ * Checks if a 'route' field is set.
+ *
+ * If it is, and it's a Route post, then we pass it back to
+ * the Strava plugin.
+ *
+ * @param $route
+ * @return bool|WP_Post
+ */
 function set_strava_handle_route($route)
 {
-    if (is_front_page()) {
-        $route = get_field('route');
+    $routePost = get_strava_route();
+
+    if (false !== $routePost) {
+        $route = $routePost;
     }
 
     return $route;
@@ -224,7 +263,7 @@ function set_strava_handle_route($route)
  */
 function set_strava_handle_home($handle)
 {
-    if (is_front_page()) {
+    if (false !== get_strava_route()) {
         $handle = 'roots_scripts';
     }
 

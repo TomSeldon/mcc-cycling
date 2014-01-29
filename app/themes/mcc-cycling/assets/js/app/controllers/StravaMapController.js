@@ -138,6 +138,7 @@
 
         $scope.fitMapToRoute = function()
         {
+
             if ($scope.map && $scope.route && $scope.route.segments) {
                 var bounds = new google.maps.LatLngBounds();
 
