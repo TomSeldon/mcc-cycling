@@ -61,20 +61,23 @@ while (have_posts()) : the_post(); ?>
                 <div class="summary row">
                     <h2>Summary</h2>
                     <div class="panel panel-default summary">
-                        <div class="panel-body">
-                            <p>Route:</p>
-                            <div id="summary-map"></div>
-                        </div>
-
                         <table class="table">
                             <tbody>
                                 <tr class="date">
-                                    <td>Event date:</td>
+                                    <td>Date:</td>
                                     <td><?php echo date('j M Y', $event_date_unix); ?></td>
                                 </tr>
+
+                                <?php if (false !== $location && !empty($location['address'])): ?>
+                                    <tr class="address">
+                                        <td>Location:</td>
+                                        <td><?php echo $location['address']; ?></td>
+                                    </tr>
+                                <?php endif; ?>
+
                                 <?php if (false !== $website): ?>
                                 <tr class="website">
-                                    <td>Event website:</td>
+                                    <td>Website:</td>
                                     <td><a href="<?php echo $website; ?>"><?php echo $website; ?></a></td>
                                 </tr>
                                 <?php endif; ?>
