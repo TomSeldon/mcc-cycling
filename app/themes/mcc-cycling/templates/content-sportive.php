@@ -52,6 +52,12 @@ while (have_posts()) : the_post(); ?>
                         <?php the_content(); ?>
                     </div>
                     <div class="tab-pane fade in" id="route">
+                        <div class="page-header">
+                            <h2>
+                                <?php echo $route->post_title; ?>&nbsp;
+                                <small>(<a target="_blank" href="<?php the_field('url', $route->ID); ?>">View route on Strava.com</a>)</small>
+                            </h2>
+                        </div>
                         <div id="sportive-route-lg" data-strava-route="" data-route-id="<?php echo $route->ID; ?>"></div>
                     </div>
                 </div>
