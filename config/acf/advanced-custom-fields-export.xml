@@ -29,7 +29,7 @@
         <title>MCC Cycling</title>
         <link>http://mcc-cycling.dev</link>
         <description></description>
-        <pubDate>Sun, 26 Jan 2014 22:21:28 +0000</pubDate>
+        <pubDate>Wed, 29 Jan 2014 01:11:35 +0000</pubDate>
         <language></language>
         <wp:wxr_version>1.1</wp:wxr_version>
         <wp:base_site_url>http://mcc-cycling.dev/wp</wp:base_site_url>
@@ -569,6 +569,88 @@
             <wp:postmeta>
                 <wp:meta_key>rule</wp:meta_key>
                 <wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:8:"location";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>Event Information</title>
+            <link>http://mcc-cycling.dev/?acf=acf_event-information-2</link>
+            <pubDate>Tue, 28 Jan 2014 22:26:50 +0000</pubDate>
+            <dc:creator>tom.seldon</dc:creator>
+            <guid isPermaLink="false">http://mcc-cycling.dev/?post_type=acf&#038;p=469</guid>
+            <wp:post_id>469</wp:post_id>
+            <wp:post_date>2014-01-28 22:26:50</wp:post_date>
+            <wp:post_date_gmt>2014-01-28 22:26:50</wp:post_date_gmt>
+            <wp:comment_status>closed</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>acf_event-information-2</wp:post_name>
+            <wp:status>publish</wp:status>
+            <wp:post_parent>0</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>acf</wp:post_type>
+            <wp:post_password></wp:post_password>
+            <wp:postmeta>
+                <wp:meta_key>_edit_last</wp:meta_key>
+                <wp:meta_value><![CDATA[1]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52e82c269af68</wp:meta_key>
+                <wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_52e82c269af68";s:5:"label";s:10:"Basic info";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52e82ba29af65</wp:meta_key>
+                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52e82ba29af65";s:5:"label";s:10:"Event date";s:4:"name";s:10:"event_date";s:4:"type";s:11:"date_picker";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:11:"date_format";s:6:"yymmdd";s:14:"display_format";s:8:"dd/mm/yy";s:9:"first_day";s:1:"1";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52e82bfe9af67</wp:meta_key>
+                <wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_52e82bfe9af67";s:5:"label";s:13:"Event website";s:4:"name";s:13:"event_website";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52e82c489af69</wp:meta_key>
+                <wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52e82c489af69";s:5:"label";s:14:"Event location";s:4:"name";s:14:"event_location";s:4:"type";s:10:"google_map";s:12:"instructions";s:157:"Search for the event location. You can search for an address and then click and drag the marker to the correct location if it isn't quite in the right place.";s:8:"required";s:1:"1";s:10:"center_lat";s:9:"51.667778";s:10:"center_lng";s:9:"-2.881389";s:4:"zoom";s:2:"12";s:6:"height";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52e82d339af6c</wp:meta_key>
+                <wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_52e82d339af6c";s:5:"label";s:5:"Other";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52e82cba9af6a</wp:meta_key>
+                <wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_52e82cba9af6a";s:5:"label";s:10:"Facilities";s:4:"name";s:10:"facilities";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"sub_fields";a:1:{i:0;a:15:{s:3:"key";s:19:"field_52e82d1a9af6b";s:5:"label";s:8:"Facility";s:4:"name";s:8:"facility";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}}s:7:"row_min";s:0:"";s:9:"row_limit";s:0:"";s:6:"layout";s:3:"row";s:12:"button_label";s:12:"Add Facility";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52e82e029af6e</wp:meta_key>
+                <wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_52e82e029af6e";s:5:"label";s:5:"Route";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52e82e119af6f</wp:meta_key>
+                <wp:meta_value><![CDATA[a:9:{s:3:"key";s:19:"field_52e82e119af6f";s:5:"label";s:14:"Select a route";s:4:"name";s:0:"";s:4:"type";s:7:"message";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"message";s:206:"Select an existing route. If you don't see the route you need, you can import new routes from Strava via the 'Strava Routes' menu item. After importing a route, it will become available here to be selected.";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52e82e619af70</wp:meta_key>
+                <wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_52e82e619af70";s:5:"label";s:5:"Route";s:4:"name";s:5:"route";s:4:"type";s:11:"post_object";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:9:"post_type";a:1:{i:0;s:5:"route";}s:8:"taxonomy";a:1:{i:0;s:3:"all";}s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>position</wp:meta_key>
+                <wp:meta_value><![CDATA[acf_after_title]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>layout</wp:meta_key>
+                <wp:meta_value><![CDATA[default]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>hide_on_screen</wp:meta_key>
+                <wp:meta_value><![CDATA[]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52e82f2702739</wp:meta_key>
+                <wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_52e82f2702739";s:5:"label";s:8:"Location";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52e8358d40d00</wp:meta_key>
+                <wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_52e8358d40d00";s:5:"label";s:8:"Benefits";s:4:"name";s:8:"benefits";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"sub_fields";a:1:{i:0;a:15:{s:3:"key";s:19:"field_52e8358d40d01";s:5:"label";s:7:"Benefit";s:4:"name";s:7:"benefit";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}}s:7:"row_min";s:0:"";s:9:"row_limit";s:0:"";s:6:"layout";s:3:"row";s:12:"button_label";s:11:"Add Benefit";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:10;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>rule</wp:meta_key>
+                <wp:meta_value><![CDATA[a:5:{s:5:"param";s:13:"page_template";s:8:"operator";s:2:"==";s:5:"value";s:21:"template-sportive.php";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
             </wp:postmeta>
         </item>
     </channel>
