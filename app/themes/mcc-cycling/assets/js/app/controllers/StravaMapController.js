@@ -78,6 +78,17 @@
             });
         }
 
+        function createMap(elementId)
+        {
+            $scope.map =  new google.maps.Map(document.getElementById(elementId), $scope.options.map);
+
+            google.maps.event.addListener($scope.map, 'bounds_changed', function() {
+                $scope.$broadcast('map.bounds_changed', $scope.map);
+            });
+
+            $scope.$broadcast('map.loaded', $scope.map);
+        }
+
         /**
          * Adds a location that can be used on the map.
          *
@@ -138,7 +149,6 @@
 
         $scope.fitMapToRoute = function()
         {
-
             if ($scope.map && $scope.route && $scope.route.segments) {
                 var bounds = new google.maps.LatLngBounds();
 
@@ -172,8 +182,8 @@
         });
 
         $scope.$on('map.loaded', function(){
-            $scope.fitMapToRoute();
             $scope.addPolylinesToMap();
+            $scope.fitMapToRoute();
         });
 
         $scope.$on('map.bounds_changed', function(){
@@ -185,13 +195,7 @@
          * On change, we'll instantiate a map on it and add some event listeners.
          */
         $scope.$watch('elementId', function(elementId){
-            $scope.map =  new google.maps.Map(document.getElementById(elementId), $scope.options.map);
-
-            google.maps.event.addListener($scope.map, 'bounds_changed', function() {
-                $scope.$broadcast('map.bounds_changed');
-            });
-
-            $scope.$broadcast('map.loaded');
+            createMap(elementId);
         });
 
         init();

@@ -42,24 +42,23 @@ while (have_posts()) : the_post(); ?>
         </div>
         <div class="row">
             <div class="col-md-9 main">
-                <ul class="nav nav-pills">
-                    <li class="active"><a href="#event" data-toggle="tab">The Event</a></li>
-                    <li><a href="#route" data-toggle="tab">The Route</a></li>
-                </ul>
+                <div id="event">
+                    <div class="page-header">
+                        <h2>The Event </h2>
+                    </div>
 
-                <div class="tab-content">
-                    <div class="tab-pane fade in active" id="event">
-                        <?php the_content(); ?>
+                    <?php the_content(); ?>
+                </div>
+
+                <div class="tab-pane fade in active" id="route">
+                    <div class="page-header">
+                        <h2>The Route</h2>
                     </div>
-                    <div class="tab-pane fade in" id="route">
-                        <div class="page-header">
-                            <h2>
-                                <?php echo $route->post_title; ?>&nbsp;
-                                <small>(<a target="_blank" href="<?php the_field('url', $route->ID); ?>">View route on Strava.com</a>)</small>
-                            </h2>
-                        </div>
-                        <div id="sportive-route-lg" data-strava-route="" data-route-id="<?php echo $route->ID; ?>"></div>
-                    </div>
+                    <h4>
+                        <?php echo $route->post_title; ?>&nbsp;
+                        <small>(<a target="_blank" href="<?php the_field('url', $route->ID); ?>">View route on Strava.com</a>)</small>
+                    </h4>
+                    <div id="sportive-route-lg" data-strava-route="" data-route-id="<?php echo $route->ID; ?>"></div>
                 </div>
             </div>
 
