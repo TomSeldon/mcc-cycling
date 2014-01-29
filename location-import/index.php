@@ -13,12 +13,14 @@ require_once "class/RecordScraper.php";
 require_once "class/AccommodationRecordScraper.php";
 require_once "class/ActivityRecordScraper.php";
 require_once "class/RecordsParser.php";
+require_once "class/ImportRecords.php";
 
 // Get URLs
 //new AccommodationUrlScraper();
 //new ActivityUrlScraper();
 
-// Parse individual records
-new RecordsParser();
+// Scrape and parse individual records
+//new RecordsParser();
 
 // Import posts
+//new ImportRecords();
