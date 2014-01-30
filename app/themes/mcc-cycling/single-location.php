@@ -18,19 +18,19 @@
     <h2>Contact information</h2>
     <div class="panel panel-default">
         <table class="table">
-            <?php if (false !== $telephone): ?>
+            <?php if (false !== $telephone && strlen($telephone)): ?>
                 <tr>
                     <td><?php _e('Telephone number:'); ?></td>
                     <td><?php echo $telephone ?></td>
                 </tr>
             <?php endif; ?>
-            <?php if (false !== $website): ?>
+            <?php if (false !== $website && strlen($website)): ?>
                 <tr>
                     <td><?php _e('Website:'); ?></td>
                     <td><a href="<?php echo $website; ?>" target="_blank"><?php echo $website ?></a></td>
                 </tr>
             <?php endif; ?>
-            <?php if (false !== $email): ?>
+            <?php if (false !== $email && strlen($email)): ?>
                 <tr>
                     <td><?php _e('E-mail address:'); ?></td>
                     <td><a href="mailto:<?php echo $email; ?>"><?php echo $email ?></a></td>
