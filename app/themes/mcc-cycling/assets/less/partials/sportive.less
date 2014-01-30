@@ -64,6 +64,21 @@ body.page-template-template-sportive-php {
         margin-bottom: 20px;
       }
 
+      .benefits,
+      .facilities {
+        li {
+          .item {
+            &:extend(.pull-left);
+          }
+
+          .tick {
+            &:extend(.pull-right);
+            font-size: 1.5em;
+            color: @greenOverlay;
+          }
+        }
+      }
+
       @media (min-width: @screen-md-min) {
         .share {
           h2 {

@@ -108,28 +108,14 @@ while (have_posts()) : the_post(); ?>
                     </div>
                 </div>
 
-                <?php if(false !== $benefits && count($benefits)): ?>
-                <div class="benefits row">
-                    <h2>Benefits</h2>
-                    <ul class="list-group">
-                        <?php while (has_sub_field('benefits')): ?>
-                        <li class="list-group-item benefit">
-                            <?php the_sub_field('benefit'); ?>
-                            <span class="glyphicon glyphicon-check pull-right"></span>
-                        </li>
-                        <?php endwhile; ?>
-                    </ul>
-                </div>
-                <?php endif; ?>
-
                 <?php if(false !== $facilities && count($facilities)): ?>
                 <div class="facilities row">
                     <h2>Facilities</h2>
                     <ul class="list-group">
                         <?php while (has_sub_field('facilities')): ?>
-                        <li class="list-group-item facility">
-                            <?php the_sub_field('facility'); ?>
-                            <span class="glyphicon glyphicon-check pull-right"></span>
+                        <li class="list-group-item facility clearfix">
+                            <span class="item"><?php the_sub_field('facility'); ?></span>
+                            <span class="tick glyphicon glyphicon-check"></span>
                         </li>
                         <?php endwhile; ?>
                     </ul>
