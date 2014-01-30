@@ -37,7 +37,7 @@ class AccommodationRecordScraper extends RecordScraper
             die(var_export($url_args));
         }
 
-        $address = array(
+        $location = array(
             'lat'           => $url_args['latitude'],
             'lng'           => $url_args['longitude'],
             'center_lat'    => $url_args['latitude'],
@@ -45,7 +45,7 @@ class AccommodationRecordScraper extends RecordScraper
             'address'       => $url_args['location']
         );
 
-        $post_meta->address          = $address;
+        $post_meta->location         = $location;
         $post_meta->telephone        = trim($this->html->find('ul.contact-details .tel', 0)->plaintext);
         $post_meta->email            = trim($this->html->find('ul.contact-details .email', 0)->plaintext);
         $post_meta->website          = trim($this->html->find('ul.contact-details .web', 0)->href);
