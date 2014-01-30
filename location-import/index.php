@@ -14,6 +14,10 @@ require_once "class/AccommodationRecordScraper.php";
 require_once "class/ActivityRecordScraper.php";
 require_once "class/RecordsParser.php";
 require_once "class/ImportRecords.php";
+require_once "../wp/wp-load.php";
+require_once "../wp/wp-admin/includes/file.php";
+require_once "../wp/wp-admin/includes/image.php";
+require_once "../wp/wp-admin/includes/media.php";
 
 // Get URLs
 //new AccommodationUrlScraper();
@@ -23,4 +27,4 @@ require_once "class/ImportRecords.php";
 //new RecordsParser();
 
 // Import posts
-//new ImportRecords();
+new ImportRecords();

@@ -30,7 +30,22 @@ class ActivityRecordScraper extends RecordScraper
     {
         $post_meta = new stdClass();
 
-        $post_meta->address          = trim($this->html->find('section.longform h3', 0)->plaintext);
+        $url_args = array();
+        parse_str($this->url, $url_args);
+
+        if (!array_key_exists('latitude', $url_args)) {
+            die(var_export($url_args));
+        }
+
+        $location = array(
+            'lat'           => $url_args['latitude'],
+            'lng'           => $url_args['longitude'],
+            'center_lat'    => $url_args['latitude'],
+            'center_lng'    => $url_args['longitude'],
+            'address'       => $url_args['location']
+        );
+
+        $post_meta->location         = $location;
         $post_meta->telephone        = trim($this->html->find('ul.contact-details .tel', 0)->plaintext);
         $post_meta->email            = trim($this->html->find('ul.contact-details .email', 0)->plaintext);
         $post_meta->website          = trim($this->html->find('ul.contact-details .web', 0)->href);

@@ -30,7 +30,7 @@ abstract class RecordScraper
 
     public function __construct($url)
     {
-        $this->url      = $url;
+        $this->url      = str_replace('&amp;', '&', $url);
 
         $this->html     = file_get_html($this->url);
 

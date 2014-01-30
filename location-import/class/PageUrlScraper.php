@@ -82,11 +82,15 @@ abstract class PageUrlScraper
         $url    = $this->base_url . $page_number;
         $html   = file_get_html($url);
 
-        foreach ($html->find('ul.results-list li') as $result) {
-            $pageUrl = $result->find('h4 a', 0)->href;
+        foreach ($html->find('ul.results-list', 0)->children() as $result) {
+            $page_url = $result->find('h4 a', 0)->href;
 
-            if ($pageUrl && !in_array($pageUrl, $this->page_urls)) {
-                $this->page_urls[] = $pageUrl;
+            if (!$page_url) {
+                die($result);
+            }
+
+            if ($page_url && !in_array($page_url, $this->page_urls)) {
+                $this->page_urls[] = $page_url;
             }
         }
     }
