@@ -16,7 +16,7 @@
     </div>
     <div class="main col-sm-9">
         <header>
-            <h2><a href="<?php get_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         </header>
         <div class="description">
             <?php the_excerpt(); ?>
