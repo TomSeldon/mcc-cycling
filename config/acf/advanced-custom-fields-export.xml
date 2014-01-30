@@ -29,7 +29,7 @@
         <title>MCC Cycling</title>
         <link>http://mcc-cycling.dev</link>
         <description></description>
-        <pubDate>Wed, 29 Jan 2014 01:11:35 +0000</pubDate>
+        <pubDate>Thu, 30 Jan 2014 22:45:45 +0000</pubDate>
         <language></language>
         <wp:wxr_version>1.1</wp:wxr_version>
         <wp:base_site_url>http://mcc-cycling.dev/wp</wp:base_site_url>
@@ -536,7 +536,7 @@
             </wp:postmeta>
             <wp:postmeta>
                 <wp:meta_key>field_52e5875d7e835</wp:meta_key>
-                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52e5875d7e835";s:5:"label";s:11:"Description";s:4:"name";s:11:"description";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:5:"basic";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52e5875d7e835";s:5:"label";s:13:"Accessibility";s:4:"name";s:13:"accessibility";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:5:"basic";s:12:"media_upload";s:2:"no";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
                 <wp:meta_key>field_52e587bf7e838</wp:meta_key>
@@ -565,6 +565,18 @@
             <wp:postmeta>
                 <wp:meta_key>hide_on_screen</wp:meta_key>
                 <wp:meta_value><![CDATA[]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52eaa2024b206</wp:meta_key>
+                <wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_52eaa2024b206";s:5:"label";s:15:"Contact details";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52eaa2114b207</wp:meta_key>
+                <wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_52eaa2114b207";s:5:"label";s:17:"Other information";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>field_52eaa1e64b205</wp:meta_key>
+                <wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_52eaa1e64b205";s:5:"label";s:10:"Facilities";s:4:"name";s:10:"facilities";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:5:"basic";s:12:"media_upload";s:2:"no";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}]]></wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
                 <wp:meta_key>rule</wp:meta_key>
