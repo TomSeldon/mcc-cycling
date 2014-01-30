@@ -5,11 +5,13 @@
  * Created: 26/01/2014
  */
 
-    $telephone  = get_field('telephone');
-    $website    = get_field('website');
-    $email      = get_field('email');
-    $location   = get_field('location');
-    $facilities = get_the_terms($post->ID, 'facility');
+    $telephone      = get_field('telephone');
+    $website        = get_field('website');
+    $email          = get_field('email');
+    $location       = get_field('location');
+
+    $facilities     = get_field('facilities');
+    $accessibility  = get_field('accessibility');
 
     while (have_posts()): the_post();
 ?>
@@ -48,6 +50,13 @@
     <div class="content">
         <?php the_content(); ?>
     </div>
+
+    <?php if (false !== $accessibility && strlen(trim(strip_tags($accessibility)))): ?>
+        <div class="facilities">
+            <h2>Accessibility</h2>
+            <?php echo $accessibility; ?>
+        </div>
+    <?php endif; ?>
 </div>
 
 <aside class="col-sm-4">
@@ -72,13 +81,11 @@
     </div>
     <?php endif; ?>
 
-    <?php if (false !== $facilities && count($facilities)): ?>
-    <h2>Facilities</h2>
-    <ul class="list-group">
-        <?php foreach ($facilities as $facility): ?>
-            <li class="list-group-item"><?php echo $facility->name; ?></li>
-        <?php endforeach; ?>
-    </ul>
+    <?php if (false !== $facilities && strlen(trim(strip_tags($facilities)))): ?>
+        <div class="facilities">
+            <h2>Facilities</h2>
+            <?php echo $facilities; ?>
+        </div>
     <?php endif; ?>
 </aside>
 
