@@ -15,15 +15,16 @@
         </a>
     </div>
     <div class="main col-sm-9">
-        <header><h2><?php the_title(); ?></h2></header>
+        <header>
+            <h2><a href="<?php get_permalink(); ?>"><?php the_title(); ?></a></h2>
+        </header>
         <div class="description">
-            <?php the_field('description'); ?>
+            <?php the_excerpt(); ?>
         </div>
+        <?php if (false !== $location): ?>
         <div class="location">
             <?php echo $location['address']; ?>
         </div>
-        <div class="read-more">
-            <a href="<?php the_permalink(); ?>">Read more</a>
-        </div>
+        <?php endif; ?>
     </div>
 </article>
