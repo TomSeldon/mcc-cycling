@@ -26,21 +26,24 @@ while (have_posts()) : the_post(); ?>
 
     <article <?php post_class(); ?>>
         <div class="row">
-            <div class="col-xs-12">
-                <div class="big-date">
-                    <div class="date">
-                        <span><?php echo date('d', $event_date_unix); ?></span>
+            <div class="col-xs-12 col-md-3 sidebar pull-right">
+                <div class="date row">
+                    <div class="col-xs-12">
+                        <div class="big-date">
+                            <div class="date">
+                                <span><?php echo date('d', $event_date_unix); ?></span>
+                            </div>
+                            <div class="month">
+                                <span><?php echo date('M', $event_date_unix); ?></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="month">
-                        <span><?php echo date('M', $event_date_unix); ?></span>
+                    <div class="col-xs-12 time-until">
+                        <h2><?php echo $days_until_event_str; ?></h2>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 time-until">
-                <h2><?php echo $days_until_event_str; ?></h2>
-            </div>
-        </div>
-        <div class="row">
+
             <div class="col-md-9 main">
                 <div id="event">
                     <div class="page-header">
@@ -50,7 +53,7 @@ while (have_posts()) : the_post(); ?>
                     <?php the_content(); ?>
                 </div>
 
-                <div class="tab-pane fade in active" id="route">
+                <div id="route">
                     <div class="page-header">
                         <h2>The Route</h2>
                     </div>
