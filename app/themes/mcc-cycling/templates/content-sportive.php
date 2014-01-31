@@ -67,7 +67,7 @@ while (have_posts()) : the_post(); ?>
 
             <div class="col-md-3 sidebar">
                 <div class="share row">
-                    <h2>Share</h2>
+                    <h2>Share with a friend</h2>
 
                     <!-- AddThis Button BEGIN -->
                     <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
