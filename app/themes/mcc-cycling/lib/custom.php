@@ -311,6 +311,11 @@ function add_post_type_location()
 }
 add_action('init', 'add_post_type_location');
 
+/**
+ * Alter the main query for locations archive.
+ *
+ * @param $query
+ */
 function mcc_locations_posts_per_page($query)
 {
     if ( is_admin() || ! $query->is_main_query() )
@@ -319,6 +324,8 @@ function mcc_locations_posts_per_page($query)
     if ( is_post_type_archive( 'location' ) ) {
         // Display 50 posts for a custom post type called 'movie'
         $query->set( 'posts_per_page', -1 );
+        $query->set( 'order', 'asc' );
+        $query->set( 'orderby', 'title' );
         return;
     }
 }
