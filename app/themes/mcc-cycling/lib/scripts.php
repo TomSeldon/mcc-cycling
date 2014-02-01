@@ -29,7 +29,7 @@ function roots_scripts() {
 
   wp_register_script('angular', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js', array(), null, false);
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
-  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array('angular'), '8aeedd439d5fdc1bcafe29272d6c3a05', true);
+  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array('angular'), 'db1c781c6de89ec5440535e332bbe3f3', true);
   wp_register_script('slimscroll', get_template_directory_uri() . '/assets/js/vendor/jquery.slimscroll.min.js', array('jquery'), null, true);
   wp_register_script('fullScreen', get_template_directory_uri() . '/assets/js/vendor/jquery.fullPage.min.js', array('jquery', 'jquery-ui-core', 'jquery-effects-core', 'slimscroll'), null, true);
   wp_register_script('addthisevent', 'http://js.addthisevent.com/atemay.js', array(), null, true);
