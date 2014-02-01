@@ -17,8 +17,10 @@
     $route              = get_field('route');
 
     if ($days_until_event > 0) {
+        $ended = false;
         $days_until_event_str = sprintf(__('%d %s until the event', 'mcc'), $days_until_event, _n('day', 'days', $days_until_event, 'mcc'));
     } else {
+        $ended = true;
         $days_until_event_str = __('This event has ended', 'mcc');
     }
 
@@ -42,6 +44,25 @@ while (have_posts()) : the_post(); ?>
                         <h2><?php echo $days_until_event_str; ?></h2>
                     </div>
                 </div>
+                <?php if (!$ended): ?>
+                <div class="add-to-cal">
+                    <a href="http://example.com/link-to-your-event" title="Add to Calendar" class="addthisevent">
+                        Add to Calendar
+                        <span class="_start"><?php echo date('d-m-Y'); ?></span>
+                        <span class="_end"><?php echo date('d-m-Y'); ?></span>
+                        <span class="_zonecode">36</span>
+                        <span class="_summary"><?php the_title(); ?></span>
+                        <span class="_description"><?php echo strip_tags(get_the_excerpt()); ?></span>
+
+                        <?php if (false !== $location): ?>
+                        <span class="_location"><?php echo $location['address']; ?></span>
+                        <?php endif; ?>
+
+                        <span class="_all_day_event">true</span>
+                        <span class="_date_format">DD/MM/YYYY</span>
+                    </a>
+                </div>
+                <?php endif; ?>
             </div>
 
             <div class="col-md-9 main">
