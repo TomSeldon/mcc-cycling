@@ -323,7 +323,7 @@ function mcc_locations_posts_per_page($query)
 
     if ( is_post_type_archive( 'location' ) ) {
         // Display 50 posts for a custom post type called 'movie'
-        $query->set( 'posts_per_page', -1 );
+        $query->set( 'posts_per_page', 15 );
         $query->set( 'order', 'asc' );
         $query->set( 'orderby', 'title' );
         return;
