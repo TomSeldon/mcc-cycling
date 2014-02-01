@@ -18,7 +18,7 @@
 
 <div class="col-sm-8">
     <h2>Contact information</h2>
-    <div class="panel panel-default">
+    <div class="contact-info panel panel-default">
         <table class="table">
             <?php if (false !== $telephone && strlen($telephone)): ?>
                 <tr>
