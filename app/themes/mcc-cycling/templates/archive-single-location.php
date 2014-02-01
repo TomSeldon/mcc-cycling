@@ -21,10 +21,5 @@
         <div class="description">
             <?php the_excerpt(); ?>
         </div>
-        <?php if (false !== $location): ?>
-        <div class="location">
-            <?php echo $location['address']; ?>
-        </div>
-        <?php endif; ?>
     </div>
 </article>
