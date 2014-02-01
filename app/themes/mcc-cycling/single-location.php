@@ -75,7 +75,7 @@
     <?php endif; ?>
 
     <?php if (has_post_thumbnail()): ?>
-    <div class="featured-image">
+    <div class="featured-image clearfix">
         <h2>Featured image</h2>
         <?php echo get_the_post_thumbnail($post->ID, 'medium', array('class' => 'thumbnail pull-left')); ?>
     </div>
