@@ -17,6 +17,11 @@ body.single-location {
     .featured-image {
       .thumbnail {
         max-width: 100%;
+        height: auto;
+
+        @media (min-width: @screen-lg-min) {
+          width: 100%;
+        }
       }
     }
 
