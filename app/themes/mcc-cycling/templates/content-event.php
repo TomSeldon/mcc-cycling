@@ -41,17 +41,18 @@
                 <h2><?php the_field('near_this_track_heading'); ?></h2>
             </div>
             <div class="col-xs-12">
-                <?php while (has_sub_field('locations')): $image = get_sub_field('thumbnail'); ?>
+                <?php foreach($locations as $location): ?>
                     <div class="col-sm-4 location">
-                        <a href="<?php the_sub_field('url'); ?>">
-                            <img alt="<?php echo $image['alt']; ?>"
-                                 src="<?php echo $image['sizes']['medium']; ?>"
-                                 width="285px"
-                                 height="285px" />
-                            <div class="label"><?php the_sub_field('name'); ?></div>
+                        <a href="<?php echo get_permalink($location); ?>">
+                            <?php
+                            if (has_post_thumbnail($location->ID)) {
+                                echo get_the_post_thumbnail($location->ID);
+                            }
+                            ?>
+                            <div class="label"><?php echo $location->post_title; ?></div>
                         </a>
                     </div>
-                <?php endwhile; ?>
+                <?php endforeach; ?>
             </div>
         </div>
         <?php endif; ?>
