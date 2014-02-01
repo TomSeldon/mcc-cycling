@@ -124,6 +124,33 @@ body {
   }
 }
 
+body.post-type-archive {
+  .pagination {
+    width: 100%;
+    margin-top: 2em;
+    font-size: 18px;
+    text-align: center;
+
+    a.page-numbers {
+      &.next,
+      &.prev {
+        &:extend(.btn);
+        &:extend(.btn-primary);
+
+        &:hover {
+          &:extend(.btn-primary:hover);
+
+          text-decoration: none;
+        }
+      }
+    }
+
+    .page-numbers {
+      margin: 0 1em;
+    }
+  }
+}
+
 .read-more {
   margin-top: 10px;
   display: block;
