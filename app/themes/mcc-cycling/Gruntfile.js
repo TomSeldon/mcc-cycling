@@ -48,7 +48,8 @@ module.exports = function(grunt) {
             'assets/js/plugins/bootstrap/affix.js',
             'assets/js/plugins/*.js',
             'assets/js/app/**/*.js',
-            'assets/js/_*.js'
+            'assets/js/_*.js',
+            'assets/js/vendor/retina-1.1.0.js'
           ]
         },
         options: {
