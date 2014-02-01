@@ -1,5 +1,5 @@
 <div class="row logos">
-    <div class="col-sm-offset- col-sm-3 logo" role="navigation">
+    <div class="col-sm-3 logo" role="navigation">
         <a href="http://www.monmouthshire.gov.uk/">
             <img
                 src="/app/themes/mcc-cycling/assets/img/monmouthshire-cc-logo.png"
