@@ -1,6 +1,6 @@
 <article <?php post_class(); ?>>
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-5">
             <div class="big-date">
                 <div class="date">
                     <span><?php echo get_the_time('d'); ?></span>
@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <header class="col-md-9">
+        <header class="col-lg-7">
             <h1 class="entry-title"><?php the_title(); ?></h1>
             <div class="entry-meta">
                 <?php get_template_part('templates/entry-meta'); ?>

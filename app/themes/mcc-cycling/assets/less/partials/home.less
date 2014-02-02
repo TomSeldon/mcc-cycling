@@ -278,20 +278,21 @@ body.home {
     @media (min-width: @screen-sm-min) {
       padding-top: 75px;
       padding-bottom: 75px;
-      text-align: left;
     }
 
     @media (min-width: @screen-md-min) {
+    }
+
+    @media (min-width: @screen-lg-min) {
+      background-position: center bottom;
+      text-align: left;
+
       article {
         .entry-title,
         .entry-meta {
           text-align: left;
         }
       }
-    }
-
-    @media (min-width: @screen-lg-min) {
-      background-position: center bottom;
     }
 
     h1.page-title {

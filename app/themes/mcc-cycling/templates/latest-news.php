@@ -11,10 +11,10 @@
 
 <div class="container section" id="latest-news" style="background-image: url('<?php echo $news_bg_img; ?>');">
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-lg-5">
             <h1 class="page-title">Latest News</h1>
         </div>
-        <div class="col-sm-8 content">
+        <div class="col-lg-7 content">
             <?php
                 // Setup new post
                 mcc_show_latest_post();
