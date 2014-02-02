@@ -127,7 +127,7 @@ while (have_posts()) : the_post(); ?>
                     <h2>Facilities</h2>
                     <ul class="list-group">
                         <?php while (has_sub_field('facilities')): ?>
-                        <li class="list-group-item facility clearfix">
+                        <li class="facility clearfix">
                             <span class="item"><?php the_sub_field('facility'); ?></span>
                             <span class="tick glyphicon glyphicon-check"></span>
                         </li>
