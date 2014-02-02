@@ -3,19 +3,9 @@
  */
 
 @import "bootstrap/bootstrap.less";
-@import "font-awesome/bordered-pulled.less";
-@import "font-awesome/core.less";
-@import "font-awesome/fixed-width.less";
-@import "font-awesome/icons.less";
-@import "font-awesome/larger.less";
-@import "font-awesome/list.less";
-@import "font-awesome/mixins.less";
-@import "font-awesome/path.less";
-@import "font-awesome/rotated-flipped.less";
-@import "font-awesome/spinning.less";
-@import "font-awesome/stacked.less";
-@import "font-awesome/variables.less";
+@import "font-awesome/font-awesome.less";
 @import "partials/variables.less";
+@import "partials/social.less";
 @import "partials/fullScreen.less";
 @import "partials/backgrounds.less";
 @import "partials/headings.less";
@@ -153,6 +143,17 @@ body {
     color: #fff;
     text-decoration: inherit;
   }
+}
+
+.strava-icon {
+  content: "";
+  background-image: url('/app/themes/mcc-cycling/assets/img/strava_cycling-logo.png');
+  background-repeat: no-repeat;
+  width: 2.5em;
+  height: 2em;
+  background-size: 2em 2em;
+  background-position: right;
+  display: inline-block;
 }
 
 body.post-type-archive {

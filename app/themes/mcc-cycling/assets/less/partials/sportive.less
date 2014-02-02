@@ -8,6 +8,27 @@ body.page-template-template-sportive-php {
   article {
     .main {
 
+      h4.route-name {
+        .pull-left();
+      }
+
+      .view-on-strava {
+        .pull-right();
+
+        margin: 10px 0;
+
+        a {
+          &::after {
+            .strava-icon();
+          }
+        }
+      }
+
+      #sportive-route-lg {
+        clear: both;
+        width: 100%;
+      }
+
       .nav-pills {
         margin-bottom: 20px;
 
@@ -73,14 +94,14 @@ body.page-template-template-sportive-php {
       .facilities {
         li {
           .item {
-            &:extend(.pull-left);
+            .pull-right();
 
             width: 80%;
             text-align: left;
           }
 
           .tick {
-            &:extend(.pull-right);
+            .pull-left();
             font-size: 1.5em;
             color: @greenOverlay;
           }
