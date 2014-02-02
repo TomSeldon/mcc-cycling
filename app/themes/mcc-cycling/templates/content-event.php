@@ -1,5 +1,8 @@
 <?php
 
+    $show_route = get_field('show_route');
+    $route      = get_Field('route');
+    $routeID    = (isset($route->ID) ? $route->ID : false);
     $locations  = get_field('locations');
     $event_date = get_field('event_date');
     $event_date_unix = strtotime($event_date);
@@ -24,6 +27,12 @@
                     <?php get_template_part('templates/entry-meta'); ?>
                 </div>
             </header>
+
+            <?php if (false !== $show_route): ?>
+            <div class="route col-md-8 col-md-offset-2">
+                <div id="event-route" data-strava-route="" data-route-id="<?php echo $routeID; ?>"></div>
+            </div>
+            <?php endif; ?>
 
             <div class="content entry-content col-md-8 col-md-offset-2">
                 <?php the_content(); ?>
