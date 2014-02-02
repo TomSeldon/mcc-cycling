@@ -32,10 +32,10 @@
 
 <div class="container section" id="the-event" style="background-image: url('<?php echo $event_bg_img; ?>');">
     <div class="row">
-        <div class="col-sm-5">
+        <div class="col-xs-12 col-md-5">
             <h1><?php the_field('event_heading'); ?></h1>
             <?php if ($event_show_cta): ?>
-            <div class="row cta hidden-xs">
+            <div class="row cta hidden-xs hidden-sm">
                 <div class="col-sm-5">
                     <span>
                         <a href="<?php echo $event_cta_href; ?>" class="redButton"><?php echo $event_cta_button_text; ?></a>
@@ -44,12 +44,12 @@
             </div>
             <?php endif; ?>
         </div>
-        <div class="col-sm-7 content">
+        <div class="col-xs-12 col-md-7 content">
             <?php the_field('event_content'); ?>
         </div>
     </div>
     <?php if ($event_show_cta): ?>
-    <div class="row cta visible-xs">
+    <div class="row cta visible-xs visible-sm">
         <div class="col-sm-5">
             <span>
                 <a href="<?php echo $event_cta_href; ?>" class="redButton"><?php echo $event_cta_button_text; ?></a>
