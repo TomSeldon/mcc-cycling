@@ -5,20 +5,23 @@ var MCCSite = {
     // All pages
     common: {
         init: function() {
-            var $backToTopBtn = jQuery("#back-to-top");
-            var windowHeight = jQuery(window).height();
+            var $topMenu      = jQuery(".top-menu");
+            var $backToTopBtn = jQuery("#back-to-top-container");
+            var windowHeight  = jQuery(window).height();
+            var belowFold     = false;
 
             $backToTopBtn.on('click', function(){
                 jQuery("html, body").animate({ scrollTop: 0 }, "slow");
                 return false;
             });
 
+            /**
+             * Shows or hides the back to top button depending on
+             * whether the user is below the fold.
+             */
             function toggleBackToTop()
             {
-                windowHeight = jQuery(window).height();
-                var offset   = $backToTopBtn.offset().top;
-
-                if (offset > windowHeight) {
+                if (true === belowFold) {
                     if (!$backToTopBtn.is(':visible')) {
                         $backToTopBtn.fadeIn();
                     }
@@ -29,8 +32,40 @@ var MCCSite = {
                 }
             }
 
+            /**
+             * Toggles the 'sticky' top menu depending
+             * on whether the user is below the fold.
+             */
+            function toggleStickyMenu()
+            {
+                if (true === belowFold) {
+                    if (!$topMenu.hasClass('sticky')) {
+                        $topMenu.addClass('sticky fadeIn');
+                    }
+                } else {
+                    if ($topMenu.hasClass('sticky')) {
+                        $topMenu.removeClass('sticky fadeIn');
+                    }
+                }
+            }
+
+            /**
+             * Checks whether the user is below the fold.
+             */
+            function calculateBelowFold()
+            {
+                windowHeight = jQuery(window).height();
+                var offset   = $backToTopBtn.offset().top;
+
+                belowFold = (offset > windowHeight);
+
+                return belowFold;
+            }
+
             jQuery(window).scroll(function(){
-               toggleBackToTop();
+                calculateBelowFold();
+                toggleBackToTop();
+                toggleStickyMenu();
             });
         },
         finalize: function() { }

@@ -7,8 +7,8 @@
 
 ?>
 
-<div id="back-to-top">
-    <a class="btn btn-primary" href="#">
+<div id="back-to-top-container" class="row">
+    <a id="back-to-top" class="" href="#">
         <span class="sr-only">Back to top</span>
         <i class="glyphicon glyphicon-chevron-up"></i>
     </a>

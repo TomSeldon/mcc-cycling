@@ -50,25 +50,8 @@ body {
   }
 }
 
-#back-to-top {
-  display: none;
-  position: fixed;
-  right: 5%;
-  bottom: 10%;
-  z-index: 99;
-
-  a {
-    padding: 10px 15px;
-    background-color: rgba(255,255,255,0.4);
-
-    &:hover {
-      background-color: @lightGreen;
-    }
-  }
-}
-
 .btn-primary {
-  &:extend(.btn);
+  .btn();
 
   background-color: rgba(255,255,255,0.1);
   border-color: #333;
@@ -82,6 +65,41 @@ body {
   &:hover {
     background-color: @lightGreen;
     border-color: @lightGreen;
+  }
+}
+
+.btn-overlay {
+  .btn-primary();
+
+  padding: 10px 15px;
+  background-color: rgba(255,255,255,0.4);
+
+  &:hover {
+    background-color: @lightGreen;
+    color: #fff;
+    opacity: 1;
+  }
+
+  &:focus {
+    background-color: darken(@lightGreen, 5%);
+    outline-color: @lightGreen;
+  }
+}
+
+#back-to-top-container {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 15px;
+  z-index: 99;
+
+  @media (min-width: @screen-lg-min) {
+    right: 70px;
+    bottom: 30px;
+  }
+
+  #back-to-top {
+    .btn-overlay();
   }
 }
 
