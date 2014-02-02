@@ -31,7 +31,7 @@ function mcc_location_shortcode($atts)
         <div class="col-xs-12">
     <?php endif; ?>
 
-            <div class="col-sm-4 location cta">
+            <div class="location cta">
                 <a href="<?php echo $permalink; ?>">
                     <?php
                             echo $thumbnail;
