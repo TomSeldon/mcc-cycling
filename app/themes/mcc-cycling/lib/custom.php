@@ -129,13 +129,13 @@ add_filter("gform_submit_button", "form_submit_button", 10, 2);
 function gform_label_replace_glyphicon($content, $icon_class)
 {
     // Hide the label (except for screen readers)
-    $regex      = '/gfield_label/';
-    $replace    = 'sr-only';
-    $content    = preg_replace($regex, $replace, $content);
+//    $regex      = '/gfield_label/';
+//    $replace    = 'sr-only';
+//    $content    = preg_replace($regex, $replace, $content);
 
     // Add necessary styles to show icon
     $regex      = '/<div class=[\'"]ginput_container[\'"]>(.+)<\/div>/';
-    $replace    = "<div class='ginput_container input-group'><span class='input-group-addon glyphicon $icon_class'></span>$1</div>";
+    $replace    = "<div class='ginput_container input-group'>$1<span class='glyphicon $icon_class'></span></div>";
     $content    = preg_replace($regex, $replace, $content);
 
     return $content;
@@ -272,7 +272,12 @@ function set_strava_handle_home($handle)
 add_filter('StravaRoutes/Scripts/Localize/Route', 'set_strava_handle_route');
 add_filter('StravaRoutes/Scripts/Localize/Handle', 'set_strava_handle_home');
 
-
+/**
+ * Add some rules to control when sidebar is shown.
+ *
+ * @param $sidebar
+ * @return bool
+ */
 function mcc_filter_sidebar($sidebar)
 {
     if (!is_front_page() && is_page_template('default')) {
