@@ -76,6 +76,18 @@ body {
         opacity: 1;
       }
 
+      & ~ #main-container .main {
+        @media (min-width: @screen-md-min) {
+          padding-left: 80px;
+          padding-right: 80px;
+        }
+
+        @media (min-width: @screen-lg-min) {
+          padding-left: 100px;
+          padding-right: 100px;
+        }
+      }
+
       & ~ #top-header,
       & ~ #main-container #top-header {
         background-position: center right;
