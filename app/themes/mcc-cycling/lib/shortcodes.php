@@ -5,13 +5,17 @@
  */
 function mcc_location_shortcode($atts)
 {
-    if (array_key_exists('id', $atts)) {
-        $id = $atts['id'];
-    } else {
+    extract( shortcode_atts(array(
+        'id'                => false,
+        'show_container'    => 1
+    ), $atts, 'mcc-location'));
+
+    if (false === $id) {
         return;
     }
 
-    $location = get_post($id);
+    $location       = get_post($id);
+    $show_container = ($show_container >= 1);
 
     if (false === $location || 'location' !== $location->post_type || !has_post_thumbnail($location->ID)) {
         return;
@@ -22,14 +26,25 @@ function mcc_location_shortcode($atts)
 
     ?>
 
-    <div class="col-sm-4 location">
-        <a href="<?php echo $permalink; ?>">
-            <?php
-                    echo $thumbnail;
-            ?>
-            <div class="label"><?php echo $location->post_title; ?></div>
-        </a>
+    <?php if (true === $show_container): ?>
+    <div class="locations row">
+        <div class="col-xs-12">
+    <?php endif; ?>
+
+            <div class="col-sm-4 location cta">
+                <a href="<?php echo $permalink; ?>">
+                    <?php
+                            echo $thumbnail;
+                    ?>
+                    <div class="label"><?php echo $location->post_title; ?></div>
+                </a>
+            </div>
+
+    <?php if (true === $show_container): ?>
+        </div>
     </div>
+    <?php endif; ?>
+
 <?php
 }
 add_shortcode('mcc-location', 'mcc_location_shortcode');

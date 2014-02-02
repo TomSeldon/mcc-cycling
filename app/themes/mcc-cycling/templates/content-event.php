@@ -51,7 +51,7 @@
             </div>
             <div class="col-xs-12">
                 <?php foreach($locations as $location):
-                    do_shortcode("[mcc-location id=$location->ID]");
+                    do_shortcode("[mcc-location id=$location->ID show_container=0]");
                 endforeach; ?>
             </div>
         </div>
