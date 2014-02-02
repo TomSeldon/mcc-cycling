@@ -50,18 +50,9 @@
                 <h2><?php the_field('near_this_track_heading'); ?></h2>
             </div>
             <div class="col-xs-12">
-                <?php foreach($locations as $location): ?>
-                    <div class="col-sm-4 location">
-                        <a href="<?php echo get_permalink($location); ?>">
-                            <?php
-                            if (has_post_thumbnail($location->ID)) {
-                                echo get_the_post_thumbnail($location->ID);
-                            }
-                            ?>
-                            <div class="label"><?php echo $location->post_title; ?></div>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
+                <?php foreach($locations as $location):
+                    do_shortcode("[mcc-location id=$location->ID]");
+                endforeach; ?>
             </div>
         </div>
         <?php endif; ?>
