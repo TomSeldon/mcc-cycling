@@ -48,8 +48,8 @@ while (have_posts()) : the_post(); ?>
                 <div class="add-to-cal">
                     <a href="http://example.com/link-to-your-event" title="Add to Calendar" class="addthisevent">
                         Add to Calendar
-                        <span class="_start"><?php echo date('d-m-Y'); ?></span>
-                        <span class="_end"><?php echo date('d-m-Y'); ?></span>
+                        <span class="_start"><?php echo date('d-m-Y', $event_date_unix); ?></span>
+                        <span class="_end"><?php echo date('d-m-Y', $event_date_unix); ?></span>
                         <span class="_zonecode">36</span>
                         <span class="_summary"><?php the_title(); ?></span>
                         <span class="_description"><?php echo strip_tags(get_the_excerpt()); ?></span>
