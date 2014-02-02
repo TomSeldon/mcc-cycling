@@ -104,34 +104,6 @@ while (have_posts()) : the_post(); ?>
                     <!-- AddThis Button END -->
                 </div>
 
-                <div class="summary row">
-                    <h2>Summary</h2>
-                    <div class="panel panel-default summary">
-                        <table class="table">
-                            <tbody>
-                                <tr class="date">
-                                    <td>Date:</td>
-                                    <td><?php echo date('j M Y', $event_date_unix); ?></td>
-                                </tr>
-
-                                <?php if (false !== $location && !empty($location['address'])): ?>
-                                    <tr class="address">
-                                        <td>Location:</td>
-                                        <td><?php echo $location['address']; ?></td>
-                                    </tr>
-                                <?php endif; ?>
-
-                                <?php if (false !== $website): ?>
-                                <tr class="website">
-                                    <td>Website:</td>
-                                    <td><a href="<?php echo $website; ?>"><?php echo $website; ?></a></td>
-                                </tr>
-                                <?php endif; ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
                 <?php if(false !== $facilities && count($facilities)): ?>
                 <div class="facilities row">
                     <h2>Facilities</h2>
