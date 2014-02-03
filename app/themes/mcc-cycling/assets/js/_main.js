@@ -5,6 +5,14 @@ var MCCSite = {
     // All pages
     common: {
         init: function() {
+            if (isSafari()) {
+                jQuery('body').addClass('safari');
+            }
+
+            if (isChrome()) {
+                jQuery('body').addClass('chrome');
+            }
+
             var $topMenu      = jQuery(".top-menu");
             var $backToTopBtn = jQuery("#back-to-top-container");
             var windowHeight  = jQuery(window).height();
