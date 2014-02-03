@@ -15,19 +15,23 @@ function mcc_show_custom_sidebar()
 
             switch ($row_type) {
                 case 'locations_cta':
-                    if (true === get_sub_field('show_heading'));
-                        echo "<h2>" . get_sub_field('heading') . "</h2>";
-
-                    mcc_sidebar_show_location_thumbs( get_sub_field('locations') );
+                    mcc_sidebar_show_locations_layout( get_sub_field('locations') );
                     break;
             }
         }
     }
 }
 
-function mcc_sidebar_show_location_thumbs($locations)
+function mcc_sidebar_show_locations_layout($locations)
 {
+    echo '<div class="locations">';
+
+    if (true === get_sub_field('show_heading'));
+        echo "<h2>" . get_sub_field('heading') . "</h2>";
+
     foreach ($locations as $location) {
         echo do_shortcode("[mcc-location id=$location->ID]");
     }
+
+    echo '</div>';
 }
