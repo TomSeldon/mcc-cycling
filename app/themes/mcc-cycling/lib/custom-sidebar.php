@@ -24,14 +24,14 @@ function mcc_show_custom_sidebar()
 
 function mcc_sidebar_show_locations_layout($locations)
 {
-    echo '<div class="locations">';
+    echo '<div class="locations row"><div class="col-xs-12">';
 
     if (true === get_sub_field('show_heading'));
         echo "<h2>" . get_sub_field('heading') . "</h2>";
 
     foreach ($locations as $location) {
-        echo do_shortcode("[mcc-location id=$location->ID]");
+        echo do_shortcode("[mcc-location id=$location->ID show_container=0]");
     }
 
-    echo '</div>';
+    echo '</div></div>';
 }
