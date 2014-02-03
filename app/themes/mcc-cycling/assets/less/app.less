@@ -157,6 +157,64 @@ body {
   display: inline-block;
 }
 
+aside {
+  .thumb-links.cta {
+    h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .intro-text {
+      font-size: 17px;
+    }
+
+    img.thumbnail {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      -webkit-filter: grayscale(30%);
+      -moz-filter: grayscale(30%);
+      -o-filter: grayscale(30%);
+      filter: grayscale(30%);
+    }
+
+    ul.links {
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style: none;
+        border-bottom: 1px solid #bbb;
+        padding: 0.5em 0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        a {
+          font-size: 17px;
+          color: #000;
+          line-height: 28px;
+
+          i.read-more {
+            .redButton();
+            .pull-right();
+
+            margin: 0;
+            font-size: 12px;
+            padding: 5px 10px;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 body.post-type-archive {
   .pagination {
     width: 100%;
