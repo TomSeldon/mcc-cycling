@@ -28,7 +28,7 @@ while (have_posts()) : the_post(); ?>
 
     <article <?php post_class(); ?>>
         <div class="row">
-            <div class="col-xs-12 col-md-3 sidebar pull-right">
+            <div class="col-xs-12">
                 <div class="date row">
                     <div class="col-xs-12">
                         <div class="big-date">
@@ -43,26 +43,26 @@ while (have_posts()) : the_post(); ?>
                     <div class="col-xs-12 time-until">
                         <h2><?php echo $days_until_event_str; ?></h2>
                     </div>
-                </div>
-                <?php if (!$ended): ?>
-                <div class="add-to-cal">
-                    <a href="http://example.com/link-to-your-event" title="Add to Calendar" class="addthisevent">
-                        Add to Calendar
-                        <span class="_start"><?php echo date('d-m-Y', $event_date_unix); ?></span>
-                        <span class="_end"><?php echo date('d-m-Y', $event_date_unix); ?></span>
-                        <span class="_zonecode">36</span>
-                        <span class="_summary"><?php the_title(); ?></span>
-                        <span class="_description"><?php echo strip_tags(get_the_excerpt()); ?></span>
+                    <?php if ($ended): ?>
+                        <div class="add-to-cal col-xs-12">
+                            <a href="http://example.com/link-to-your-event" title="Add to Calendar" class="addthisevent">
+                                Add to Calendar
+                                <span class="_start"><?php echo date('d-m-Y', $event_date_unix); ?></span>
+                                <span class="_end"><?php echo date('d-m-Y', $event_date_unix); ?></span>
+                                <span class="_zonecode">36</span>
+                                <span class="_summary"><?php the_title(); ?></span>
+                                <span class="_description"><?php echo strip_tags(get_the_excerpt()); ?></span>
 
-                        <?php if (false !== $location): ?>
-                        <span class="_location"><?php echo $location['address']; ?></span>
-                        <?php endif; ?>
+                                <?php if (false !== $location): ?>
+                                    <span class="_location"><?php echo $location['address']; ?></span>
+                                <?php endif; ?>
 
-                        <span class="_all_day_event">true</span>
-                        <span class="_date_format">DD/MM/YYYY</span>
-                    </a>
+                                <span class="_all_day_event">true</span>
+                                <span class="_date_format">DD/MM/YYYY</span>
+                            </a>
+                        </div>
+                    <?php endif; ?>
                 </div>
-                <?php endif; ?>
             </div>
 
             <div class="col-md-9 main">
@@ -91,6 +91,20 @@ while (have_posts()) : the_post(); ?>
             </div>
 
             <div class="col-md-3 sidebar">
+                <?php if(false !== $facilities && count($facilities)): ?>
+                    <div class="facilities row">
+                        <h2>Included</h2>
+                        <ul class="list-group">
+                            <?php while (has_sub_field('facilities')): ?>
+                                <li class="facility clearfix">
+                                    <span class="item"><?php the_sub_field('facility'); ?></span>
+                                    <span class="tick glyphicon glyphicon-check"></span>
+                                </li>
+                            <?php endwhile; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+
                 <div class="share row">
                     <h2>Share with a friend</h2>
 
@@ -121,20 +135,6 @@ while (have_posts()) : the_post(); ?>
                     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52e94e7e419949f1"></script>
                     <!-- AddThis Button END -->
                 </div>
-
-                <?php if(false !== $facilities && count($facilities)): ?>
-                <div class="facilities row">
-                    <h2>Included</h2>
-                    <ul class="list-group">
-                        <?php while (has_sub_field('facilities')): ?>
-                        <li class="facility clearfix">
-                            <span class="item"><?php the_sub_field('facility'); ?></span>
-                            <span class="tick glyphicon glyphicon-check"></span>
-                        </li>
-                        <?php endwhile; ?>
-                    </ul>
-                </div>
-                <?php endif; ?>
             </div>
         </div>
     </article>
