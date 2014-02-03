@@ -24,6 +24,8 @@ body {
 
   &.in ~ #top-header,
   &.in ~ #main-container #top-header {
+    background-position: center 200px;
+
     .nav-toggle {
       button {
         background: @lightGreen;
@@ -38,9 +40,10 @@ body {
 
   @media (min-width: @screen-sm-min) {
     width: @sideNavWidth;
-    height: 100% !important;
+    //height: 100% !important;
     left: -@sideNavWidth;
     top: 0;
+    bottom: 0;
     position: fixed;
     -webkit-transition: all @sideNavTime ease-in-out;
     -moz-transition: all @sideNavTime ease-in-out;
@@ -66,11 +69,8 @@ body {
     &.in {
       z-index: 99;
       left: 0;
-      height: auto !important;
-      top: 0;
-      bottom: 0;
-      overflow-x: hidden;
-      overflow-y: scroll;
+      height: 100% !important;
+      overflow: auto;
       box-shadow: 0 30px 80px #444;
       -webkit-box-shadow: 0 30px 80px #444;
       -moz-box-shadow: 0 30px 80px #444;
@@ -94,8 +94,6 @@ body {
 
       & ~ #top-header,
       & ~ #main-container #top-header {
-        background-position: center right;
-
         .top-menu.sticky {
           width: 100% - @sideNavWidth;
           left: @sideNavWidth;

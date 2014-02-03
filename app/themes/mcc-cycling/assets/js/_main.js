@@ -13,6 +13,11 @@ var MCCSite = {
                 jQuery('body').addClass('chrome');
             }
 
+            jQuery(".navbar-side-collapse").mCustomScrollbar({
+                scrollInertia:          500,
+                updateOnContentResize:  true
+            });
+
             var $topMenu      = jQuery(".top-menu");
             var $backToTopBtn = jQuery("#back-to-top-container");
             var windowHeight  = jQuery(window).height();
