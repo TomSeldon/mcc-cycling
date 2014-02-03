@@ -35,9 +35,15 @@
           ?>
       </main><!-- /.main -->
 
-      <?php if (roots_display_sidebar()) : ?>
+      <?php if (roots_display_sidebar() || true === get_field('show_custom_sidebar')) : ?>
           <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-              <?php include roots_sidebar_path(); ?>
+              <?php
+                  if (true === get_field('show_custom_sidebar'))
+                    locate_template('templates/sidebar-custom.php', true, true);
+
+                  if (roots_display_sidebar())
+                    include roots_sidebar_path();
+              ?>
           </aside><!-- /.sidebar -->
       </div>
       <?php endif; ?>
