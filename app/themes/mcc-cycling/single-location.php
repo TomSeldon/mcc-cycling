@@ -52,7 +52,7 @@
     </div>
 
     <?php if (false !== $accessibility && strlen(trim(strip_tags($accessibility)))): ?>
-        <div class="facilities">
+        <div class="accessibility">
             <h2>Accessibility</h2>
             <?php echo $accessibility; ?>
         </div>
@@ -83,7 +83,7 @@
 
     <?php if (false !== $facilities && strlen(trim(strip_tags($facilities)))): ?>
         <div class="facilities">
-            <h2>Facilities</h2>
+            <h2>Included</h2>
             <?php echo $facilities; ?>
         </div>
     <?php endif; ?>

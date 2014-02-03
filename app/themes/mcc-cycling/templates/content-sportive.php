@@ -124,7 +124,7 @@ while (have_posts()) : the_post(); ?>
 
                 <?php if(false !== $facilities && count($facilities)): ?>
                 <div class="facilities row">
-                    <h2>Facilities</h2>
+                    <h2>Included</h2>
                     <ul class="list-group">
                         <?php while (has_sub_field('facilities')): ?>
                         <li class="facility clearfix">
