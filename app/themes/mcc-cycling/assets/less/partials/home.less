@@ -39,10 +39,6 @@ body.home {
 
   #top-header {
     .headings {
-      h1 {
-        font-size: 22px;
-      }
-
       h2 {
         font-size: 14px;
       }
@@ -56,6 +52,12 @@ body.home {
 
         h2 {
           font-size: @font-size-h2;
+        }
+      }
+
+      @media (min-width: @screen-md) {
+        h1 {
+          font-size: @h1-size-lg;
         }
       }
     }
