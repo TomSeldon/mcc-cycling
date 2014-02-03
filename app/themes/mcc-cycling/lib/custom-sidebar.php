@@ -63,6 +63,7 @@ function mcc_sidebar_show_thumb_and_link_layout()
                 break;
 
             case 'external';
+                $link_href = get_sub_field('external_url');
                 break;
         }
 
