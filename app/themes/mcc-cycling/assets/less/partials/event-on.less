@@ -1,17 +1,65 @@
 .ajde_evcal_calendar {
   padding: 0.5em;
-  background: #fdfdfd;
+  background: none;
+
+  // Reset font styles
+  &,
+  .evo_date,
+  #evcal_head.calendar_header #evcal_cur,
+  .evcal_month_line p,
+  .evcal_event_title,
+  .eventon_full_description,
+  .ajde_evcal_calendar,
+  .calendar_header p,
+  .eventon_sort_line p,
+  .eventon_filter_line p,
+  .evcal_cblock, .evcal_cblock,
+  span.evcal_desc2,
+  .evcal_evdata_cell h2,
+  h3.evo_h3,
+  .evcal_month_line p,
+  .evo_h3
+  {
+    font-family: @mccFontFamily !important;
+  }
+
+  .evo_date {
+    font-weight: 500;
+  }
 
   .eventon_events_list .eventon_list_event .evcal_eventcard,
-  .evcal_evdata_row, .evorow .tbrow {
-    background-color: #fbfbfb;
+  .evcal_evdata_row,
+  .evorow .tbrow {
+    background-color: #efefef;
+    background-color: rgba(250,250,250,0.4);
+    border: none;
+  }
+
+  #evcal_list {
+    border: none !important;
+
+    .eventon_list_event {
+      p.no_events {
+        border-left: none;
+      }
+    }
+  }
+
+  .eventon_events_list .eventon_list_event .desc_trig {
+    background-color: none;
+    background-color: rgba(255,255,255,0.2);
+    border-left-color: @ctaRed !important;
+
+    &:hover {
+      border-left-color: @greenOverlay !important;
+      background-color: rgba(255,255,255,0.4);
+    }
   }
 
   #evcal_head.calendar_header #evcal_cur,
   .evcal_month_line p {
     color: #666;
     font-weight: 100;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
     text-transform: capitalize;
   }
 
