@@ -36,11 +36,9 @@
             <h1><?php the_field('event_heading'); ?></h1>
             <?php if ($event_show_cta): ?>
             <div class="row cta hidden-xs hidden-sm">
-                <div class="col-sm-5">
-                    <span>
-                        <a href="<?php echo $event_cta_href; ?>" class="redButton"><?php echo $event_cta_button_text; ?></a>
-                    </span>
-                </div>
+                <span>
+                    <a href="<?php echo $event_cta_href; ?>" class="redButton"><?php echo $event_cta_button_text; ?></a>
+                </span>
             </div>
             <?php endif; ?>
         </div>
@@ -50,11 +48,9 @@
     </div>
     <?php if ($event_show_cta): ?>
     <div class="row cta visible-xs visible-sm">
-        <div class="col-sm-5">
-            <span>
-                <a href="<?php echo $event_cta_href; ?>" class="redButton"><?php echo $event_cta_button_text; ?></a>
-            </span>
-        </div>
+        <span>
+            <a href="<?php echo $event_cta_href; ?>" class="redButton"><?php echo $event_cta_button_text; ?></a>
+        </span>
     </div>
     <?php endif; ?>
 </div>
