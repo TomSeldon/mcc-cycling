@@ -26,6 +26,12 @@ body {
   &.in ~ #main-container #top-header {
     background-position: center 200px;
 
+    .logos {
+      @media (min-width: @screen-lg-min) {
+        margin-top: 150px;
+      }
+    }
+
     .nav-toggle {
       button {
         background: @lightGreen;

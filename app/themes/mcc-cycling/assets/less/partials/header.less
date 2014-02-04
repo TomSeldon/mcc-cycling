@@ -99,7 +99,7 @@
   }
 
   .logos {
-    margin-top: 140px;
+    margin-top: 70px;
     margin-bottom: 70px;
 
     a {
@@ -132,6 +132,10 @@
         margin-top: auto;
       }
     }
+
+    @media (min-width: 1250px) {
+      margin-top: 60px;
+    }
   }
 
   .cta {
@@ -152,8 +156,10 @@
 
 @media (min-width: @screen-sm-min) {
   #top-header {
+    background-position: center 100px;
+
     .headings {
-      margin-bottom: 100px;
+      margin-bottom: 270px;
     }
 
     .logos {
@@ -162,5 +168,14 @@
   }
 }
 
+@media (min-width: @screen-md-min) {
+  #top-header {
+    background-position: center 50px;
+  }
+}
+
 @media (min-width: @screen-lg-min) {
+  #top-header {
+    background-position: center 35%;
+  }
 }
