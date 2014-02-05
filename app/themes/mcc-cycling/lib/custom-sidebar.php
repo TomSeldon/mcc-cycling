@@ -28,21 +28,31 @@ function mcc_show_custom_sidebar()
 
 function mcc_sidebar_show_thumb_and_link_layout()
 {
+    $heading    = get_sub_field('heading');
+    $intro_text = get_sub_field('intro_text');
+
     echo '<div class="thumb-links cta">';
-    echo '  <h2>' . get_sub_field('heading') . '</h2>';
+
+    if ($heading && strlen(trim($heading)))
+        echo '  <h2>' . get_sub_field('heading') . '</h2>';
 
 
     $thumbnail      = get_sub_field('thumbnail');
-    $thumb_alt      = $thumbnail['title'];
-    $thumb_src      = $thumbnail['sizes']['medium'];
-    $thumb_width    = $thumbnail['sizes']['medium-width'];
-    $thumb_height   = $thumbnail['sizes']['medium-height'];
 
-    echo "<img class='thumbnail' src='$thumb_src' alt='$thumb_alt' width='$thumb_width' height='$thumb_height' />'";
+    if ($thumbnail) {
+        $thumb_alt      = $thumbnail['title'];
+        $thumb_src      = $thumbnail['sizes']['medium'];
+        $thumb_width    = $thumbnail['sizes']['medium-width'];
+        $thumb_height   = $thumbnail['sizes']['medium-height'];
 
-    echo '<div class="intro-text">';
-        the_sub_field('intro_text');
-    echo '</div>';
+        echo "<img class='thumbnail' src='$thumb_src' alt='$thumb_alt' width='$thumb_width' height='$thumb_height' />'";
+    }
+
+    if ($intro_text && strlen(trim($intro_text))) {
+        echo '<div class="intro-text">';
+        echo $intro_text;
+        echo '</div>';
+    }
 
     echo '<ul class="links">';
 
