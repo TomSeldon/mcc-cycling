@@ -297,28 +297,46 @@ add_filter('roots_display_sidebar', 'mcc_filter_sidebar');
 /**
  * Adds a post type for locations.
  */
-function add_post_type_location()
+function add_post_type_locations()
 {
-    $labels = array(
-        'add_new_item'  => 'Add New Location',
-        'edit_item'     => 'Edit Location',
-        'search_items'  => 'Search Locations'
+    $accom_labels = array(
+        'add_new_item'  => 'Add New Accommodation',
+        'edit_item'     => 'Edit Accommodation',
+        'search_items'  => 'Search Accommodation'
     );
 
-    $args = array(
-        'label'         => 'Locations',
-        'labels'        => $labels,
+    $activity_labels = array(
+        'add_new_item'  => 'Add New Activity',
+        'edit_item'     => 'Edit Activity',
+        'search_items'  => 'Search Activities'
+    );
+
+    $activity_args = array(
+        'label'         => 'Activities',
+        'labels'        => $accom_labels,
         'public'        => true,
         'menu_icon'     => 'dashicons-admin-site',
         'supports'      => array('title','editor','thumbnail'),
         'has_archive'   => true,
         'with_front'    => true,
-        'rewrite'       => array('slug' => 'locations')
+        'rewrite'       => array('slug' => 'activities')
     );
 
-    register_post_type('location', $args);
+    $accom_args = array(
+        'label'         => 'Accommodation',
+        'labels'        => $accom_labels,
+        'public'        => true,
+        'menu_icon'     => 'dashicons-admin-site',
+        'supports'      => array('title','editor','thumbnail'),
+        'has_archive'   => true,
+        'with_front'    => true,
+        'rewrite'       => array('slug' => 'accommodation')
+    );
+
+    register_post_type('mcc-accommodation', $accom_args);
+    register_post_type('mcc-activities', $activity_args);
 }
-add_action('init', 'add_post_type_location');
+add_action('init', 'add_post_type_locations');
 
 /**
  * Alter the main query for locations archive.

@@ -13,7 +13,7 @@ class ActivityRecordScraper extends RecordScraper
 
         $post->post_title       = trim($this->html->find('section.longform h1', 0)->plaintext);
         $post->post_content     = trim($this->html->find('.product-description', 0)->innertext);
-        $post->post_type        = 'mcc_location_activity';
+        $post->post_type        = 'mcc-activities';
         $post->images           = array();
 
         foreach ($this->html->find('.carousel-products ul.slides li') as $image) {

@@ -120,7 +120,7 @@ class ImportRecords {
             'post_title'    => $post_data->post_title,
             'post_content'  => $post_data->post_content,
             'post_status'   => 'publish',
-            'post_type'     => 'location',
+            'post_type'     => $post_data->post_type,
             'post_author'   => $this->author_id,
         );
 
