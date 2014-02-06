@@ -1,9 +1,9 @@
 <?php
-/**
- * archive-location.php
- * Author: Tom Seldon
- * Created: 27/01/2014
- */
+    /**
+     * archive-location.php
+     * Author: Tom Seldon
+     * Created: 27/01/2014
+     */
 
     global $wp_query;
 
