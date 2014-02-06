@@ -104,13 +104,13 @@ function mcc_set_subtitles($subtitle)
       $subtitle = __('Sorry, but the page you were trying to view does not exist.', 'mcc');
     }
 
-    if (is_post_type_archive('location')) {
-        $count_locations = wp_count_posts('location')->publish;
-        $subtitle = __($count_locations . ' locations found', 'mcc');
-    }
-
     if (is_search()) {
         $subtitle = __('You searched for: <br />', 'mcc') . get_search_query();
+    }
+
+    if (is_post_type_archive(array('mcc-accommodation','mcc-activities'))) {
+        $count    = wp_count_posts(get_post_type())->publish;
+        $subtitle = __($count . ' locations found', 'mcc');
     }
 
     return $subtitle;
