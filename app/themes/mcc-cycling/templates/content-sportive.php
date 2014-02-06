@@ -74,6 +74,7 @@ while (have_posts()) : the_post(); ?>
                     <?php the_content(); ?>
                 </div>
 
+                <!--
                 <div id="route">
                     <div class="page-header">
                         <h2>The Route</h2>
@@ -88,6 +89,11 @@ while (have_posts()) : the_post(); ?>
                     </small>
                     <div id="sportive-route-lg" data-strava-route="" data-route-id="<?php echo $route->ID; ?>"></div>
                 </div>
+                -->
+            </div>
+
+            <div class="col-md-3 sidebar sign-up">
+                <a class="redButton" href="<?php the_redux_field('login_url'); ?>">Sign up now</a>
             </div>
 
             <div class="col-md-3 sidebar">
