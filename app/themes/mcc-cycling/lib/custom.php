@@ -313,7 +313,7 @@ function add_post_type_locations()
 
     $activity_args = array(
         'label'         => 'Activities',
-        'labels'        => $accom_labels,
+        'labels'        => $activity_labels,
         'public'        => true,
         'menu_icon'     => 'dashicons-admin-site',
         'supports'      => array('title','editor','thumbnail'),
