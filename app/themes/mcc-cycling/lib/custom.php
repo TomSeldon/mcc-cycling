@@ -330,7 +330,7 @@ function add_post_type_locations()
         'supports'      => array('title','editor','thumbnail'),
         'has_archive'   => true,
         'with_front'    => true,
-        'rewrite'       => array('slug' => 'accommodation')
+        'rewrite'       => array('slug' => 'places')
     );
 
     register_post_type('mcc-accommodation', $accom_args);
