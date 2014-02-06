@@ -68,7 +68,8 @@
     "wpackagist/wordpress-importer": ">= 0.6.1",
     "wpackagist/wordpress-seo": ">= 1.4.24",
     "guzzle/guzzle": "~3.7",
-    "shark/simple_html_dom": "dev-master"
+    "shark/simple_html_dom": "dev-master",
+    "wpackagist/velvet-blues-update-urls": ">= 3.2"
   },
   "extra": {
     "installer-paths": {

@@ -22,4 +22,3 @@ server '162.243.228.92', user: 'deploy', roles: %w{web app db}
   }
 
 fetch(:default_env).merge!(wp_env: :production)
-
