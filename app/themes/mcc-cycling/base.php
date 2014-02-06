@@ -19,6 +19,8 @@
 
     get_template_part('templates/header','back-to-top');
 
+    $show_custom_sidebar = get_field('show_custom_sidebar') && is_page();
+
   ?>
 
   <div class="container" id="main-container">
@@ -35,7 +37,7 @@
           ?>
       </main><!-- /.main -->
 
-      <?php if (roots_display_sidebar() || true === get_field('show_custom_sidebar')) : ?>
+      <?php if (roots_display_sidebar() || true === $show_custom_sidebar) : ?>
           <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
               <?php
                   if (true === get_field('show_custom_sidebar'))

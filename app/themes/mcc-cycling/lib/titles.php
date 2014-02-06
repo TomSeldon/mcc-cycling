@@ -28,7 +28,7 @@ function roots_title() {
       return single_cat_title('', false);
     }
   } elseif (is_search()) {
-    return sprintf(__('Search Results for %s', 'roots'), get_search_query());
+    return __('Search Results', 'roots');
   } elseif (is_404()) {
     return __('Not Found', 'roots');
   } else {

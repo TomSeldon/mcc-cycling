@@ -109,6 +109,10 @@ function mcc_set_subtitles($subtitle)
         $subtitle = __($count_locations . ' locations found', 'mcc');
     }
 
+    if (is_search()) {
+        $subtitle = __('You searched for: <br />', 'mcc') . get_search_query();
+    }
+
     return $subtitle;
 }
 add_filter('page_subtitle', 'mcc_set_subtitles');
