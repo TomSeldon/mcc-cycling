@@ -31,7 +31,7 @@ function roots_scripts() {
   wp_register_script('mcustomscrollbar', get_template_directory_uri() . '/assets/js/vendor/jquery.mCustomScrollbar.js', array('jquery-scrollwheel'), null, false);
   wp_register_script('angular', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js', array(), null, false);
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
-  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array('angular'), '289305475cb9215664252b08b29ebf3b', true);
+  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array('angular'), 'cfe165c29dcc4484d3de181d76858ac9', true);
   wp_register_script('slimscroll', get_template_directory_uri() . '/assets/js/vendor/jquery.slimscroll.min.js', array('jquery'), null, true);
   wp_register_script('fullScreen', get_template_directory_uri() . '/assets/js/vendor/jquery.fullPage.min.js', array('jquery', 'jquery-ui-core', 'jquery-effects-core', 'slimscroll'), null, true);
   wp_register_script('addthisevent', 'http://js.addthisevent.com/atemay.js', array(), null, true);

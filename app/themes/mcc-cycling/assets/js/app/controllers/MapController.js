@@ -84,8 +84,16 @@
                 return;
             }
 
+            var markerClick = function(event) {
+                console.log(this);
+                console.log(event);
+                $scope.$broadcast('map.marker.click', this, event);
+            };
+
             for (var i=0; i<markers.length; i++) {
                 var marker = markers[i];
+
+                google.maps.event.addListener(marker, 'click', markerClick);
 
                 marker.setMap(map);
             }
@@ -156,6 +164,16 @@
 
             return 0;
         }
+
+        $scope.$on('map.marker.click', function(event, marker){
+            if (!marker.title) {
+                return;
+            }
+
+            $scope.infowindow.setContent('<strong>' + marker.title + '</strong>');
+            $scope.infowindow.setPosition(marker.getPosition());
+            $scope.infowindow.open($scope.map);
+        });
 
         $scope.$on('map.bounds_changed', function(event, map) {
            centerMap(map);

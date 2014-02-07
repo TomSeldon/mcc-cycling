@@ -37,7 +37,11 @@
 
                     var latlng = new google.maps.LatLng(lat, lng);
 
-                    markers.push(new google.maps.Marker({position: latlng}));
+                    markers.push(new google.maps.Marker({
+                        position:   latlng,
+                        title:      title,
+                        animation:  google.maps.Animation.DROP
+                    }));
                 });
 
                 scope.markers = markers;

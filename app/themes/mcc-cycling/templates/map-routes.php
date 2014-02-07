@@ -65,7 +65,7 @@
 
     <div class="hidden-xs">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-7 col-lg-4">
                 <h1 id="map-title"><?php the_field('maproutes_heading'); ?></h1>
             </div>
         </div>
