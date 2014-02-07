@@ -52,9 +52,15 @@ group 'www-data' do
   action  :modify
 end
 
+group 'deploy' do
+  members 'www-data'
+  append  true
+  action  :modify
+end
+
 directory node[:wp_cookbook][:dir] do
   owner      node[:wp_cookbook][:user]
-  group      'www-data'
+  group      'deploy'
   mode       00764
   recursive  true
 end
