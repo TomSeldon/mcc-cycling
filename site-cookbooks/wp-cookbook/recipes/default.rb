@@ -61,7 +61,7 @@ end
 directory node[:wp_cookbook][:dir] do
   owner      node[:wp_cookbook][:user]
   group      'deploy'
-  mode       00764
+  mode       00765
   recursive  true
 end
 
