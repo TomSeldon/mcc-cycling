@@ -124,8 +124,6 @@
 
             var zoom    = getZoomByBounds(map, bounds, padding);
 
-            console.log(zoom);
-
             map.setZoom(zoom);
             map.setCenter(bounds.getCenter());
         }
