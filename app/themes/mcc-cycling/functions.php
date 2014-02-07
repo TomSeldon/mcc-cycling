@@ -20,3 +20,4 @@ require_once locate_template('/lib/redux.php');           // Redux framework con
 require_once locate_template('/lib/custom.php');          // Custom functions
 require_once locate_template('/lib/shortcodes.php');      // Custom short codes
 require_once locate_template('/lib/custom-sidebar.php');  // Custom side bar
+require_once locate_template('/lib/maps.php');            // Maps

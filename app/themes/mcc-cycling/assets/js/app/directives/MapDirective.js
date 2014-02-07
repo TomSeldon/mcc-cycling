@@ -19,13 +19,22 @@
 
                 scope.mapEl = $mapEl;
 
+                // Set the element to use for padding
+                var leftMarginElId = angular.element(element).data('left-margin-el');
+
+                if (leftMarginElId) {
+                    scope.leftMarginEl = angular.element(document.getElementById(leftMarginElId));
+                }
+
                 // Get markers
                 var markers    = [];
                 var $markersEl = element.find('.marker');
 
                 $markersEl.each(function(index, $markerEl){
-                    var lng = angular.element($markerEl).data('lng');
-                    var lat = angular.element($markerEl).data('lat');
+                    var lng     = angular.element($markerEl).data('lng');
+                    var lat     = angular.element($markerEl).data('lat');
+                    var title   = angular.element($markerEl).data('title');
+
                     var latlng = new google.maps.LatLng(lat, lng);
 
                     markers.push(new google.maps.Marker({position: latlng}));

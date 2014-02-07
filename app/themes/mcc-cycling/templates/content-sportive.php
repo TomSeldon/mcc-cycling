@@ -16,6 +16,8 @@
     $website            = get_field('event_website');
     $route              = get_field('route');
 
+    $markers            = mcc_get_route_markers();
+
     if ($days_until_event > 0) {
         $ended = false;
         $days_until_event_str = sprintf(__('%d %s until the event', 'mcc'), $days_until_event, _n('day', 'days', $days_until_event, 'mcc'));
@@ -74,11 +76,12 @@ while (have_posts()) : the_post(); ?>
                     <?php the_content(); ?>
                 </div>
 
-                <!--
                 <div id="route">
                     <div class="page-header">
                         <h2>The Route</h2>
                     </div>
+
+                    <!--
                     <h4 class="route-name">
                         <?php echo $route->post_title; ?>&nbsp;
                     </h4>
@@ -87,9 +90,23 @@ while (have_posts()) : the_post(); ?>
                             View route on Strava.com
                         </a>
                     </small>
+                    -->
+
+                    <div id="sportive-route-lg" class="map" data-map="">
+                        <?php foreach ($markers as $marker): ?>
+                            <div class="marker"
+                                 data-marker=""
+                                 data-lng="<?php echo $marker['lng']; ?>"
+                                 data-lat="<?php echo $marker['lat']; ?>"
+                                 data-title="<?php echo $marker['title']; ?>">
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+
+                    <!--
                     <div id="sportive-route-lg" data-strava-route="" data-route-id="<?php echo $route->ID; ?>"></div>
+                    -->
                 </div>
-                -->
             </div>
 
             <div class="col-md-3 sidebar sign-up">
