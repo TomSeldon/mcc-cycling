@@ -5,5 +5,5 @@
 'use strict';
 
 (function(){
-    var MCCApp = angular.module('MCCApp', []);
+    var MCCApp = angular.module('MCCApp', ['ui.bootstrap']);
 }());

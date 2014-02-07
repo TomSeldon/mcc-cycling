@@ -41,7 +41,12 @@
                 </button>
             </div>
             <div class="col-xs-3 pull-right login item">
-                <a class="btn btn-default" href="<?php the_redux_field('login_url'); ?>">
+                <a
+                    class="btn btn-default"
+                    href="<?php the_redux_field('login_url'); ?>"
+                    data-tooltip="Sign up here"
+                    data-trigger="mouseenter"
+                    data-tooltip-placement="bottom">
                     <span class="sr-only">Login</span>
                     <i class="glyphicon glyphicon-lock"></i>
                 </a>
