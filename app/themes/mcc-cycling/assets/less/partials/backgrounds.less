@@ -24,3 +24,12 @@
     padding-bottom: 700px;
   }
 }
+
+html.js {
+  .parallax-bg {
+    // Fixed background does weird things with background-size: cover
+    // but it reduced jitter when using Stellar (parallax bg). So, if
+    // JS is enabled, we'll use fixed.
+    background-attachment: fixed;
+  }
+}
