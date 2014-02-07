@@ -124,6 +124,8 @@
 
             var zoom    = getZoomByBounds(map, bounds, padding);
 
+            console.log(zoom);
+
             map.setZoom(zoom);
             map.setCenter(bounds.getCenter());
         }
@@ -158,7 +160,7 @@
 
             for( var zoom = MAX_ZOOM; zoom >= MIN_ZOOM; --zoom ){
                 if( worldCoordWidth*(1<<zoom)+2*FIT_PAD < $(map.getDiv()).width() &&  worldCoordHeight*(1<<zoom)+2*FIT_PAD < $(map.getDiv()).height() ) {
-                    return zoom;
+                    return Math.min(14,zoom);
                 }
             }
 
