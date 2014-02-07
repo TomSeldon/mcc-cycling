@@ -47,6 +47,7 @@ module.exports = function(grunt) {
             'assets/js/plugins/bootstrap/tab.js',
             'assets/js/plugins/bootstrap/affix.js',
             'assets/js/vendor/ui-bootstrap-tpls-0.10.0.js',
+            'assets/js/vendor/jquery.stellar.js',
             'assets/js/plugins/*.js',
             'assets/js/app/**/*.js',
             'assets/js/_*.js',

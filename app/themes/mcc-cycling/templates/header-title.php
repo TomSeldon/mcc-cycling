@@ -31,7 +31,7 @@
 
 ?>
 
-<header id="top-header" class="section" style="background-image: url('<?php echo $header_bg_img; ?>');">
+<header id="top-header" data-stellar-background-ratio="0.5" class="section" style="background-image: url('<?php echo $header_bg_img; ?>');">
     <div class="container">
         <nav class="row top-menu animated">
             <div class="col-xs-3 pull-left nav-toggle item">

@@ -9,7 +9,7 @@
     }
 ?>
 
-<div class="container section" id="latest-news" style="background-image: url('<?php echo $news_bg_img; ?>');">
+<div class="container section" data-stellar-background-ratio="0.5" id="latest-news" style="background-image: url('<?php echo $news_bg_img; ?>');">
     <div class="row">
         <div class="col-xs-12 col-lg-4">
             <h1 class="page-title">Latest News</h1>
