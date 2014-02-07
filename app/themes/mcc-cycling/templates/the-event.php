@@ -33,6 +33,7 @@
 <div
     class="container section"
     data-stellar-background-ratio="0.5"
+    data-stellar-vertical-offset="-100"
     id="the-event"
     style="background-image: url('<?php echo $event_bg_img; ?>');">
     <div class="row">

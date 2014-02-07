@@ -29,10 +29,16 @@
         $header_bg_img = '';
     }
 
+    $header_stellar_vert_offset = 150;
+
+    if (is_home())
+        $header_stellar_vert_offset = 0;
+
 ?>
 
 <header id="top-header"
         data-stellar-background-ratio="0.5"
+        data-stellar-vertical-offset="<?php echo $header_stellar_vert_offset; ?>"
         class="section parallax-bg"
         style="background-image: url('<?php echo $header_bg_img; ?>');">
     <div class="container">
