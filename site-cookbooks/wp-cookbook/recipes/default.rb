@@ -46,6 +46,12 @@ group 'www-data' do
   action  :modify
 end
 
+group 'www-data' do
+  members 'deploy'
+  append  true
+  action  :modify
+end
+
 directory node[:wp_cookbook][:dir] do
   owner      node[:wp_cookbook][:user]
   group      'www-data'
