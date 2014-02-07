@@ -8,15 +8,11 @@
         "server_repl_password": "password"
     },
     "wp_cookbook": {
-        "hostname": "162.243.228.92",
-        "wp_import": true,
+        "hostname": "nationalroadchamps.co.uk",
+        "wp_import": false,
         "dir":      "/var/www/mcc_cycling"
     },
     "run_list": [
-        "recipe[build-essential]",
-        "recipe[apt]",
-        "recipe[mysql::server]",
-        "recipe[database::mysql]",
-        "recipe[wp-cookbook]"
+        "recipe[mcc-cycling]"
     ]
 }
