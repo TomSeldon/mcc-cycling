@@ -20,6 +20,7 @@ app/mu-plugins/*
 !app/mu-plugins/register-theme-directory.php
 !app/plugins/strava-routes
 !app/plugins/eventON
+location-import/raw/*.bin
 
 # Vendor (e.g. Composer)
 vendor/*
@@ -35,7 +36,6 @@ bin
 # Chef
 tmp
 chef/nodes/*.json
-
 
 # Project
 .DS_Store
