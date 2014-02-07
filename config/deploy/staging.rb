@@ -8,7 +8,7 @@ set :stage, 'staging'
 
 # Extended Server Syntax
 # ======================
-server '', user: 'deploy', roles: %w{web app db}
+server '192.241.179.252', user: 'deploy', roles: %w{web app db}
 
 # Set branch
 set :branch, :develop
