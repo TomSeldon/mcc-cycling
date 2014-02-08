@@ -49,7 +49,7 @@ class Segment {
         $segment    = get_post($id);
         $response   = false;
 
-        if (false !== $segment) {
+        if ($segment) {
             $response = array(
                 'id'        => get_post_meta($id, 'id', true),
                 'name'      => $segment->post_title,
