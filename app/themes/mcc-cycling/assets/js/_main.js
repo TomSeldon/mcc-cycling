@@ -23,6 +23,7 @@ var MCCSite = {
             var windowHeight  = jQuery(window).height();
             var belowFold     = false;
 
+            // Back to top button
             $backToTopBtn.on('click', function(){
                 jQuery("html, body").animate({ scrollTop: 0 }, "slow");
                 return false;
@@ -153,6 +154,16 @@ var MCCSite = {
     about: {
         init: function() {
             // JS here
+        }
+    },
+
+    archive: {
+        init: function() {
+            jQuery('.popup-html').magnificPopup({
+                items: {
+                    type: 'inline'
+                }
+            });
         }
     }
 };

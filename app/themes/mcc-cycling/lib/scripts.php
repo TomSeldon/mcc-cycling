@@ -12,7 +12,7 @@
  */
 function roots_scripts() {
   wp_enqueue_style('animate.css', get_template_directory_uri() . '/assets/css/animate.min.css', false, '794cb380366e3fd8ea9aaec75fe9a5ab');
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'aa530ae6964bea1630517976b386dcd4');
+  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '70d743c35aadb11b13099a22b16de905');
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
@@ -29,9 +29,10 @@ function roots_scripts() {
 
   wp_register_script('jquery-scrollwheel', '//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js');
   wp_register_script('mcustomscrollbar', get_template_directory_uri() . '/assets/js/vendor/jquery.mCustomScrollbar.js', array('jquery-scrollwheel'), null, false);
+  wp_register_script('magnific-popup', get_template_directory_uri() . '/assets/js/vendor/magnific-popup/dist/jquery.magnific-popup.js', array(), null, false);
   wp_register_script('angular', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js', array(), null, false);
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
-  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array('angular'), '1cb9d9778e9a81660bc99b53994caf36', true);
+  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array('angular','magnific-popup'), '62ebe5f029c5b2bb1a85b70b16cc6c19', true);
   wp_register_script('slimscroll', get_template_directory_uri() . '/assets/js/vendor/jquery.slimscroll.min.js', array('jquery'), null, true);
   wp_register_script('fullScreen', get_template_directory_uri() . '/assets/js/vendor/jquery.fullPage.min.js', array('jquery', 'jquery-ui-core', 'jquery-effects-core', 'slimscroll'), null, true);
   wp_register_script('addthisevent', 'http://js.addthisevent.com/atemay.js', array(), null, true);

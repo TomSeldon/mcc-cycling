@@ -4,6 +4,7 @@
 
 @import "bootstrap/bootstrap.less";
 @import "font-awesome/font-awesome.less";
+@import (less) "../js/vendor/magnific-popup/dist/magnific-popup.css";
 @import "partials/variables.less";
 @import "partials/social.less";
 @import "partials/fullScreen.less";
@@ -161,6 +162,31 @@ body {
     opacity: 0.8;
     color: #fff;
     text-decoration: inherit;
+  }
+
+  &:disabled,
+  &.disabled {
+    background: desaturate(@ctaRed, 30);
+    opacity: 0.2;
+    cursor: default;
+  }
+}
+
+.viewOnMap {
+  .redButton();
+
+  display: none;
+
+  padding: 10px 15px;
+
+  i {
+    margin-left: 0.25em;
+  }
+}
+
+html.js {
+  .viewOnMap {
+    display: inline;
   }
 }
 

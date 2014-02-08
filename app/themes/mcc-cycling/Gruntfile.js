@@ -24,9 +24,9 @@ module.exports = function(grunt) {
           compress: true,
           // LESS source map
           // To enable, set sourceMap to true and update sourceMapRootpath based on your install
-          sourceMap: false,
+          sourceMap: true,
           sourceMapFilename: 'assets/css/main.min.css.map',
-          sourceMapRootpath: '/app/themes/roots/'
+          sourceMapRootpath: '/app/themes/mcc-cycling/'
         }
       }
     },
@@ -56,8 +56,8 @@ module.exports = function(grunt) {
         },
         options: {
           // JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
-          // sourceMap: 'assets/js/scripts.min.js.map',
-          // sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
+          sourceMap: 'assets/js/scripts.min.js.map',
+          sourceMappingURL: '/app/themes/mcc-cycling/assets/js/scripts.min.js.map',
         }
       }
     },
