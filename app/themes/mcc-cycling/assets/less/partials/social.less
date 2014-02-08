@@ -1,9 +1,14 @@
+.sidebar-widget {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 .sidebar,
 aside {
-  .share {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: center;
+  .share,
+  .widget_facebook_likebox {
+    .sidebar-widget();
   }
 }
 
@@ -31,6 +36,13 @@ aside {
           font-size: 50px;
         }
       }
+    }
+  }
+
+  &.widget_facebook_likebox {
+    iframe {
+      background: none !important;
+      border: none !important;
     }
   }
 }
