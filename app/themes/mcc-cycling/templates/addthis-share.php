@@ -7,7 +7,7 @@
 
 ?>
 
-<div class="share row">
+<div class="share row widget">
     <h2>Share with a friend</h2>
 
     <!-- AddThis Button BEGIN -->

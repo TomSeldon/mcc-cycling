@@ -2,13 +2,39 @@
   margin-top: 40px;
   margin-bottom: 40px;
   text-align: center;
+
+  .widget-inner {
+    h2 {
+      margin-bottom: 20px;
+
+      a {
+        text-decoration: none;
+        color: #333;
+
+        &:hover {
+          text-decoration: none;
+          color: #555;
+        }
+      }
+
+      i {
+        display: block;
+        padding-bottom: 10px;
+        font-size: 50px;
+        color: #000;
+      }
+    }
+  }
 }
 
 .sidebar,
 aside {
-  .share,
-  .widget_facebook_likebox {
-    .sidebar-widget();
+  .widget {
+    &.share,
+    &.widget_facebook_likebox,
+    &.widget_twitter_timeline {
+      .sidebar-widget();
+    }
   }
 }
 
@@ -27,22 +53,11 @@ aside {
 }
 
 .widget {
-  &.widget_twitter_timeline {
-    text-align: center;
-
-    .widget-inner {
-      h3 {
-        i {
-          font-size: 50px;
-        }
-      }
-    }
-  }
-
   &.widget_facebook_likebox {
     iframe {
       background: none !important;
       border: none !important;
+      max-width: 100% !important;
     }
   }
 }
