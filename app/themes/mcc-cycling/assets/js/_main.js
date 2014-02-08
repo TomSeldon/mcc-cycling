@@ -86,8 +86,35 @@ var MCCSite = {
     // Home page
     home: {
         init: function() {
+            // Time before we'll alert the user to scroll down (in seconds)
+            var scrollTimer = 4;
+
+            // Has the user scroll down past the top header?
+            var scrolledPastHeader = false;
+
             // Force full height sections
             var $sections = jQuery('.main > .section, #top-header');
+
+            var $topHeader = jQuery('#top-header');
+
+            // CTA header button
+            var $ctaButon = $topHeader.find('.cta');
+
+            setInterval(function(){
+                scrollAlert();
+            }, scrollTimer * 1000);
+
+            /**
+             * Shake the 'scroll down' button if the user is still
+             * at the top of the page.
+             */
+            function scrollAlert()
+            {
+                if (!scrolledPastHeader) {
+                    $ctaButon.removeClass('fadeInDown');
+                    $ctaButon.toggleClass('shake');
+                }
+            }
 
             function fitSections()
             {
@@ -100,6 +127,23 @@ var MCCSite = {
 
             jQuery(window).resize(function(){
                 fitSections();
+            });
+
+            // On scrolling, let's update if the user has gotten past the top
+            function scrolledPastHeaderCheck()
+            {
+                if (!scrolledPastHeader) {
+                    var viewportTop       = jQuery('html').scrollTop();
+                    var $topHeaderHeight  = $topHeader.height();
+
+                    if (viewportTop >= ($topHeaderHeight / 4) * 2) {
+                        scrolledPastHeader = true;
+                    }
+                }
+            }
+
+            jQuery(window).scroll(function(){
+               scrolledPastHeaderCheck();
             });
 
             fitSections();
