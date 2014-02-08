@@ -41,3 +41,27 @@ function roots_widgets_init() {
 }
 add_action('widgets_init', 'roots_widgets_init');
 
+function mcc_twitter_timeline_check($instance, $widget, $args)
+{
+    // Add the icon if this is a Twitter widget
+    if ('twitter_timeline' === $widget->id_base)
+        add_filter('widget_title', 'mcc_twitter_timeline_icon');
+
+    return $instance;
+}
+add_filter('widget_display_callback', 'mcc_twitter_timeline_check', 10, 3);
+
+/**
+ * Adds twitter icon to widget title and hides the title text.
+ *
+ * @param $title
+ * @return string
+ */
+function mcc_twitter_timeline_icon($title) {
+    $title =  '<i class="fa fa-twitter"></i><span class="sr-only">' . $title . '</span>';
+
+    remove_filter('widget_title', 'mcc_twitter_timeline_icon');
+
+    return $title;
+}
+

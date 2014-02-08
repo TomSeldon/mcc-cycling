@@ -1,3 +1,12 @@
+.sidebar,
+aside {
+  .share {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
 .addthis_toolbox {
   a {
     .btn-primary();
@@ -9,5 +18,19 @@
     line-height: 40px;
     padding: 0;
     border-radius: 0;
+  }
+}
+
+.widget {
+  &.widget_twitter_timeline {
+    text-align: center;
+
+    .widget-inner {
+      h3 {
+        i {
+          font-size: 50px;
+        }
+      }
+    }
   }
 }
