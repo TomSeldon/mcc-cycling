@@ -31,7 +31,7 @@
 
     $header_stellar_vert_offset = 150;
 
-    if (is_home())
+    if (is_front_page())
         $header_stellar_vert_offset = 0;
 
 ?>
