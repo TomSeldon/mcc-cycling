@@ -45,7 +45,7 @@ while (have_posts()) : the_post(); ?>
                     <div class="col-xs-12 time-until">
                         <h2><?php echo $days_until_event_str; ?></h2>
                     </div>
-                    <?php if ($ended): ?>
+                    <?php if (!$ended): ?>
                         <div class="add-to-cal col-xs-12">
                             <a href="http://example.com/link-to-your-event" title="Add to Calendar" class="addthisevent">
                                 Add to Calendar
