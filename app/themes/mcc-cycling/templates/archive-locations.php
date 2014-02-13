@@ -16,7 +16,22 @@
         'total'         => $wp_query->max_num_pages,
         'mid_size'      => 5
     ));
+
+    $locations = mcc_get_locations(get_post_type());
 ?>
+
+<?php if (count($locations)): ?>
+<div id="map-locations" class="map" data-map="">
+    <?php foreach ($locations as $location): ?>
+        <div class="marker"
+             data-marker=""
+             data-lng="<?php echo $location['lng']; ?>"
+             data-lat="<?php echo $location['lat']; ?>"
+             data-address="<?php echo $location['address']; ?>">
+        </div>
+    <?php endforeach; ?>
+</div>
+<?php endif; ?>
 
 <div class="pagination">
     <?php echo $pagination; ?>

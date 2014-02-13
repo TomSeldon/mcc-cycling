@@ -22,18 +22,6 @@
         </header>
         <div class="description">
             <?php the_excerpt(); ?>
-
-            <a
-                disabled="disabled"
-                class="viewOnMap"
-                href="#<?php echo $mapElID; ?>">
-                View on map <i class="fa fa-map-marker"></i>
-            </a>
         </div>
-    </div>
-
-    <div class="popup-element mfp-hide white-popup" id="<?php echo $mapElID; ?>">
-        <h1>test</h1>
-        <div class="map">test</div>
     </div>
 </article>

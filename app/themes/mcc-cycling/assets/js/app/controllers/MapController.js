@@ -156,6 +156,8 @@
             //Fit padding in pixels
             var FIT_PAD = padding || 40;
 
+            console.log(padding);
+
             for( var zoom = MAX_ZOOM; zoom >= MIN_ZOOM; --zoom ){
                 if( worldCoordWidth*(1<<zoom)+2*FIT_PAD < $(map.getDiv()).width() &&  worldCoordHeight*(1<<zoom)+2*FIT_PAD < $(map.getDiv()).height() ) {
                     return Math.min(14,zoom);

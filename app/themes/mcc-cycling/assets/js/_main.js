@@ -155,16 +155,6 @@ var MCCSite = {
         init: function() {
             // JS here
         }
-    },
-
-    archive: {
-        init: function() {
-            jQuery('.popup-html').magnificPopup({
-                items: {
-                    type: 'inline'
-                }
-            });
-        }
     }
 };
 

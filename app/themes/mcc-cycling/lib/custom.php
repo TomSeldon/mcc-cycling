@@ -357,3 +357,32 @@ function mcc_locations_posts_per_page($query)
     }
 }
 add_action('pre_get_posts', 'mcc_locations_posts_per_page');
+
+/**
+ * Return array of all locations for a given post type.
+ *
+ * @param $post_type
+ *
+ * @return array
+ */
+function mcc_get_locations($post_type)
+{
+    $post_args = array(
+        'post_type'     => $post_type,
+        'numberposts'   => -1
+    );
+
+    $posts = get_posts($post_args);
+
+    $locations = array();
+
+    foreach ($posts as $post) {
+        $location = get_field('location', $post->ID);
+
+        if (false !== $location) {
+            $locations[] = $location;
+        }
+    }
+
+    return $locations;
+}
