@@ -12,7 +12,7 @@
  */
 function roots_scripts() {
   wp_enqueue_style('animate.css', get_template_directory_uri() . '/assets/css/animate.min.css', false, '794cb380366e3fd8ea9aaec75fe9a5ab');
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '6f383d73c8884a4a82080852ffa249f2');
+  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '30a202ceefcf5215faa7679e7ebd1dec');
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
@@ -32,7 +32,7 @@ function roots_scripts() {
   wp_register_script('magnific-popup', get_template_directory_uri() . '/assets/js/vendor/magnific-popup/dist/jquery.magnific-popup.js', array(), null, false);
   wp_register_script('angular', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js', array(), null, false);
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
-  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array('angular'), '3f08d323a514252ac0bdf4da6c8a3f46', true);
+  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array('angular'), '95af6f13568b7255ad0b6aac57aa5a06', true);
   wp_register_script('slimscroll', get_template_directory_uri() . '/assets/js/vendor/jquery.slimscroll.min.js', array('jquery'), null, true);
   wp_register_script('fullScreen', get_template_directory_uri() . '/assets/js/vendor/jquery.fullPage.min.js', array('jquery', 'jquery-ui-core', 'jquery-effects-core', 'slimscroll'), null, true);
   wp_register_script('addthisevent', 'http://js.addthisevent.com/atemay.js', array(), null, true);

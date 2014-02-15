@@ -380,6 +380,8 @@ function mcc_get_locations($post_type)
         $location = get_field('location', $post->ID);
 
         if (false !== $location) {
+            $location['post'] = $post;
+
             $locations[] = $location;
         }
     }

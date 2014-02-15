@@ -48,8 +48,13 @@ module.exports = function(grunt) {
             'assets/js/plugins/bootstrap/affix.js',
             'assets/js/vendor/ui-bootstrap-tpls-0.10.0.js',
             'assets/js/vendor/jquery.stellar.js',
+            'assets/js/vendor/google.markercluster.js',
             'assets/js/plugins/*.js',
-            'assets/js/app/**/*.js',
+            'assets/js/app/app.js',
+            'assets/js/app/config/*.js',
+            'assets/js/app/controllers/*.js',
+            'assets/js/app/directives/*.js',
+            'assets/js/app/services/*.js',
             'assets/js/_*.js',
             'assets/js/vendor/retina-1.1.0.js'
           ]

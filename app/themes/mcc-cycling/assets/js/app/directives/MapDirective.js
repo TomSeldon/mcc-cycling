@@ -19,6 +19,11 @@
 
                 scope.mapEl = $mapEl;
 
+                // Set config object
+                var configObjName = angular.element(element).data('options');
+
+                scope.mapOptions = (typeof scope[configObjName] === 'undefined' ? {} : scope[configObjName]);
+
                 // Set the element to use for padding
                 var leftMarginElId = angular.element(element).data('left-margin-el');
 
@@ -34,12 +39,14 @@
                     var lng     = angular.element($markerEl).data('lng');
                     var lat     = angular.element($markerEl).data('lat');
                     var title   = angular.element($markerEl).data('title');
+                    var content = angular.element($markerEl).html();
 
                     var latlng = new google.maps.LatLng(lat, lng);
 
                     markers.push(new google.maps.Marker({
                         position:   latlng,
                         title:      title,
+                        content:    content,
                         animation:  google.maps.Animation.DROP
                     }));
                 });
