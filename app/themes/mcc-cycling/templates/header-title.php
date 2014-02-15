@@ -1,6 +1,7 @@
 <?php
     // Get vars
     $show_cta           = get_field('show_call_to_action');
+    $show_cta           = apply_filters('mcc_header_show_call_to_action', $show_cta);
     $cta_button_text    = '';
     $cta_href           = '';
 
@@ -18,6 +19,9 @@
                 $cta_href  = get_field('cta_url');
                 break;
         }
+
+        $cta_button_text = apply_filters('mcc_header_cta_text', $cta_button_text);
+        $cta_href        = apply_filters('mcc_header_cta_href', $cta_href);
     }
 
     // Set the background image

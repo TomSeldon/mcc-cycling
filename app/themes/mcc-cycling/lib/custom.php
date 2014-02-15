@@ -117,6 +117,36 @@ function mcc_set_subtitles($subtitle)
 }
 add_filter('page_subtitle', 'mcc_set_subtitles');
 
+function mcc_locations_cta_text($text)
+{
+    if (is_post_type_archive(array('mcc-accommodation','mcc-activities'))) {
+        $text = 'View all on map';
+    }
+
+    return $text;
+}
+
+function mcc_locations_cta_href($href)
+{
+    if (is_post_type_archive(array('mcc-accommodation','mcc-activities'))) {
+        $href= '#map-container';
+    }
+
+    return $href;
+}
+
+function mcc_locations_show_cta($show)
+{
+    if (is_post_type_archive(array('mcc-accommodation','mcc-activities'))) {
+        $show = true;
+    }
+
+    return $show;
+}
+add_filter('mcc_header_cta_text', 'mcc_locations_cta_text');
+add_filter('mcc_header_cta_href', 'mcc_locations_cta_href');
+add_filter('mcc_header_show_call_to_action', 'mcc_locations_show_cta');
+
 /**
  * Use custom class for submit button.
  *

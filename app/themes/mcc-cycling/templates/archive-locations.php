@@ -20,12 +20,6 @@
     $locations = mcc_get_locations(get_post_type());
 ?>
 
-<?php if (count($locations)): ?>
-<div class="view-on-map">
-    <a href="#map-container" class="redButton">View all on map</a>
-</div>
-<?php endif; ?>
-
 <div class="pagination">
     <?php echo $pagination; ?>
 </div>
