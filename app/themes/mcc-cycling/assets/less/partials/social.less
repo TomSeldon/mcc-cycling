@@ -3,9 +3,18 @@
   margin-bottom: 40px;
   text-align: center;
 
+  @media (min-width: @screen-sm-min) {
+    text-align: center;
+  }
+
   .widget-inner {
     h2 {
       margin-bottom: 20px;
+      text-align: center;
+
+      @media (min-width: @screen-sm-min) {
+        text-align: left;
+      }
 
       a {
         text-decoration: none;
@@ -18,11 +27,15 @@
       }
 
       i {
-        display: block;
-        padding-bottom: 10px;
-        font-size: 50px;
-        color: #000;
+        display: none;
       }
+
+//      i {
+//        display: block;
+//        padding-bottom: 10px;
+//        font-size: 50px;
+//        color: #000;
+//      }
     }
   }
 }
@@ -53,6 +66,13 @@ aside {
 }
 
 .widget {
+  &.widget_twitter_timeline,
+  &.widget_facebook_likebox {
+    iframe {
+      width: 100% !important;
+    }
+  }
+
   &.widget_facebook_likebox {
     iframe {
       background: none !important;

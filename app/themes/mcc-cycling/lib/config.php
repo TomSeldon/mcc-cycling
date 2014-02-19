@@ -33,7 +33,7 @@ function roots_main_class() {
  * .sidebar classes
  */
 function roots_sidebar_class() {
-  return 'col-sm-4';
+  return 'col-sm-5 col-md-4 col-lg-3';
 }
 
 /**

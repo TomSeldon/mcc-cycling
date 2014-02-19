@@ -31,7 +31,7 @@
       <div class="container">
       <?php endif; ?>
 
-      <main class="main container <?php echo (roots_display_sidebar() ? 'col-sm-8' : ''); ?>" role="main">
+      <main class="main container <?php echo (roots_display_sidebar() ? 'col-sm-7 col-md-8 col-lg-9' : ''); ?>" role="main">
           <?php
               include roots_template_path();
           ?>
