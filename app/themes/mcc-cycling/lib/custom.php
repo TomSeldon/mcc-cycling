@@ -162,14 +162,9 @@ add_filter("gform_submit_button", "form_submit_button", 10, 2);
 
 function gform_label_replace_glyphicon($content, $icon_class)
 {
-    // Hide the label (except for screen readers)
-//    $regex      = '/gfield_label/';
-//    $replace    = 'sr-only';
-//    $content    = preg_replace($regex, $replace, $content);
-
     // Add necessary styles to show icon
-    $regex      = '/<div class=[\'"]ginput_container[\'"]>(.+)<\/div>/';
-    $replace    = "<div class='ginput_container input-group'>$1<span class='glyphicon $icon_class'></span></div>";
+    $regex      = '/<div class=[\'"]ginput_container[\'"]>(.+)/';
+    $replace    = "<div class='ginput_container input-group'><span class='glyphicon $icon_class'></span>$1";
     $content    = preg_replace($regex, $replace, $content);
 
     return $content;
