@@ -54,12 +54,31 @@
             }
         });
 
-        $scope.$on('map.bounds_changed', function(event, map) {
-            if (map.lockPosition === true || fitMap === false) {
-                MapService.fitToMarkers(map, $scope.markers);
+        $scope.$on('map.bounds_changed', function() {
+            if ($scope.map.lockPosition === true || fitMap === false) {
+                MapService.fitToMarkers($scope.map, $scope.markers);
 
                 fitMap = true;
             }
+        });
+
+        angular.element(window).on('resize', function(){
+            if ($scope.map.lockPosition === true) {
+                google.maps.event.trigger($scope.map,'resize');
+                MapService.fitToMarkers($scope.map, $scope.markers);
+            }
+        });
+
+        $scope.$on('map.projection_changed', function(event, map) {
+            MapService.fitToMarkers($scope.map, $scope.markers);
+
+            fitMap = true;
+        });
+
+        $scope.$on('shown.bs.tab', function() {
+            MapService.fitToMarkers($scope.map, $scope.markers);
+
+            fitMap = true;
         });
 
         $scope.$watch('mapEl', function(mapEl){

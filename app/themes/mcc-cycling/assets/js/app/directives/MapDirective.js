@@ -8,12 +8,14 @@
             controller: 'MapController',
             transclude: false,
             replace:    false,
-            scope:      {
-            },
+            scope:      {},
             link: function(scope, element) {
                 // Create map element
+                var baseId = element.attr('id');
+
                 var $mapEl = document.createElement('div');
-                    $mapEl.setAttribute('id', 'location-map');
+                    $mapEl.setAttribute('id', baseId + '-location-map');
+                    $mapEl.setAttribute('class', 'location-map');
 
                 angular.element(element).append($mapEl);
 
@@ -49,6 +51,10 @@
                         content:    content,
                         animation:  google.maps.Animation.DROP
                     }));
+                });
+
+                angular.element(document).on('shown.bs.tab', function(e){
+                   scope.$broadcast('shown.bs.tab', e);
                 });
 
                 scope.markers = markers;
