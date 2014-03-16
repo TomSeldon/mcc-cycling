@@ -29,6 +29,11 @@ var MCCSite = {
                 return false;
             });
 
+            $('.dropdown-menu', '.nav-tabs').find('a').click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+
             /**
              * Shows or hides the back to top button depending on
              * whether the user is below the fold.
@@ -150,7 +155,7 @@ var MCCSite = {
             fitSections();
         }
     },
-    // About page
+    // Spotive
     about: {
         init: function() {
             // JS here

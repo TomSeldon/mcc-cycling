@@ -363,6 +363,28 @@ function add_post_type_locations()
 }
 add_action('init', 'add_post_type_locations');
 
+function add_post_type_route()
+{
+    $route_labels = array(
+        'add_new_item'  => 'Add New Route',
+        'edit_item'     => 'Edit Route',
+        'search_items'  => 'Search Routes'
+    );
+
+    $route_args = array(
+        'label'         => 'Routes',
+        'labels'        => $route_labels,
+        'public'        => false,
+        'show_ui'       => true,
+        'show_in_menu'  => true,
+        'menu_icon'     => 'dashicons-location',
+        'supports'      => array('title')
+    );
+
+    register_post_type('mcc-route', $route_args);
+}
+add_action('init', 'add_post_type_route');
+
 /**
  * Alter the main query for locations archive.
  *

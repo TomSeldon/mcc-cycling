@@ -5,6 +5,8 @@
  * Created: 28/01/2014
  */
 
+    const USE_STRAVA_MAP = false;
+
     $event_date         = get_field('event_date');
     $event_date_unix    = strtotime($event_date);
     $datediff           = $event_date_unix - time();
@@ -15,8 +17,7 @@
     $location           = get_field('event_location');
     $website            = get_field('event_website');
     $route              = get_field('route');
-
-    $markers            = mcc_get_route_markers();
+    $routes             = get_field('routes');
 
     if ($days_until_event > 0) {
         $ended = false;
@@ -78,10 +79,10 @@ while (have_posts()) : the_post(); ?>
 
                 <div id="route">
                     <div class="page-header">
-                        <h2>The Route</h2>
+                        <h2>The <?php echo _n('Route', 'Routes', count($routes)); ?></h2>
                     </div>
 
-                    <!--
+                    <?php if ($route !== false && USE_STRAVA_MAP === true): ?>
                     <h4 class="route-name">
                         <?php echo $route->post_title; ?>&nbsp;
                     </h4>
@@ -90,22 +91,69 @@ while (have_posts()) : the_post(); ?>
                             View route on Strava.com
                         </a>
                     </small>
-                    -->
 
-                    <div id="sportive-route-lg" class="map" data-map="">
-                        <?php foreach ($markers as $marker): ?>
-                            <div class="marker"
-                                 data-marker=""
-                                 data-lng="<?php echo $marker['lng']; ?>"
-                                 data-lat="<?php echo $marker['lat']; ?>"
-                                 data-title="<?php echo $marker['title']; ?>">
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
+                    <div class="sportive-route-lg" data-strava-route="" data-route-id="<?php echo $route->ID; ?>"></div>
 
-                    <!--
-                    <div id="sportive-route-lg" data-strava-route="" data-route-id="<?php echo $route->ID; ?>"></div>
-                    -->
+                    <?php elseif ($routes !== false): ?>
+
+                        <?php if (get_field('routes')): ?>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="dropdown active">
+                                <a href="#" id="routeSelect" class="dropdown-toggle" data-toggle="dropdown">
+                                    Route Select <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="routeSelect">
+                                    <?php
+                                        $first = true;
+                                        while (has_sub_field('routes')):
+                                            $route = get_sub_field('route');
+                                    ?>
+                                            <li <?php echo ($first) ? 'class="active"' : ''; ?>>
+                                                <a href="#tab<?php echo $route->ID; ?>" data-toggle="tab">
+                                                    <?php echo $route->post_title; ?>
+                                                </a>
+                                            </li>
+                                    <?php
+                                        $first = false;
+                                        endwhile;
+                                    ?>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <?php
+                                $first = true;
+                                while (has_sub_field('routes')):
+                                    $route   = get_sub_field('route');
+                            ?>
+                                <div class="tab-pane fade <?php echo ($first) ? 'active in' : ''; ?>" id="tab<?php echo $route->ID; ?>">
+                                    <div class="sportive-route-lg map" id="sportive-map-<?php echo $route->ID; ?>" data-map="">
+                                        <?php
+                                            while (has_sub_field('markers', $route->ID)):
+                                                $label = get_sub_field('label');
+                                                $lat   = get_sub_field('lat');
+                                                $lng   = get_sub_field('lng');
+                                        ?>
+                                            <div class="marker"
+                                                 data-marker=""
+                                                 data-lng="<?php echo $lng; ?>"
+                                                 data-lat="<?php echo $lat; ?>"
+                                                 data-title="<?php echo $label; ?>">
+                                            </div>
+                                        <?php endwhile; ?>
+                                    </div>
+                                </div>
+                            <?php
+                                $first = false;
+                                endwhile;
+                            ?>
+                        </div>
+                        <?php endif; ?>
+
+                    <?php endif; ?>
                 </div>
             </div>
 

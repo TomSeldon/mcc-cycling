@@ -31,6 +31,10 @@
                 $rootScope.$broadcast('map.bounds_changed', map);
             });
 
+            google.maps.event.addListener(map, 'projection_changed', function() {
+                $rootScope.$broadcast('map.projection_changed', map);
+            });
+
             return map;
         };
 
@@ -80,6 +84,12 @@
             markers = (typeof markers ===  'undefined' ? [] : markers);
             padding = (typeof padding ===  'undefined' ? 40 : padding);
 
+            var changed = false;
+
+            if (markers.length === 0) {
+                return;
+            }
+
             var bounds  = new google.maps.LatLngBounds();
 
             for (var i=0; i<markers.length; i++) {
@@ -92,8 +102,19 @@
 
             var zoom = this.getZoomByBounds(map, bounds, padding);
 
-            map.setZoom(zoom);
-            map.setCenter(bounds.getCenter());
+            if (zoom !== map.getZoom()) {
+                map.setZoom(zoom);
+                changed = true;
+            }
+
+            if (map.getCenter() !== bounds.getCenter()) {
+                map.setCenter(bounds.getCenter());
+                changed = true;
+            }
+
+            if (changed === true) {
+                google.maps.event.trigger(map,'resize');
+            }
         };
 
         /**
