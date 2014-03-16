@@ -251,16 +251,22 @@ body.home {
 
       .partner {
         margin: 40px 0;
+        line-height: 90px;
 
         img.logo {
            max-width: 100%;
-          -webkit-transition: opacity 0.1s ease-in-out;
-          -moz-transition: opacity 0.1s ease-in-out;
-          -o-transition: opacity 0.1s ease-in-out;
-          transition: opacity 0.1s ease-in-out;
+          opacity: 0.7;
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+          -webkit-transition: all 0.1s ease-in-out;
+          -moz-transition: all 0.1s ease-in-out;
+          -o-transition: all 0.1s ease-in-out;
+          transition: all 0.1s ease-in-out;
 
           &:hover {
-            opacity: 0.8;
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+            opacity: 0.9;
           }
         }
       }
