@@ -131,8 +131,8 @@ while (have_posts()) : the_post(); ?>
                             ?>
                                 <div class="tab-pane fade <?php echo ($first) ? 'active in' : ''; ?>" id="tab<?php echo $route->ID; ?>">
                                     <div class="sportive-route-lg map" id="sportive-map-<?php echo $route->ID; ?>" data-map="">
-                                        <?php if (get_sub_field('kml_url')): ?>
-                                        <div class="kml-layer" data-url="<?php the_sub_field('kml_url'); ?>"></div>
+                                        <?php if (get_field('kml_url', $route->ID)): ?>
+                                        <div class="kml-layer" data-url="<?php the_field('kml_url', $route->ID); ?>"></div>
                                         <?php endif; ?>
 
                                         <?php
