@@ -8,6 +8,7 @@
         $scope.map              = null;
         $scope.mapEl            = null;
         $scope.markers          = [];
+        $scope.kmlLayers        = [];
         $scope.markerCluster    = null;
         $scope.infowindow       = null;
         $scope.mapOptions       = {};
@@ -38,6 +39,25 @@
                 $scope.markerCluster = MapService.createMarkerCluster($scope.map, $scope.markers);
 
                 MapService.fitToMarkers($scope.map, $scope.markers);
+            });
+
+            $scope.$watch('kmlUrls', function(){
+                $scope.kmlLayers = [];
+
+                for (var i=0; i < $scope.kmlUrls.length; i++) {
+                    var url  = $scope.kmlUrls[i].url;
+                    var name = $scope.kmlUrls[i].name;
+
+                    var ctaLayer = new google.maps.KmlLayer({
+                       url: url
+                    });
+
+                    ctaLayer.setMap($scope.map);
+
+                    console.log(ctaLayer);
+
+                    $scope.kmlLayers.push(ctaLayer);
+                }
             });
         }
 

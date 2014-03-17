@@ -53,11 +53,26 @@
                     }));
                 });
 
+                // Get KML URLs
+                var kmlURLs = [];
+                var $kmlLayersEl = element.find('.kml-layer');
+
+                $kmlLayersEl.each(function(index, $markerEl){
+                    var name = angular.element($markerEl).data('name').toString();
+                    var url  = angular.element($markerEl).data('url').toString();
+
+                    kmlURLs.push({
+                        name: name,
+                        url:  url
+                    });
+                });
+
                 angular.element(document).on('shown.bs.tab', function(e){
                    scope.$broadcast('shown.bs.tab', e);
                 });
 
                 scope.markers = markers;
+                scope.kmlUrls = kmlURLs;
             }
         };
     };
