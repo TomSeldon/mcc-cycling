@@ -45,9 +45,7 @@
                 $scope.kmlLayers = [];
 
                 for (var i=0; i < $scope.kmlUrls.length; i++) {
-                    var url  = $scope.kmlUrls[i].url;
-                    var name = $scope.kmlUrls[i].name;
-
+                    var url      = $scope.kmlUrls[i];
                     var ctaLayer = new google.maps.KmlLayer(url);
 
                     ctaLayer.setMap($scope.map);
