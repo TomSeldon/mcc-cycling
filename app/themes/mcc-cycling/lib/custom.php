@@ -435,3 +435,9 @@ function mcc_get_locations($post_type)
 
     return $locations;
 }
+
+function mcc_mime_types($mime_types){
+    $mime_types['kml'] = 'application/vnd.google-earth.kml+xml';
+    return $mime_types;
+}
+add_filter('upload_mimes', 'mcc_mime_types');
