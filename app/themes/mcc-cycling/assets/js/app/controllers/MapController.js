@@ -48,13 +48,9 @@
                     var url  = $scope.kmlUrls[i].url;
                     var name = $scope.kmlUrls[i].name;
 
-                    var ctaLayer = new google.maps.KmlLayer({
-                       url: url
-                    });
+                    var ctaLayer = new google.maps.KmlLayer(url);
 
                     ctaLayer.setMap($scope.map);
-
-                    console.log(ctaLayer);
 
                     $scope.kmlLayers.push(ctaLayer);
                 }
