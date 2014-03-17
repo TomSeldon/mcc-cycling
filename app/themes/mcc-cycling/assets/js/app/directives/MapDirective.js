@@ -57,8 +57,12 @@
                 var kmlURLs = [];
                 var $kmlLayersEl = element.find('.kml-layer');
 
-                $kmlLayersEl.each(function(index, $markerEl){
-                    var url  = angular.element($markerEl).data('url').toString();
+                $kmlLayersEl.each(function(index, $markerEl) {
+                    var url  = angular.element($markerEl).data('url');
+
+                    if (typeof url.toString !== 'undefined') {
+                        url = url.toString();
+                    }
 
                     kmlURLs.push(url);
                 });
