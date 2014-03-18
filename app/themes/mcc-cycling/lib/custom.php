@@ -374,7 +374,7 @@ function add_post_type_route()
     $route_args = array(
         'label'         => 'Routes',
         'labels'        => $route_labels,
-        'public'        => false,
+        'public'        => true,
         'show_ui'       => true,
         'show_in_menu'  => true,
         'menu_icon'     => 'dashicons-location',
