@@ -105,10 +105,20 @@ END;
                     </div>
 EOD;
             }
-            $output .= <<<EOD
+    $output .= '    </div>';
+
+    // GPX download
+    $gpx_url = get_field('gpx_url', $route->ID);
+
+    if ($gpx_url !== false) {
+        $output .= <<<EOD
+        <div class="gpx-download">
+            <a href="$gpx_url">Download route as GPX</a>
         </div>
-    </div>
 EOD;
+    }
+
+    $output .= '</div>';
 
     return $output;
 }
