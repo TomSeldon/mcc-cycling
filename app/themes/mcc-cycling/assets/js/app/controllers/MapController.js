@@ -27,6 +27,19 @@
             rotateControl: false
         };
 
+        $scope.embedMapOptions = {
+            lockPosition: false,
+            zoom: 11,
+            disableDefaultUI: true,
+            draggable: true,
+            zoomControl: true,
+            scrollwheel: true,
+            disableDoubleClickZoom: false,
+            keyboardShortcuts: false,
+            panControl: false,
+            rotateControl: false
+        };
+
         function init()
         {
             $scope.map = MapService.createMap($scope.mapEl, $scope.mapOptions);

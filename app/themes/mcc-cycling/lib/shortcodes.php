@@ -83,7 +83,7 @@ function mcc_map_shortcode($atts)
         }
 
         $output .= <<<END
-        <div class="mcc-map-embed map" id="mcc-map-$route->ID" data-map="">
+        <div class="mcc-map-embed map" id="mcc-map-$route->ID" data-map="" data-options="embedMapOptions">
 END;
             $kml_url = get_field('kml_url', $route->ID);
 
