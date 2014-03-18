@@ -46,7 +46,7 @@
 
                 for (var i=0; i < $scope.kmlUrls.length; i++) {
                     var url      = $scope.kmlUrls[i];
-                    var ctaLayer = new google.maps.KmlLayer(url);
+                    var ctaLayer = new google.maps.KmlLayer({url: url});
 
                     ctaLayer.setMap($scope.map);
 
@@ -71,7 +71,6 @@
         $scope.$on('map.bounds_changed', function() {
             if ($scope.map.lockPosition === true || fitMap === false) {
                 MapService.fitToMarkers($scope.map, $scope.markers);
-                MapService.fitToKml($scope.map, $scope.kmlLayers);
 
                 fitMap = true;
             }
@@ -81,20 +80,17 @@
             if ($scope.map.lockPosition === true) {
                 google.maps.event.trigger($scope.map,'resize');
                 MapService.fitToMarkers($scope.map, $scope.markers);
-                MapService.fitToKml($scope.map, $scope.kmlLayers);
             }
         });
 
         $scope.$on('map.projection_changed', function(event, map) {
             MapService.fitToMarkers($scope.map, $scope.markers);
-            MapService.fitToKml($scope.map, $scope.kmlLayers);
 
             fitMap = true;
         });
 
         $scope.$on('shown.bs.tab', function() {
             MapService.fitToMarkers($scope.map, $scope.markers);
-            MapService.fitToKml($scope.map, $scope.kmlLayers);
 
             fitMap = true;
         });

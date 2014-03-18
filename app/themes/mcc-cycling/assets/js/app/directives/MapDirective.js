@@ -62,9 +62,8 @@
 
                     if (typeof url.toString !== 'undefined') {
                         url = url.toString();
+                        kmlURLs.push(url);
                     }
-
-                    kmlURLs.push(url);
                 });
 
                 angular.element(document).on('shown.bs.tab', function(e){
