@@ -94,70 +94,19 @@ while (have_posts()) : the_post(); ?>
 
                     <div class="sportive-route-lg" data-strava-route="" data-route-id="<?php echo $route->ID; ?>"></div>
 
-                    <?php elseif ($routes !== false): ?>
+                    <?php elseif ($routes !== false):
+                        $routeNames = array();
 
-                        <?php if (get_field('routes')): ?>
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs">
-                            <li class="dropdown active">
-                                <a href="#" id="routeSelect" class="dropdown-toggle" data-toggle="dropdown">
-                                    Route Select <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="routeSelect">
-                                    <?php
-                                        $first = true;
-                                        while (has_sub_field('routes')):
-                                            $route = get_sub_field('route');
-                                    ?>
-                                            <li <?php echo ($first) ? 'class="active"' : ''; ?>>
-                                                <a href="#tab<?php echo $route->ID; ?>" data-toggle="tab">
-                                                    <?php echo $route->post_title; ?>
-                                                </a>
-                                            </li>
-                                    <?php
-                                        $first = false;
-                                        endwhile;
-                                    ?>
-                                </ul>
-                            </li>
-                        </ul>
+                        while (has_sub_field('routes')) {
+                            $route = get_sub_field('route');
+                            $routeNames[] = $route->post_name;
+                        }
 
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <?php
-                                $first = true;
-                                while (has_sub_field('routes')):
-                                    $route   = get_sub_field('route');
-                            ?>
-                                <div class="tab-pane fade <?php echo ($first) ? 'active in' : ''; ?>" id="tab<?php echo $route->ID; ?>">
-                                    <div class="sportive-route-lg map" id="sportive-map-<?php echo $route->ID; ?>" data-map="">
-                                        <?php if (get_field('kml_url', $route->ID)): ?>
-                                        <div class="kml-layer" data-url="<?php the_field('kml_url', $route->ID); ?>"></div>
-                                        <?php endif; ?>
-
-                                        <?php
-                                            while (has_sub_field('markers', $route->ID)):
-                                                $label = get_sub_field('label');
-                                                $lat   = get_sub_field('lat');
-                                                $lng   = get_sub_field('lng');
-                                        ?>
-                                            <div class="marker"
-                                                 data-marker=""
-                                                 data-lng="<?php echo $lng; ?>"
-                                                 data-lat="<?php echo $lat; ?>"
-                                                 data-title="<?php echo $label; ?>">
-                                            </div>
-                                        <?php endwhile; ?>
-                                    </div>
-                                </div>
-                            <?php
-                                $first = false;
-                                endwhile;
-                            ?>
-                        </div>
-                        <?php endif; ?>
-
-                    <?php endif; ?>
+                        if (count($routeNames)) {
+                            $routeNames = implode(',', $routeNames);
+                            echo do_shortcode("[mcc-map-tabs names='$routeNames']");
+                        }
+                    endif; ?>
                 </div>
             </div>
 
