@@ -438,6 +438,8 @@ function mcc_get_locations($post_type)
 
 function mcc_mime_types($mime_types){
     $mime_types['kml'] = 'application/vnd.google-earth.kml+xml';
+    $mime_types['gpx'] = 'application/gpx';
+
     return $mime_types;
 }
 add_filter('upload_mimes', 'mcc_mime_types');
