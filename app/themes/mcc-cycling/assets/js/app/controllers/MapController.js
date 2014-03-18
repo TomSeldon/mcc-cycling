@@ -71,6 +71,7 @@
         $scope.$on('map.bounds_changed', function() {
             if ($scope.map.lockPosition === true || fitMap === false) {
                 MapService.fitToMarkers($scope.map, $scope.markers);
+                MapService.fitToKml($scope.map, $scope.kmlLayers);
 
                 fitMap = true;
             }
@@ -80,17 +81,20 @@
             if ($scope.map.lockPosition === true) {
                 google.maps.event.trigger($scope.map,'resize');
                 MapService.fitToMarkers($scope.map, $scope.markers);
+                MapService.fitToKml($scope.map, $scope.kmlLayers);
             }
         });
 
         $scope.$on('map.projection_changed', function(event, map) {
             MapService.fitToMarkers($scope.map, $scope.markers);
+            MapService.fitToKml($scope.map, $scope.kmlLayers);
 
             fitMap = true;
         });
 
         $scope.$on('shown.bs.tab', function() {
             MapService.fitToMarkers($scope.map, $scope.markers);
+            MapService.fitToKml($scope.map, $scope.kmlLayers);
 
             fitMap = true;
         });

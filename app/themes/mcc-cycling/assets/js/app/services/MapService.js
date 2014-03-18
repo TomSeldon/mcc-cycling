@@ -71,6 +71,22 @@
             return markerCluster;
         };
 
+        /**
+         * Centers map on kml layer.
+         *
+         * @param map
+         * @param kmlLayers
+         */
+        this.fitToKml = function(map, kmlLayers)
+        {
+            if (typeof kmlLayers === 'undefined') {
+                return;
+            }
+
+            for (var i=0; i < kmlLayers.length; i++) {
+                map.fitBounds(kmlLayers[i].getDefaultViewport());
+            }
+        };
 
         /**
          * Centers the map so all markers can be seen.
