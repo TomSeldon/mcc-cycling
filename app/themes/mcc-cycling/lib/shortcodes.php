@@ -67,41 +67,50 @@ function mcc_map_shortcode($atts)
         'numberposts'   => 1
     );
 
-    $route = get_posts($args);
+    $route  = get_posts($args);
+    $output = '';
 
     if ($route) {
         $route = $route[0];
     } else {
-        return;
+        return $output;
     }
 
-    ?>
+    $output .= '<div class="map-widget">';
 
-    <div class="map-widget">
-        <?php if ((bool) $title === true): ?>
-        <h2><?php echo $route->post_title; ?></h2>
-        <?php endif; ?>
-        <div class="mcc-map-embed map" id="mcc-map-<?php echo $route->ID; ?>" data-map="">
-            <?php if (get_field('kml_url', $route->ID)): ?>
-                <div class="kml-layer" data-url="<?php the_field('kml_url', $route->ID); ?>"></div>
-            <?php endif; ?>
+        if ((bool) $title === true) {
+            $output .= "<h2>$route->post_title</h2>";
+        }
 
-            <?php
-                while (has_sub_field('markers', $route->ID)):
-                    $label = get_sub_field('label');
-                    $lat   = get_sub_field('lat');
-                    $lng   = get_sub_field('lng');
-                    ?>
+        $output .= <<<END
+        <div class="mcc-map-embed map" id="mcc-map-$route->ID" data-map="">
+END;
+            $kml_url = get_field('kml_url', $route->ID);
+
+            if ($kml_url !== false):
+                $output .= "<div class=\"kml-layer\" data-url=\"$kml_url\"></div>";
+            endif;
+
+            while (has_sub_field('markers', $route->ID)) {
+                $label = get_sub_field('label');
+                $lat   = get_sub_field('lat');
+                $lng   = get_sub_field('lng');
+
+                $output .= <<<EOD
                     <div class="marker"
                          data-marker=""
-                         data-lng="<?php echo $lng; ?>"
-                         data-lat="<?php echo $lat; ?>"
-                         data-title="<?php echo $label; ?>">
+                         data-lng="$lng"
+                         data-lat="$lat"
+                         data-title="$label">
                     </div>
-                <?php endwhile; ?>
+EOD;
+            }
+            $output .= <<<EOD
         </div>
     </div>
-    <?php
+EOD;
+
+    return $output;
 }
 add_shortcode('mcc-map', 'mcc_map_shortcode');
 
@@ -133,9 +142,10 @@ function mcc_map_tabs_shortcode($atts)
         }
     }
 
-    if ($routes):
+    $output = "";
 
-    ?>
+    if ($routes):
+        $output = <<<EOD
         <!-- Nav tabs -->
         <ul class="nav nav-tabs">
             <li class="dropdown active">
@@ -143,38 +153,41 @@ function mcc_map_tabs_shortcode($atts)
                     Route Select <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="routeSelect">
-                    <?php
+EOD;
                         $first = true;
                         foreach ($routes as $route):
-                            ?>
-                            <li <?php echo ($first) ? 'class="active"' : ''; ?>>
-                                <a href="#tab<?php echo $route->ID; ?>" data-toggle="tab">
-                                    <?php echo $route->post_title; ?>
+                            $klass   = ($first) ? 'class="active"' : '';
+                            $output .= <<<EOD
+                            <li class="$klass">
+                                <a href="#tab-$route->ID" data-toggle="tab">
+                                   $route->post_title
                                 </a>
                             </li>
-                            <?php
+EOD;
                             $first = false;
                         endforeach;
-                    ?>
+        $output .= <<<EOD
                 </ul>
             </li>
         </ul>
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <?php
+EOD;
                 $first = true;
                 foreach ($routes as $route):
-                    ?>
-                    <div class="tab-pane fade <?php echo ($first) ? 'active in' : ''; ?>" id="tab<?php echo $route->ID; ?>">
-                        <?php do_shortcode('[mcc-map name=' . $route->post_name . ' title=0]'); ?>
+                    $klass = ($first) ? 'active in' : '';
+                    $map   = do_shortcode('[mcc-map name=' . $route->post_name . ' title=0]');
+                    $output .= <<<EOD
+                    <div class="tab-pane fade $klass" id="tab-$route->ID">
+                        $map
                     </div>
-                    <?php
+EOD;
                     $first = false;
                 endforeach;
-            ?>
-        </div>
-    <?php
+        $output .= "</div>";
     endif;
+
+    return $output;
 }
 add_shortcode('mcc-map-tabs', 'mcc_map_tabs_shortcode');
