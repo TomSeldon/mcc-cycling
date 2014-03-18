@@ -84,7 +84,7 @@
             }
 
             for (var i=0; i < kmlLayers.length; i++) {
-                map.fitBounds(kmlLayers[i].getDefaultViewport());
+                map.fitBounds(kmlLayers[i].defaultViewport);
             }
         };
 

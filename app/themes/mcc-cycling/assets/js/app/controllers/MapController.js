@@ -92,6 +92,11 @@
         $scope.$on('shown.bs.tab', function() {
             MapService.fitToMarkers($scope.map, $scope.markers);
 
+            if ($scope.markers.length === 0) {
+                google.maps.event.trigger($scope.map,'resize');
+                MapService.fitToKml($scope.map, $scope.kmlLayers);
+            }
+
             fitMap = true;
         });
 
