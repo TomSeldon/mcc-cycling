@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 
-packages          = ['php-pear', 'php5-dev', 'apache2-dev', 'gcc', 'make', 'zlib1g-dev', 'libpcre3-dev']
+packages          = ['php-pear', 'php5-dev', 'apache2-dev', 'gcc', 'make', 'zlib1g-dev', 'libpcre3-dev', 'vim']
 packagesInstalled = 0;
 
 # Force apt-get update

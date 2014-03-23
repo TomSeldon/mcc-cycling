@@ -6,9 +6,12 @@ server {
     error_log    <%= node['nginx']['log_dir'] %>/<%= @name %>.error.log;
 
     # Stop some private files being shown
-    location ~ /(config|Capfile|Gemfile(\.lock)?|composer(\.lock|\.json)|\.env) {
+    location ~ /(config|Capfile|Cheffile|Gemfile(\.lock)?|composer(\.lock|\.json)|\.env|Vagrantfile|.gitignore|(.+)\.md|(.+)\.yml) {
       deny all;
     }
+
+    # Increase post size
+    client_max_body_size 2m;
 
     # BEGIN W3TC Browser Cache
     gzip on;

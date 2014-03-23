@@ -52,12 +52,13 @@ add_shortcode('mcc-location', 'mcc_location_shortcode');
 function mcc_map_shortcode($atts)
 {
     extract( shortcode_atts(array(
-        'name'  => false,
-        'title' => true
+        'name'          => false,
+        'title'         => true,
+        'options'       => 'embedMapOptions'
     ), $atts, 'mcc-map'));
 
     if (false === $name) {
-        return;
+        return '';
     }
 
     $args = array(
@@ -83,7 +84,7 @@ function mcc_map_shortcode($atts)
         }
 
         $output .= <<<END
-        <div class="mcc-map-embed map" id="mcc-map-$route->ID" data-map="" data-options="embedMapOptions">
+        <div class="mcc-map-embed map" id="mcc-map-$route->ID" data-map="" data-options="$options">
 END;
             $kml_url = get_field('kml_url', $route->ID);
 

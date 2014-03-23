@@ -40,6 +40,19 @@
             rotateControl: false
         };
 
+        $scope.fullscreenMapOptions = {
+            lockPosition: true,
+            zoom: 11,
+            disableDefaultUI: true,
+            draggable: false,
+            zoomControl: false,
+            scrollwheel: false,
+            disableDoubleClickZoom: true,
+            keyboardShortcuts: false,
+            panControl: false,
+            rotateControl: false
+        };
+
         function init()
         {
             $scope.map = MapService.createMap($scope.mapEl, $scope.mapOptions);
