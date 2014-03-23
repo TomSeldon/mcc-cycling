@@ -53,14 +53,11 @@
                     <i class="glyphicon glyphicon-align-justify"></i>
                 </button>
             </div>
-            <div class="col-xs-3 pull-right login item">
+            <div class="col-xs-5 pull-right login item">
                 <a
                     class="btn btn-default"
-                    href="<?php the_redux_field('login_url'); ?>"
-                    data-tooltip="Sign up here"
-                    data-trigger="mouseenter"
-                    data-tooltip-placement="bottom">
-                    <span class="sr-only">Login</span>
+                    href="<?php the_redux_field('login_url'); ?>">
+                    <span>Sign up&nbsp;</span>
                     <i class="glyphicon glyphicon-lock"></i>
                 </a>
             </div>
