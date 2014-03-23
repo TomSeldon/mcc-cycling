@@ -47,10 +47,10 @@
         style="background-image: url('<?php echo $header_bg_img; ?>');">
     <div class="container">
         <nav class="row top-menu animated">
-            <div class="col-xs-3 pull-left nav-toggle item">
+            <div class="col-xs-5 pull-left nav-toggle item">
                 <button type="button" class="btn btn-default" data-toggle="collapse" data-target=".navbar-side-collapse">
-                    <span class="sr-only">Toggle navigation</span>
                     <i class="glyphicon glyphicon-align-justify"></i>
+                    <span>&nbsp;Menu</span>
                 </button>
             </div>
             <div class="col-xs-5 pull-right login item">
