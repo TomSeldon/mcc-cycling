@@ -63,7 +63,7 @@
     "vlucas/phpdotenv": "1.0.2",
     "wpackagist/advanced-custom-fields": ">= 4.3.3",
     "wpackagist/redux-framework": "3.1.4",
-    "wpackagist/jetpack": ">= 2.7",
+    "wpackagist/jetpack": "~2.9.3",
     "wpackagist/w3-total-cache": ">= 0.9.3",
     "wpackagist/wordpress-importer": ">= 0.6.1",
     "wpackagist/wordpress-seo": ">= 1.4.24",
