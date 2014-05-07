@@ -18,6 +18,9 @@ module.exports = function(grunt) {
         files: {
           'assets/css/main.min.css': [
             'assets/less/app.less'
+          ],
+          'assets/less/font-awesome/font-awesome.css': [
+            'assets/less/font-awesome/font-awesome.less'
           ]
         },
         options: {

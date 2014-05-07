@@ -51,19 +51,16 @@ body {
     top: 0;
     bottom: 0;
     position: fixed;
-    -webkit-transition: all @sideNavTime ease-in-out;
-    -moz-transition: all @sideNavTime ease-in-out;
-    -o-transition: all @sideNavTime ease-in-out;
-    transition: all @sideNavTime ease-in-out;
-    transition: all @sideNavTime ease-in-out;
+    .transition(all @sideNavTime ease-in-out);
     text-align: left;
     z-index: 99;
 
+    &.collapse {
+      display: block;
+    }
+
     & > section {
-      -webkit-transition: opacity @sideNavTime ease-in-out;
-      -moz-transition: opacity @sideNavTime ease-in-out;
-      -o-transition: opacity @sideNavTime ease-in-out;
-      transition: opacity @sideNavTime ease-in-out;
+      .transition(opacity @sideNavTime ease-in-out);
       opacity: 0.5;
     }
 
@@ -184,6 +181,17 @@ body {
       margin-bottom: 50px;
     }
 
+    .dropdown-menu {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      .transition(max-height 0.2s linear);
+    }
+
+    .open > .dropdown-menu {
+      max-height: 200px;
+    }
+
     ul {
       list-style: none;
       padding: 0;
@@ -196,6 +204,22 @@ body {
           border-bottom: 1px solid @greenOverlay;
         }
 
+        &.dropdown {
+          .caret {
+            float: right;
+            border-width: 0;
+            vertical-align: inherit;
+            padding-right: 1em;
+            padding-top: 5px;
+
+            &:extend(.fa, .fa-plus all);
+          }
+
+          &.open .caret {
+            &:extend(.fa-minus all);
+          }
+        }
+
         a:link,
         a:active,
         a:visited,
@@ -206,12 +230,37 @@ body {
           font-size: 18px;
           font-weight: 200;
           letter-spacing: 1px;
+          text-decoration: none;
         }
 
         a:hover,
         &.active a {
           background: @greenOverlay;
           text-decoration: none;
+        }
+
+        ul.dropdown-menu {
+          position: static;
+          float: none;
+          width: 100%;
+          border: none;
+
+          li {
+            a {
+              padding-left: 1.5em;
+              background: darken(@greenOverlay, 4.5%);
+
+              &:hover {
+                background: lighten(@greenOverlay, 2.5%);
+              }
+            }
+
+            &.active {
+              a {
+                background: @greenOverlay;
+              }
+            }
+          }
         }
       }
     }
